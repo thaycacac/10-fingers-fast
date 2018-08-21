@@ -13,9 +13,12 @@
   },
   "dependencies": {
     "axios": "^0.16.2",
+    "bootstrap-vue": "^2.0.0-rc.11",
     "cross-env": "^5.0.1",
     "express": "^4.15.3",
+    "node-sass": "^4.9.3",
     "nuxt": "latest",
+    "sass-loader": "^7.1.0",
     "source-map-support": "^0.4.15"
   },
   "devDependencies": {
