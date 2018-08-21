@@ -10,7 +10,13 @@ module.exports = {
       { hid: 'description', name: 'description', content: 'Nuxt.js project' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      {
+        rel: 'stylesheet',
+        href: 'https://use.fontawesome.com/releases/v5.2.0/css/all.css',
+        integrity: 'sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ',
+        crossorigin: 'anonymous'
+      }
     ]
   },
   css: [
@@ -18,9 +24,11 @@ module.exports = {
     './assets/sass/main.sass'
   ],
   modules: [
-    'bootstrap-vue/nuxt',
-    // Or if you have custom bootstrap CSS...
-    ['bootstrap-vue/nuxt', { css: false }],
+    // Simple usage
+    'nuxt-buefy',
+
+    // Or you can customize
+    ['nuxt-buefy', { css: false, materialDesignIcons: false }],
   ],
   build: {
     vendor: ['axios'],
