@@ -1,46 +1,82 @@
 <template>
     <nav class="navbar is-transparent is-fixed-top">
         <div class="container">
-        <div class="navbar-brand">
-            <a class="navbar-item" href="https://bulma.io">
-                <img src="https://bulma.io/images/bulma-logo.png" alt="Bulma: a modern CSS framework based on Flexbox" width="112" height="28">
-            </a>
-            <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-
-        <div id="navbarExampleTransparentExample" class="navbar-menu">
-            <div class="navbar-start">
-                <a class="navbar-item" href="https://bulma.io/">
-                    Typing Study
+            <div class="navbar-brand">
+                <a class="navbar-item" href="/">
+                    <img src="../../assets/img/logo.png" alt="logo">
                 </a>
-                <a class="navbar-item" href="https://bulma.io/">
-                    Play Game
-                </a>
+                <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
 
-            <div class="navbar-end">
-                <div class="navbar-item">
-                    <div class="navbar-item has-dropdown is-hoverable">
-                    <a class="navbar-link" href="/documentation/overview/start/">
-                        User
-                    </a>
-                    <div class="navbar-dropdown is-boxed">
-                        <a class="navbar-item" href="/documentation/overview/start/">
-                            Profile
-                        </a>
-                        <a class="navbar-item" href="https://bulma.io/documentation/modifiers/syntax/">
-                            Logout
-                        </a>
+            <div id="navbarExampleTransparentExample" class="navbar-menu">
+                <div class="navbar-end">
+                    <div class="group-navbar">
+                        <div class="navbar-start">
+                            <a class="navbar-item" href="#">
+                                Home
+                            </a>
+                            <a class="navbar-item" href="#">
+                                Elements
+                            </a>
+                            <a class="navbar-item" href="#">
+                                Pages
+                            </a>
+                            <a class="navbar-item" href="#">
+                                Portfolio
+                            </a>
+                            <a class="navbar-item" href="#">
+                                Blog
+                            </a>
+                            <a class="navbar-item" href="#">
+                                Shop
+                            </a>
+                        </div>
+                    </div>
+                    <div class="navbar-item">
+                        <div class="navbar-item has-dropdown is-hoverable">
+                            <a class="navbar-link" href="#">
+                                User
+                            </a>
+                            <div class="navbar-dropdown is-boxed">
+                                <a class="navbar-item" href="#">
+                                    Profile
+                                </a>
+                                <a class="navbar-item" href="#">
+                                    Logout
+                                </a>
+                            </div>
+                        </div>
+                        <div class="navbar-item has-dropdown is-hoverable">
+                            <a class="navbar-link" href="#">
+                                Language
+                            </a>
+                            <div class="navbar-dropdown is-boxed">
+                                <a class="navbar-item" href="#">
+                                    VietNamese
+                                </a>
+                                <a class="navbar-item" href="#">
+                                    English
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                </div>
             </div>
-        </div></div>
+        </div>
     </nav>
 </template>
 <style lang="scss" scoped>
+    @import '../../assets/sass/main.sass';
+    .group-navbar {
+        margin: 9px 25px 0px 0px;
+        text-transform: uppercase;
+    }
+
+    .navbar-link::after {
+        border-color: $font-color-link-hover
+    }
 </style>
