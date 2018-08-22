@@ -1,20 +1,15 @@
 <template>
     <div>
-        <header class="masthead text-center text-white d-flex">
+        <header class="masthead text-center d-flex">
             <div class="container my-auto">
                 <div class="row">
-                    <div class="col-lg-10 mx-auto">
-                        <h1 class="text-uppercase">
-                            <strong>Your Favorite Source of Free Bootstrap Themes</strong>
-                        </h1>
-                        <hr>
-                    </div>
-                    <div class="col-lg-8 mx-auto">
-                        <p class="text-faded mb-5">Start Bootstrap can help you build better websites using the Bootstrap CSS framework ! Just download
-                            your template and start going, no strings attached !</p>
-                        <a class="btn btn-primary btn-xl js-scroll-trigger"
-                            href="#about">Find Out More</a>
-                    </div>
+                    <h1>
+                        <strong>Your Favorite Source of Free Bootstrap Themes</strong>
+                    </h1>
+                    <hr class="my-break">
+                    <p class="text-description">Start Bootstrap can help you build better websites using the Bootstrap CSS framework ! Just download
+                        your template and start going, no strings attached !</p>
+                    <a class="button is-white js-scroll-trigger my-button" href="#">Read More</a>
                 </div>
             </div>
         </header>
@@ -22,4 +17,24 @@
 </template>
 <style lang="scss" scoped>
     @import '../../assets/sass/main.sass';
+    h1 strong {
+        color: white;
+        text-transform: uppercase;
+        font-weight: 700
+    }
+
+    .text-description {
+        color: #e4e4e4;
+        font-family: $font-opensan;
+    }
+
+    .my-break {
+        height: 1px;
+    }
+
+    .my-button {
+        margin-top: 35px;
+        font-family: $font-opensan;
+        font-size: 25px
+    }
 </style>
