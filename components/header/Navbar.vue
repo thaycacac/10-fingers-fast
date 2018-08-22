@@ -79,4 +79,31 @@
     .navbar-link::after {
         border-color: $font-color-link-hover
     }
+    .navbar, .navbar-menu, .navbar-start, .navbar-end {
+        background-color: transparent; 
+    }
+    .navbar-scroll {
+        background-color: #ffffff;
+    }
 </style>
+<script>
+export default {
+  methods: {
+    getOffsetTop () {
+      return window.scrollY
+    },
+    handleScroll () {
+      const narbar = document.getElementsByClassName('navbar')[0]
+      if (this.getOffsetTop() > 50) {
+        narbar.classList.add('navbar-scroll')
+      } else {
+        narbar.classList.remove('navbar-scroll')
+      }
+    }
+  },
+  beforeMount () {
+    window.addEventListener('scroll', this.handleScroll);
+  }
+};
+
+</script>

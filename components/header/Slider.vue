@@ -9,7 +9,7 @@
                     <hr class="my-break">
                     <p class="text-description">Start Bootstrap can help you build better websites using the Bootstrap CSS framework ! Just download
                         your template and start going, no strings attached !</p>
-                    <a class="button is-white js-scroll-trigger my-button" href="#">Read More</a>
+                    <a class="button is-white my-button" href="#">Read More</a>
                 </div>
             </div>
         </header>
