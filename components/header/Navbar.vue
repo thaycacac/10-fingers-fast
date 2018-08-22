@@ -83,7 +83,7 @@
         background-color: transparent; 
     }
     .navbar-scroll {
-        background-color: #ffffff;
+        background-color: #fff;
     }
 </style>
 <script>
