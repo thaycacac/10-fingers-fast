@@ -36,7 +36,7 @@ module.exports = {
     'nuxt-buefy',
 
     // Or you can customize
-    ['nuxt-buefy', { css: false, materialDesignIcons: false }],
+    ['nuxt-buefy', { css: false, materialDesignIcons: false }]
   ],
   build: {
     vendor: ['axios'],
@@ -57,5 +57,6 @@ module.exports = {
   serverMiddleware: [
     // API middleware
     '~/api/index.js'
-  ]
+  ],
+  
 }
