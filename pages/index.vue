@@ -5,6 +5,8 @@
     <introduction></introduction>
     <navigation></navigation>
     <target></target>
+    <background></background>
+    <target></target>
   </div>
 </template>
 
@@ -15,6 +17,7 @@ import Slider from "../components/header/Slider";
 import Introduction from '../components/content/Introduction';
 import Navigation from '../components/content/Navigation';
 import Target from '../components/content/Target';
+import Background from '../components/content/Background';
 
 export default {
   components: {
@@ -22,7 +25,8 @@ export default {
     Slider,
     Introduction,
     Navigation,
-    Target
+    Target,
+    Background
   }
   // async asyncData () {
   //   let { data } = await axios.get('/api/users')
