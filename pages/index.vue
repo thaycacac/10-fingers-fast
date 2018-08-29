@@ -6,18 +6,19 @@
     <navigation></navigation>
     <target></target>
     <background></background>
-    <target></target>
+    <guide></guide>
   </div>
 </template>
 
 <script>
 // import axios from '~/plugins/axios'
-import Navbar from "../components/header/Navbar";
-import Slider from "../components/header/Slider";
-import Introduction from '../components/content/Introduction';
-import Navigation from '../components/content/Navigation';
-import Target from '../components/content/Target';
-import Background from '../components/content/Background';
+import Navbar from "../components/header/Navbar"
+import Slider from "../components/header/Slider"
+import Introduction from '../components/content/Introduction'
+import Navigation from '../components/content/Navigation'
+import Target from '../components/content/Target'
+import Background from '../components/content/Background'
+import Guide from '../components/content/Guide'
 
 export default {
   components: {
@@ -26,7 +27,8 @@ export default {
     Introduction,
     Navigation,
     Target,
-    Background
+    Background,
+    Guide
   }
   // async asyncData () {
   //   let { data } = await axios.get('/api/users')
