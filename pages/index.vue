@@ -7,6 +7,7 @@
     <target></target>
     <background></background>
     <guide></guide>
+    <follow></follow>
   </div>
 </template>
 
@@ -19,6 +20,7 @@ import Navigation from '../components/content/Navigation'
 import Target from '../components/content/Target'
 import Background from '../components/content/Background'
 import Guide from '../components/content/Guide'
+import Follow from '../components/content/Follow'
 
 export default {
   components: {
@@ -28,7 +30,8 @@ export default {
     Navigation,
     Target,
     Background,
-    Guide
+    Guide,
+    Follow
   }
   // async asyncData () {
   //   let { data } = await axios.get('/api/users')

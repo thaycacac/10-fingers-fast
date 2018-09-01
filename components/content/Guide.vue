@@ -2,7 +2,7 @@
   <div>
     <div class="is-container-guide">
       <div class="columns">
-        <div class="column">
+        <div class="column is-4">
           <cover-guide
           :numpage="numpage.numpage1"
           :step="step.step1"></cover-guide>
@@ -17,7 +17,7 @@
 
    <div class="is-container-guide">
       <div class="columns">
-        <div class="column">
+        <div class="column is-8">
           <content-guide
           :title="title.title2"
           :content="content.content2"></content-guide>
