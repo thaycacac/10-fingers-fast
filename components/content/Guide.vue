@@ -13,19 +13,19 @@
           :content="content.content1"></content-guide>  
         </div>
       </div>
-   </div>
+    </div>
 
-   <div class="is-container-guide">
+    <div class="is-container-guide">
       <div class="columns">
-        <div class="column is-8">
-          <content-guide
-          :title="title.title2"
-          :content="content.content2"></content-guide>
-        </div>
-        <div class="column">
+        <div class="column is-4">
           <cover-guide
           :numpage="numpage.numpage2"
           :step="step.step2"></cover-guide>
+        </div>
+        <div class="column">
+          <content-guide
+          :title="title.title2"
+          :content="content.content2"></content-guide>  
         </div>
       </div>
     </div>
