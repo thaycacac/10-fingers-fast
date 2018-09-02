@@ -8,6 +8,7 @@
     <background></background>
     <guide></guide>
     <follow></follow>
+    <typing-study></typing-study>
   </div>
 </template>
 
@@ -21,6 +22,7 @@ import Target from '../components/content/Target'
 import Background from '../components/content/Background'
 import Guide from '../components/content/Guide'
 import Follow from '../components/content/Follow'
+import TypingStudy from '../components/content/TypingStudy'
 
 export default {
   components: {
@@ -31,7 +33,8 @@ export default {
     Target,
     Background,
     Guide,
-    Follow
+    Follow,
+    TypingStudy
   }
   // async asyncData () {
   //   let { data } = await axios.get('/api/users')
