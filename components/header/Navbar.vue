@@ -3,7 +3,7 @@
         <div class="container">
             <div class="navbar-brand">
                 <a class="navbar-item" href="/">
-                    <img src="../../assets/img/logo.png" alt="logo">
+                    <img src="../../assets/img/logo2.png" alt="logo">
                 </a>
                 <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
                     <span></span>
@@ -17,49 +17,37 @@
                     <div class="group-navbar">
                         <div class="navbar-start">
                             <a class="navbar-item" href="#">
-                                Home
+                                Trang chủ
                             </a>
                             <a class="navbar-item" href="#">
-                                Elements
-                            </a>
-                            <a class="navbar-item" href="#">
-                                Pages
-                            </a>
-                            <a class="navbar-item" href="#">
-                                Portfolio
-                            </a>
-                            <a class="navbar-item" href="#">
-                                Blog
-                            </a>
-                            <a class="navbar-item" href="#">
-                                Shop
+                                Luyện gõ 10 ngón
                             </a>
                         </div>
                     </div>
                     <div class="navbar-item">
                         <div class="navbar-item has-dropdown is-hoverable">
                             <a class="navbar-link" href="#">
-                                User
+                                Tài khoản
                             </a>
                             <div class="navbar-dropdown is-boxed">
                                 <a class="navbar-item" href="#">
-                                    Profile
+                                    Trang cá nhân
                                 </a>
                                 <a class="navbar-item" href="#">
-                                    Logout
+                                    Đăng xuất
                                 </a>
                             </div>
                         </div>
                         <div class="navbar-item has-dropdown is-hoverable">
                             <a class="navbar-link" href="#">
-                                Language
+                                Ngôn ngữ
                             </a>
                             <div class="navbar-dropdown is-boxed">
                                 <a class="navbar-item" href="#">
-                                    VietNamese
+                                    Tiếng Việt
                                 </a>
                                 <a class="navbar-item" href="#">
-                                    English
+                                    Tiếng Anh
                                 </a>
                             </div>
                         </div>
@@ -70,21 +58,20 @@
     </nav>
 </template>
 <style lang="scss" scoped>
-    @import '../../assets/sass/main.sass';
-    .group-navbar {
-        margin: 9px 25px 0px 0px;
-        text-transform: uppercase;
-    }
-
-    .navbar-link::after {
-        border-color: $font-color-link-hover
-    }
-    .navbar, .navbar-menu, .navbar-start, .navbar-end {
-        background-color: transparent; 
-    }
-    .navbar-scroll {
-        background-color: #fff;
-    }
+@import '../../assets/sass/main.sass';
+.group-navbar {
+  margin: 9px 25px 0px 0px;
+  text-transform: uppercase;
+}
+.navbar-link::after {
+  border-color: $font-color-link-hover
+}
+.navbar, .navbar-menu, .navbar-start, .navbar-end {
+  background-color: transparent; 
+}
+.navbar-scroll {
+  background-color: #fff;
+}
 </style>
 <script>
 export default {
