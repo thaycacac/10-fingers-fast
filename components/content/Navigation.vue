@@ -1,35 +1,16 @@
 <template>
-    <div class="my-navigation">
-        <div class="container">
-            <p class="has-text">WEB DESIGN</p>
+    <div class="is-navigation-map">
+        <div class="container is-container-navigation">
+            <p class="has-text">Bạn Có Thể Làm Gì</p>
             <p>/</p>
-            <p class="has-text">GRAPHICS</p>
+            <p class="has-text">Hướng Dẫn</p>
             <p>/</p>
-            <p class="has-text">MAGENTO</p>
+            <p class="has-text">Luyện Gõ</p>
             <p>/</p>
-            <p class="has-text">WORDPRESS</p>
-            <p>/</p>
-            <p class="has-text">APPLICATIONS</p>
+            <p class="has-text">Kiểm tra tốc độ</p>
         </div>
     </div>
 </template>
 <style lang="scss" scoped>
 @import '../../assets/sass/main.sass';
-.my-navigation {
-  height: 90px;
-  line-height: 90px;
-  text-align: center;
-  background-color: $color-main;
-  color: white;
-}
-.container{
-  p{
-    display: inline;
-  }
-  .has-text{
-      margin: 0 16px;
-      font-size: 14px;
-      font-weight: 100;
-  }
-}
 </style>

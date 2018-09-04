@@ -1,7 +1,7 @@
 <template>
     <div class="my-target">
         <div class="container-intro">
-            <h1 class="title">What you can do?</h1>
+            <h1 class="title">Bạn có thể làm gì?</h1>
             <h5 class="title  is-5 my-descrip">CREATIVE MULTIPURPOSE ONE/MULTI PAGE TEMPLATE</h5>
         </div>
         <div class="container">
@@ -30,7 +30,7 @@
   export default {
     data () {
       return {
-        title1 : 'Pixel Perfect',
+        title1 : 'Hướng dẫn',
         content1: 'Lorem ipsum dolor sit amet, consectetur elit adipisicing , sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minimv',
         title2: 'Multiple icon sets',
         content2: 'Lorem ipsum dolor sit amet, consectetur elit adipisicing , sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minimv',
