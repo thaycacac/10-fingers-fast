@@ -7,8 +7,8 @@
     <target></target>
     <guide></guide>
     <background></background>
-    <follow></follow>
     <typing-study></typing-study>
+    <follow></follow>
     <my-footer></my-footer>
   </div>
 </template>
