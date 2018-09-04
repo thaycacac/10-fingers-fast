@@ -46,7 +46,11 @@
   background-color: white
   .is-icon 
     font-size: 50px
-    color: $font-color-yellow
+    color: $font-color-price
+    transition: all .2s ease-in-out
+    &:hover 
+      transform: scale(1.5)
+      color: $font-color-yellow
   .is-title-guide
     margin-top: 25px
     font-size: 30px
@@ -57,10 +61,11 @@
     font-family: inherit
   .is-content-guide 
     margin-top: 25px
-    font-size: 14px
+    font-size: 13px
     line-height: 26px
     font-family: $font-opensan
     color: $font-color-gray
+    text-align: left
   .is-button 
     background-color: black
     color: white

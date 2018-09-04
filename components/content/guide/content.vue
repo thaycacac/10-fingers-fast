@@ -1,20 +1,24 @@
 <template>
     <div>
       <div class=" is-guide">
-        <i class="fab fa-vuejs is-icon"></i>
+        <i class="is-icon"
+        :class=icon></i>
         <p class="is-title-guide">{{ title }}</p>
-        <p class="is-content-guide">
-          {{ content }}
+        <p class="is-content-guide" v-html="content">
         </p>
-        <a href="#">
+        <!-- <a href="#">
           <button class="is-button">Read More</button>
-        </a>
+        </a> -->
       </div>
     </div>
 </template>
 <script>
 export default {
   props: {
+    icon: {
+      type: String,
+      required: true
+    },
     title: {
       type: String,
       required: true

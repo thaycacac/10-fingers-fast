@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="columns">
-            <div class="column is-image" :style="{backgroundImage: 'url(/img/keyboard/1.jpg)'}">
+            <div class="column is-image" :style="{backgroundImage: image}">
                 <div class="is-mask">
                 </div>
                 <div class="is-intro">
@@ -23,8 +23,13 @@ export default {
       type: String,
       required: true
     },
+    image: {
+      type: String,
+      required: true
+    }
   }
 }
+// url(/img/keyboard/1.jpg)
 </script>
 
 <style lang="scss" scoped>
