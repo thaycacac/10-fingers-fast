@@ -5,8 +5,8 @@
     <introduction></introduction>
     <navigation></navigation>
     <target></target>
-    <background></background>
     <guide></guide>
+    <background></background>
     <follow></follow>
     <typing-study></typing-study>
     <my-footer></my-footer>

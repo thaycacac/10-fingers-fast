@@ -1,6 +1,10 @@
 <template>
   <div>
     <div class="is-container-guide">
+        <h1 class="is-title">Các Nguyên Tắc</h1>
+        <p class="is-description">Phương pháp 10 ngón tay là một kỹ thuật được lập ra để sử dụng hiệu quả bàn phím máy tính của bạn. 
+          Với một số bài thực hành và luyện cho bạn vị trí ngón tay chính xác, bạn không còn "gõ một cách mù 
+          quáng" trên bàn phím. Sau đó, bạn có thể giảm đáng kể tỷ lệ lỗi và tăng tốc độ đánh một cách nhanh chóng.</p>
       <div class="columns">
         <div class="column is-4">
           <cover-guide
@@ -63,7 +67,5 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-.is-container-guide {
-    margin: 30px 0px;
-}
+@import '../../assets/sass/main.sass';
 </style>
