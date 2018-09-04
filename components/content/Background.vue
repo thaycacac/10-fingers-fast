@@ -37,10 +37,10 @@
     data () {
       return {
         icon: {
-          icon1: 'fas fa-heart',
-          icon2: 'fas fa-smile',
-          icon3: 'fas fa-anchor',
-          icon4: 'fas fa-comments'
+          icon1: 'fab fa-connectdevelop',
+          icon2: 'fas fa-headphones-alt',
+          icon3: 'far fa-check-circle',
+          icon4: 'fab fa-medapps'
         },
         content: {
           content1: 516,
@@ -49,10 +49,10 @@
           content4: 458
         },
         description: {
-          description1: 'pizzas Ordered',
-          description2: 'happy clients',
-          description3: 'projects completed',
-          description4: 'comments reserved'
+          description1: 'Bài luyện tập',
+          description2: 'Người dùng',
+          description3: 'Hoàn thành',
+          description4: 'Bài kiểm tra'
         }
       }
     },
@@ -64,31 +64,5 @@
 </script>
 
 <style lang="scss" scoped>
-.is-fixed-bg {
-  position: relative;
-  height: 300px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-attachment: fixed;
-  z-index: 1;
-  h2 {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    bottom: auto;
-    right: auto;
-    -webkit-transform: translateX(-50%) translateY(-50%);
-    -ms-transform: translateX(-50%) translateY(-50%);
-    transform: translateX(-50%) translateY(-50%);
-    width: 90%;
-    max-width: 1170px;
-    margin: 0 auto;
-    text-align: center;
-    font-size: 3rem;
-  }
-}
-.is-fixed-bg.is-fixed-bg-image {
-  background-image: url(https://i.imgur.com/ZG50ZEA.jpg);
-}
+@import '../../assets/sass/main.sass';
 </style>
