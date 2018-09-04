@@ -1,7 +1,7 @@
 <template>
     <div class="container-intro">
-        <h1 class="title">WELCOME TO DEFINITY</h1>
-        <h5 class="title  is-5">CREATIVE MULTIPURPOSE ONE/MULTI PAGE TEMPLATE</h5>
+        <h1 class="title">Giới thiệu</h1>
+        <h5 class="title  is-5">Chào mừng bạn đến với luyện gõ 10 ngón - 10FingersFast</h5>
         <p>
             Bạn mới sử dụng máy tính và đang muốn tìm hiểu xem làm thế nào để 
             có thể gõ phím bằng 10 ngón nhanh? Vậy thì không thể bỏ qua bài viết và các bài tập của chúng 
@@ -15,8 +15,7 @@
 .container-intro{
   @include setupTitle();
   p{
-    margin-top: 90px;
+  margin-top: 90px;
   }
-
 }
 </style>
