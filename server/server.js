@@ -1,3 +1,4 @@
+// import { config } from './database/config'
 const express = require('express')
 
 // Create express instnace
