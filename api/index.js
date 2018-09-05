@@ -2,6 +2,7 @@ const express = require('express')
 
 // Create express instnace
 const app = express()
+app.listen(4000)
 
 // Require API routes
 const users = require('./routes/users')
