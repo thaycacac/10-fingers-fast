@@ -26,7 +26,7 @@
                                     Nhớ mật khẩu
                                 </label>
                             </div>
-                            <button class="button is-block is-info is-large is-fullwidth">Login</button>
+                            <button class="button is-block is-info is-large is-fullwidth" @click.prevent="testpost">Login</button>
                         </form>
                     </div>
                     <p class="has-text-grey">
@@ -48,10 +48,23 @@ nav.navbar.is-transparent.is-fixed-top {
 </style>
 <script>
 import Navbar from '../components/header/Navbar'
+import axios from 'axios'
 export default {
   components: {
     Navbar
-  } 
+  },
+  methods: {
+    testpost() {
+      console.log('click')
+      axios.get('/api')
+      .then(function (response) {
+        console.log(response)
+      })
+      .catch(function (error) {
+        console.log(error)
+      })
+    }
+  }
 }
 </script>
 

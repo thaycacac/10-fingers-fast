@@ -7,7 +7,7 @@ app.listen(5000, () => {
   console.log(`Server started on port 5000`)
 })
 
-app.get('/', (req, res) => {
+app.get('/api', (req, res) => {
   sql.connect(DBConfig.dbconfig, (error) => {
     if (error) {
       console.log(error)
@@ -19,6 +19,11 @@ app.get('/', (req, res) => {
         console.log(error)
       }
       res.send(record)
+      sql.close()
     })
   })
+})
+
+app.post('/', function (req, res) {
+  res.send('POST request to the homepage')
 })

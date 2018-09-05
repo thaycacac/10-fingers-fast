@@ -36,11 +36,21 @@ module.exports = {
     './assets/sass/main.sass'
   ],
   modules: [
-    // Simple usage
+    '@nuxtjs/axios',
     'nuxt-buefy',
-    // Or you can customize
-    ['nuxt-buefy', { css: false, materialDesignIcons: false }]
+    // ['nuxt-buefy', { css: false, materialDesignIcons: false }]
   ],
+  axios: {
+    proxy: true
+    // prefix: '/v1'
+    // See https://github.com/nuxt-community/axios-module#options
+  },
+  proxy: {
+    '/api': {
+      target: 'http://localhost:5000/api',
+      pathRewrite: { '^/api': '' }
+    }
+  },
   build: {
     vendor: ['axios'],
     /*
