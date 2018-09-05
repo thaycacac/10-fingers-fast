@@ -38,7 +38,6 @@ module.exports = {
   modules: [
     // Simple usage
     'nuxt-buefy',
-
     // Or you can customize
     ['nuxt-buefy', { css: false, materialDesignIcons: false }]
   ],
@@ -56,11 +55,18 @@ module.exports = {
         //   exclude: /(node_modules)/
         // })
       }
+      const urlLoader = config.module.rules.find((rule) => rule.loader === 'url-loader')
+      urlLoader.test = /\.(png|jpe?g|gif)$/
+
+      config.module.rules.push({
+        test: /\.svg$/,
+        loader: 'vue-svg-loader',
+        exclude: /node_modules/
+      })
     }
   },
   serverMiddleware: [
     // API middleware
     '~/api/index.js'
-  ],
-  
+  ]
 }
