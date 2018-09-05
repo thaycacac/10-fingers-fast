@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "body-parser": "^1.18.3",
     "express": "^4.16.3",
     "express-generator": "^4.16.0",
     "mssql": "^4.1.0",

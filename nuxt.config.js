@@ -42,8 +42,6 @@ module.exports = {
   ],
   axios: {
     proxy: true
-    // prefix: '/v1'
-    // See https://github.com/nuxt-community/axios-module#options
   },
   proxy: {
     '/api': {

@@ -12,12 +12,12 @@
                         <form>
                             <div class="field">
                                 <div class="control">
-                                    <input class="input is-large" type="email" placeholder="Nhập email" autofocus="">
+                                    <input class="input is-large" type="email" placeholder="Nhập email" autofocus="" v-model="username">
                                 </div>
                             </div>
                             <div class="field">
                                 <div class="control">
-                                    <input class="input is-large" type="password" placeholder="Nhập mật khẩu">
+                                    <input class="input is-large" type="password" placeholder="Nhập mật khẩu" v-model="password">
                                 </div>
                             </div>
                             <div class="field">
@@ -50,13 +50,21 @@ nav.navbar.is-transparent.is-fixed-top {
 import Navbar from '../components/header/Navbar'
 import axios from 'axios'
 export default {
+  data () {
+    return {
+      username: '',
+      password: ''
+    }
+  },
   components: {
     Navbar
   },
   methods: {
     testpost() {
-      console.log('click')
-      axios.get('/api')
+      axios.post('/api',{
+        username: this.username,
+        password: this.password
+      })
       .then(function (response) {
         console.log(response)
       })
