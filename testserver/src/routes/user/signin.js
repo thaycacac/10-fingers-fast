@@ -14,7 +14,7 @@ router.post('/', (req, res) => {
   sql.connect(DBConfig.dbconfig).then(pool => {
     return pool.request()
       .input('input_username', sql.NVarChar, user.username)
-      .query('SELECT password FROM [User] WHERE username = @input_username')
+      .query('SELECT username, firstname, lastname, dob, email, password FROM [User] WHERE username = @input_username')
   }).then(result => {
     // check password empty
     if (user.password === undefined || !user.password.trim()) {
@@ -27,7 +27,7 @@ router.post('/', (req, res) => {
     // check user input correct
     if (result.recordset[0].password === user.password) {
       res.status(200).json({
-        message: 'Login success'
+        message: result.recordset[0]
       })
     } else {
       res.status(200).json({
