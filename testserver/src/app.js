@@ -15,12 +15,10 @@ app.post('/api', (req, res) => {
   const user = req.body
 
   sql.connect(DBConfig.dbconfig).then(pool => {
-    // Query
     return pool.request()
       .input('input_parameter', sql.NVarChar, user.username)
       .query('select password from authentication where username = @input_parameter')
   }).then(result => {
-    console.log(result.recordset[0].password)
     if (result.recordset[0].password === user.password) {
       res.status(200).json({
         message: 'Login success'
@@ -33,7 +31,7 @@ app.post('/api', (req, res) => {
     sql.close()
   }).catch(err => {
     console.log(err)
-    res.status(500).jsonp({ 
+    res.status(500).jsonp({
       error: err
     })
     sql.close()

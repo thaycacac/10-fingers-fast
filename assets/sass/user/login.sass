@@ -3,7 +3,10 @@ html,body
   font-size: 14px
   font-weight: 300
 .hero.is-success 
-  background: #F2F6FA
+  background-image: url('/assets/img/user/background-login-register.jpg')
+  background-size: cover
+  background-repeat: no-repeat
+  background-position: center
 .hero .nav, .hero.is-success .nav 
   -webkit-box-shadow: none
   box-shadow: none
@@ -15,6 +18,7 @@ html,body
 .avatar img 
   padding: 5px
   background: #fff
+  width: 100px
   border-radius: 50%
   -webkit-box-shadow: 0 2px 3px rgba(10,10,10,.1), 0 0 0 1px rgba(10,10,10,.1)
   box-shadow: 0 2px 3px rgba(10,10,10,.1), 0 0 0 1px rgba(10,10,10,.1)
@@ -24,3 +28,9 @@ p
   font-weight: 700
 p.subtitle 
   padding-top: 1rem
+form 
+  padding: 15px
+.has-choose-more a
+  color: black
+  &:hover
+    color: #e6af2a

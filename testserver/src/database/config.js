@@ -2,7 +2,7 @@ const DBConfig = {
   user: 'sa',
   password: '123456',
   server: 'localhost',
-  database: 'PRJ321',
+  database: 'TypingDB',
   options: {
     encrypt: true,
     rowCollectionOnRequestCompletion: true
