@@ -12,7 +12,7 @@
                         <form>
                             <div class="field">
                                 <div class="control">
-                                    <input class="input is-large" type="email" placeholder="Nhập tên tài khoản" autofocus="" v-model="username">
+                                    <input class="input is-large" type="text" placeholder="Nhập tên tài khoản" autofocus="" v-model="username">
                                 </div>
                             </div>
                             <div class="field">
@@ -26,7 +26,7 @@
                                     Nhớ mật khẩu
                                 </label>
                             </div>
-                            <button class="button is-block is-warning is-large is-fullwidth" @click.prevent="testpost">Đăng Nhập</button>
+                            <button class="button is-block is-warning is-large is-fullwidth" @click.prevent="signin">Đăng Nhập</button>
                         </form>
                     </div>
                     <p class="has-choose-more">
@@ -40,7 +40,7 @@
     </section>
 </template>
 <style lang="scss" scoped>
-@import '../assets/sass/user/login.sass';
+@import '../assets/sass/user/signin.sass';
 @import '../assets/sass/main.sass';
 nav.navbar.is-transparent.is-fixed-top {
     background-color: white;
@@ -60,8 +60,8 @@ export default {
     Navbar
   },
   methods: {
-    testpost() {
-      axios.post('/api/login',{
+    signin() {
+      axios.post('/api/signin',{
         username: this.username,
         password: this.password
       })
