@@ -13,32 +13,22 @@ router.post('/', (req, res) => {
 
   sql.connect(DBConfig.dbconfig).then(pool => {
     return pool.request()
-      .input('input_username', sql.NVarChar, user.username)
-      .query('SELECT password FROM [User] WHERE username = @input_username')
+      .input('username', sql.VarChar(50), user.username)
+      .input('firstname', sql.NVarChar, user.firstname)
+      .input('lastname', sql.NVarChar, user.lastname)
+      .input('dob', sql.NVarChar, user.dob)
+      .input('email', sql.NVarChar, user.email)
+      .input('password', sql.NVarChar, user.password)
+      .query('INSERT INTO [User] (username, firstname, lastname, dob, email, password) VALUES (@username, @firstname, @lastname, @dob, @email, @password)')
   }).then(result => {
-    // check password empty
-    if (user.password === undefined || !user.password.trim()) {
-      console.log('password undefined')
-      res.status(200).json({
-        error: 'You must be input user name and password'
-      })
-      sql.close()
-    }
-    // check user input correct
-    if (result.recordset[0].password === user.password) {
-      res.status(200).json({
-        message: 'Login success'
-      })
-    } else {
-      res.status(200).json({
-        message: 'Login fail'
-      })
-    }
+    res.status(200).json({
+      error: 'Register success'
+    })
     sql.close()
   }).catch(err => {
     console.log(err)
     res.status(200).json({
-      error: 'Account not registered'
+      error: 'Username already exist'
     })
     sql.close()
   })

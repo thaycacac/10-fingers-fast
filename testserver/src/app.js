@@ -12,5 +12,7 @@ app.listen(5000, () => {
 
 // routes
 const signInRouter = require('./routes/user/signin')
+const signUpRouter = require('./routes/user/signup')
 
 app.use('/api/signin', signInRouter)
+app.use('/api/signup', signUpRouter)
