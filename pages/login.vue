@@ -61,11 +61,12 @@ export default {
   },
   methods: {
     testpost() {
-      axios.post('/api',{
+      axios.post('/api/login',{
         username: this.username,
         password: this.password
       })
       .then(function (response) {
+        console.log(response.data.error)
         console.log(response.data.message)
       })
       .catch(function (error) {
