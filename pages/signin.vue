@@ -48,7 +48,6 @@ nav.navbar.is-transparent.is-fixed-top {
 </style>
 <script>
 import Navbar from '../components/header/Navbar'
-import store from 'vuex'
 import axios from 'axios'
 export default {
   data () {
@@ -70,6 +69,7 @@ export default {
         console.log(response.data.error)
         //set profile to
         this.$store.dispatch('setUser', response.data.message)
+        this.$router.push('/profile') 
       })
       .catch(function (error) {
         console.log(error)
