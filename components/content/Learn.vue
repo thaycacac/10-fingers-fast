@@ -12,8 +12,11 @@
           <div class="__content">
             <h2>{{ record.Intro }}</h2>
             <p>{{ record.Tips }}</p>
-            <button class="__read-more" @click="isShowLesson = true">Read more</button>
-            <span class="__date">Lesson {{ record.ID }}</span>
+            <button 
+              class="__read-more" 
+              @click="isShowLesson = true, getListLesson(record.ID)">Read more</button>
+            <span 
+            class="__date">Lesson {{ record.ID }}</span>
           </div>
         </div>
       </div>
@@ -25,14 +28,34 @@
           Danh Sách Bài Học
         </p>
         <ul class="menu-list">
-          <li><a>Dashboard</a></li>
-          <li><a>Customers</a></li>
-          <li>
-            <a>Manage Your Team</a>
-            <ul>
-              <li><a>Members</a></li>
-              <li><a>Plugins</a></li>
-              <li><a>Add a member</a></li>
+          <li><a>Phím Mới</a>
+            <ul v-for="lesson in listLesson" :key="lesson.ContentID">
+              <li v-show="lesson.TypeID === 1"><a>Bài {{ lesson.TypeID }}</a></li>
+            </ul>
+          </li>
+          <li><a>Luyện Phím</a>
+            <ul v-for="lesson in listLesson" :key="lesson.ContentID">
+              <li v-show="lesson.TypeID === 2"><a>Bài {{ lesson.TypeID }}</a></li>
+            </ul>
+          </li>
+          <li><a>Luyện Từ</a>
+            <ul v-for="lesson in listLesson" :key="lesson.ContentID">
+              <li v-show="lesson.TypeID === 3"><a>Bài {{ lesson.TypeID }}</a></li>
+            </ul>
+          </li>
+          <li><a>Luyện Không Nhìn</a>
+            <ul v-for="lesson in listLesson" :key="lesson.ContentID">
+              <li v-show="lesson.TypeID === 4"><a>Bài {{ lesson.TypeID }}</a></li>
+            </ul>
+          </li>
+          <li><a>Luyện Văn Bản</a>
+            <ul v-for="lesson in listLesson" :key="lesson.ContentID">
+              <li v-show="lesson.TypeID === 5"><a>Bài {{ lesson.TypeID }}</a></li>
+            </ul>
+          </li>
+          <li><a>Luyện Thêm</a>
+            <ul v-for="lesson in listLesson" :key="lesson.ContentID">
+              <li v-show="lesson.TypeID === 6"><a>Bài {{ lesson.TypeID }}</a></li>
             </ul>
           </li>
         </ul>
@@ -53,7 +76,19 @@ export default {
   data(){
     return {
       records: '',
+      listLesson: '',
       isShowLesson: false,
+    }
+  },
+  methods: {
+    getListLesson(lessonID) {
+      axios.post('/api/listlesson', { lessonID: lessonID })
+      .then(response => {
+        this.listLesson = response.data.recordset
+      })
+      .catch(err => {
+        console.log(err)
+      })
     }
   },
   beforeMount() {

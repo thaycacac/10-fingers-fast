@@ -18,7 +18,8 @@ app.use('/api/signin', signInRouter)
 app.use('/api/signup', signUpRouter)
 
 // lesson
-
 const getLesson = require('./routes/lesson/getLesson')
+const getListLesson = require('./routes/lesson/getListLesson')
 
 app.use('/api/lesson', getLesson)
+app.use('/api/listlesson', getListLesson)
