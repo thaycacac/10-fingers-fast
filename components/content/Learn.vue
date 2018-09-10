@@ -4,7 +4,7 @@
       <div class="__container">
         <div class="__block">
           <div class="__img --picture">
-            <img src="/sgv/timeline-picture.svg" alt="Picture">
+            <i class="fab fa-500px __icon"></i>
           </div>
           <div class="__content">
             <h2>Title of section 1</h2>
@@ -16,7 +16,7 @@
 
         <div class="__block">
           <div class="__img --movie">
-            <img src="/sgv/timeline-picture.svg" alt="Picture">
+            <i class="fab fa-accusoft"></i>
           </div>
 
           <div class="__content">
