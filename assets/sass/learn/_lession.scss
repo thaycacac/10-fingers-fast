@@ -1,17 +1,15 @@
 #learn {
-  margin-top: 35px;
   background: #e9f0f5;
 }
 
 .time-line {
   overflow: hidden;
-  margin: 2em auto;
   .__container {
     position: relative;
     width: 90%;
     max-width: 1170px;
     margin: 0 auto;
-    padding: 20em 0;
+    padding: 12em 0;
   }
   .__container::before {
     content: '';
@@ -107,15 +105,15 @@
   }
 }
 
-.__img.--picture {
+.__img.--success {
   background: #75ce66;
 }
 
-.__img.--movie {
+.__img.--danger {
     background: #c03b44;
 }
 
-.__img.--location {
+.__img.--warning {
     background: #f0ca45;
 }
 
