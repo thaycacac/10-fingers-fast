@@ -12,12 +12,32 @@
           <div class="__content">
             <h2>{{ record.Intro }}</h2>
             <p>{{ record.Tips }}</p>
-            <a href="#" class="__read-more">Read more</a>
+            <button class="__read-more" @click="isShowLesson = true">Read more</button>
             <span class="__date">Lesson {{ record.ID }}</span>
           </div>
         </div>
       </div>
     </div>
+    <!-- use buefy for show all lesson -->
+    <b-modal :active.sync="isShowLesson" :width="640" scroll="keep">
+      <aside class="menu --menu-lesson">
+        <p class="menu-label">
+          Danh Sách Bài Học
+        </p>
+        <ul class="menu-list">
+          <li><a>Dashboard</a></li>
+          <li><a>Customers</a></li>
+          <li>
+            <a>Manage Your Team</a>
+            <ul>
+              <li><a>Members</a></li>
+              <li><a>Plugins</a></li>
+              <li><a>Add a member</a></li>
+            </ul>
+          </li>
+        </ul>
+      </aside>
+    </b-modal>
   </div>
 </template>
 <script>
@@ -32,7 +52,8 @@ import axios from 'axios'
 export default {
   data(){
     return {
-      records: ''
+      records: '',
+      isShowLesson: false,
     }
   },
   beforeMount() {
