@@ -161,7 +161,7 @@
         <kbd data-key="17" class="key">Ctrl</kbd>
         <kbd data-key="91" class="key"><i class="fab fa-windows"></i></kbd>
         <kbd data-key="18" class="key">Alt</kbd>
-        <kbd data-key="32" class="key spacebar">TechGeek</kbd>
+        <kbd data-key="32" class="key spacebar">10 Fingers Fast</kbd>
         <kbd data-key="18" class="key">Alt</kbd>
         <kbd data-key="-2" class="key">Fn</kbd>
         <kbd data-key="93" class="key c-menu"><i class="fas fa-bars"></i></kbd>
@@ -184,7 +184,6 @@
   <!-- audio -->
   <audio id="keyAudio">
     <source src="http://www.freesfx.co.uk/rx2/mp3s/5/16952_1461335341.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
   </audio>
 
 

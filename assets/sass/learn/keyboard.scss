@@ -1,11 +1,11 @@
 /* colors */ 
 
 :root {
-    --keyboard-bg-color: #00c3b3;
+    --keyboard-bg-color: #e6af2a;
     --key-bg-color: #353535;
     --key-color: #FDF6FF;
     --lock-on-color: #00AE94;
-    --font: 'Varela Round', sans-serif;
+    --font: 'Montserrat', sans-serif
 }
 
 
@@ -19,14 +19,14 @@
 ::-webkit-scrollbar-track {
     box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.6);
     -webkit-box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.6);
-    border-radius: 10px;
+    border-radius: 6px;
 }
 
 
 /* Handle */
 
 ::-webkit-scrollbar-thumb {
-    -webkit-border-radius: 10px;
+    -webkit-border-radius: 6px;
     border-radius: 10px;
     background: rgb(0, 137, 150);
     box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
@@ -73,7 +73,7 @@ body {
     background-color: var(--key-bg-color);
     color: var(--key-color);
     font-family: var(--font);
-    font-size: 12px;
+    font-size: 13px;
     width: 46px;
     height: 40px;
     display: flex;
@@ -83,7 +83,7 @@ body {
     text-align: center;
     margin: 0 4px;
     padding: 0 2px;
-    border-radius: 10px;
+    border-radius: 6px;
     box-shadow: 0px 5px 0px rgba(0, 0, 0, 0.2);
 }
 
