@@ -28,6 +28,7 @@
           Danh Sách Bài Học
         </p>
         <ul class="menu-list">
+          <!-- FIXME: get type together lesson -->
           <li><a>Phím Mới</a>
             <ul v-for="lesson in listLesson" :key="lesson.ContentID">
               <li v-show="lesson.TypeID === 1"><a>Bài {{ lesson.TypeID }}</a></li>
@@ -77,6 +78,7 @@ export default {
     return {
       records: '',
       listLesson: '',
+      listType: '',
       isShowLesson: false,
     }
   },
@@ -89,7 +91,7 @@ export default {
       .catch(err => {
         console.log(err)
       })
-    }
+    },
   },
   beforeMount() {
     axios.post('/api/lesson')

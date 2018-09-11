@@ -21,7 +21,7 @@ router.post('/', (req, res) => {
   }).catch(err => {
     console.log(err)
     res.status(200).json({
-      error: 'Account not registered'
+      error: err
     })
     sql.close()
   })
