@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="box container --box-keyboard">
-      <p class="__text">{{ text }}</p>
+      <p class="__text" id="text">10 Fingers Fast</p>
     </div>
     <div class="keyboard">
     <!-- 1st row -->
@@ -187,7 +187,6 @@
     <source src="http://www.freesfx.co.uk/rx2/mp3s/5/16952_1461335341.mp3" type="audio/mpeg">
   </audio>
 
-
 </div>
 </template>
 <style lang="scss" scoped>
@@ -199,11 +198,12 @@
 <script>
 import Navbar from '../../components/header/Navbar'
 import Slider from '../../components/header/SliderSmall'
-import keyboard from '../../assets/javascript/keyboard';
+import keyboard from '../../assets/javascript/keyboard'
+import handleKeyboard from '../../assets/javascript/handleKeyboard'
 export default {
   data() {
     return {
-      text: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque nobis sed eum cum qui voluptatum aperiam similique aut laboriosam, autem commodi enim quos earum aliquam voluptatem dolore! Praesentium, accusantium ipsa.'
+      text: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit.'
     }
   },
   components: {
@@ -212,6 +212,9 @@ export default {
   },
   beforeMount() {
     keyboard()
-  }
+  },
+  mounted() {
+    return handleKeyboard(this.text)
+  },
 };
 </script>
