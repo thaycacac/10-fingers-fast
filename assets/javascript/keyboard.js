@@ -64,11 +64,7 @@ export default () => {
   // global window keydown event from real keyboard
   window.addEventListener('keydown', function (e) {
     let code = e.keyCode.toString()
-    // show key code
-    // console.log(code) 
     let keyElement = document.querySelector(`kbd[data-key="${code}"]`)
-    // show text code
-    console.log(keyElement.innerHTML)
     toggleKey(code)
     toggleKeyPress(keyElement)
   })
