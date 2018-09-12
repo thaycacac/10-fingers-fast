@@ -1,4 +1,4 @@
-export default () => {
+export default () => { 
   // keys
   let keyboardElement = document.getElementsByClassName('keyboard')
   let keys = document.querySelectorAll('kbd')
@@ -51,6 +51,22 @@ export default () => {
   // virtual keyboard key event
   keys.forEach(key => key.addEventListener('click', keyPress))
 
+  // color themes button events
+
+  let themeFourElement = document.getElementById('t-4')
+
+  let customeElement = document.getElementById('c-t')
+  let customToggle = false
+
+  function toggleCustomThemeContent () {
+    customToggle = !customToggle
+    if (customToggle) {
+      customeElement.style.display = 'block'
+    } else {
+      customeElement.style.display = 'none'
+    }
+  }
+
   // toggle key-press class on keys when real keyboard key is clicked
   function toggleKeyPress (el) {
     if (el.classList.contains('key-press')) {
@@ -64,11 +80,7 @@ export default () => {
   // global window keydown event from real keyboard
   window.addEventListener('keydown', function (e) {
     let code = e.keyCode.toString()
-    // show key code
-    // console.log(code) 
     let keyElement = document.querySelector(`kbd[data-key="${code}"]`)
-    // show text code
-    console.log(keyElement.innerHTML)
     toggleKey(code)
     toggleKeyPress(keyElement)
   })

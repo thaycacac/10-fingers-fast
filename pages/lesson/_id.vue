@@ -181,14 +181,14 @@
         <p class="key key-empty"></p>
       </div>
     </div>
-
-    </div>
-
-    <!-- audio -->
-    <audio id="keyAudio">
-      <source src="http://www.freesfx.co.uk/rx2/mp3s/5/16952_1461335341.mp3" type="audio/mpeg">
-    </audio>
   </div>
+  <!-- audio -->
+  <audio id="keyAudio">
+    <source src="http://www.freesfx.co.uk/rx2/mp3s/5/16952_1461335341.mp3" type="audio/mpeg">
+  </audio>
+
+
+</div>
 </template>
 <style lang="scss" scoped>
 @import '../../assets/sass/learn/keyboard.scss';
@@ -199,8 +199,7 @@
 <script>
 import Navbar from '../../components/header/Navbar'
 import Slider from '../../components/header/SliderSmall'
-import keyboard from '../../assets/javascript/keyboard'
-import handleKeyboard from '../../assets/javascript/handleKeyboard'
+import keyboard from '../../assets/javascript/keyboard';
 export default {
   data() {
     return {
@@ -213,7 +212,6 @@ export default {
   },
   beforeMount() {
     keyboard()
-    handleKeyboard()
   }
 };
 </script>
