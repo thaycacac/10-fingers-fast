@@ -1,5 +1,7 @@
 <template>
   <div>
+    <navbar/>
+    <slider/>
     <div class="box container --box-keyboard">
       <p class="__text" id="text">10 Fingers Fast</p>
     </div>
@@ -186,7 +188,7 @@
   <audio id="keyAudio">
     <source src="http://www.freesfx.co.uk/rx2/mp3s/5/16952_1461335341.mp3" type="audio/mpeg">
   </audio>
-
+  <my-footer/>
 </div>
 </template>
 <style lang="scss" scoped>
@@ -198,6 +200,7 @@
 <script>
 import Navbar from '../../components/header/Navbar'
 import Slider from '../../components/header/SliderSmall'
+import MyFooter from '../../components/footer/Footer'
 import keyboard from '../../assets/javascript/keyboard'
 import handleKeyboard from '../../assets/javascript/handleKeyboard'
 export default {
@@ -209,6 +212,7 @@ export default {
   components: {
     Navbar,
     Slider,
+    MyFooter,
   },
   beforeMount() {
     keyboard()
