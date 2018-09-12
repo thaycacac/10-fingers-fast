@@ -15,7 +15,6 @@
     "@nuxtjs/axios": "^5.3.1",
     "animejs": "^2.2.0",
     "axios": "^0.18.0",
-    "charming": "^2.2.4",
     "cross-env": "^5.0.1",
     "express": "^4.15.3",
     "mssql": "^4.1.0",
