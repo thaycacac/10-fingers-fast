@@ -1,6 +1,9 @@
 <template>
-<main>
-  <div class="keyboard">
+  <div>
+    <div class="box container --box-keyboard">
+      <p class="__text">{{ text }}</p>
+    </div>
+    <div class="keyboard">
     <!-- 1st row -->
     <div class="row">
       <div class="group">
@@ -179,15 +182,13 @@
       </div>
     </div>
 
+    </div>
+
+    <!-- audio -->
+    <audio id="keyAudio">
+      <source src="http://www.freesfx.co.uk/rx2/mp3s/5/16952_1461335341.mp3" type="audio/mpeg">
+    </audio>
   </div>
-
-  <!-- audio -->
-  <audio id="keyAudio">
-    <source src="http://www.freesfx.co.uk/rx2/mp3s/5/16952_1461335341.mp3" type="audio/mpeg">
-  </audio>
-
-
-</main>
 </template>
 <style lang="scss" scoped>
 @import '../../assets/sass/learn/keyboard.scss';
@@ -198,14 +199,21 @@
 <script>
 import Navbar from '../../components/header/Navbar'
 import Slider from '../../components/header/SliderSmall'
-import keyboard from '../../assets/javascript/keyboard';
+import keyboard from '../../assets/javascript/keyboard'
+import handleKeyboard from '../../assets/javascript/handleKeyboard'
 export default {
+  data() {
+    return {
+      text: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque nobis sed eum cum qui voluptatum aperiam similique aut laboriosam, autem commodi enim quos earum aliquam voluptatem dolore! Praesentium, accusantium ipsa.'
+    }
+  },
   components: {
     Navbar,
     Slider,
   },
   beforeMount() {
     keyboard()
+    handleKeyboard()
   }
 };
 </script>

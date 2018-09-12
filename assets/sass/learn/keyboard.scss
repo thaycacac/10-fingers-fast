@@ -97,6 +97,7 @@ body {
     -webkit-transition: all 0.1s ease-in-out;
     -moz-transition: all 0.1s ease-in-out;
     -o-transition: all 0.1s ease-in-out;
+    background-color: green;
 }
 
 .key-empty {
@@ -286,4 +287,18 @@ i.underscore {
     100% {
         background-position: 0% 50%
     }
+}
+
+/**
+* Custom
+* 
+*/
+
+.box.--box-keyboard {
+  margin-top: 20px;
+  .__text {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 25px;
+    font-weight: 500;
+  }
 }
