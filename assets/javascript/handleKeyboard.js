@@ -18,6 +18,11 @@ export default text => {
 
   // global window keydown event from real keyboard
   window.addEventListener('keydown', function (e) {
+    // check code space then prevent
+    if (e.keyCode === 32) {
+      e.preventDefault()
+    }
+
     const code = e.keyCode.toString()
     const keyElement = document.querySelector(`kbd[data-key="${code}"]`)
     // check input of user
