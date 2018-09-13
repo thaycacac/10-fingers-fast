@@ -1,23 +1,27 @@
 export default text => {
   // declare
   let positionCurrent = 0
+  let countTextArray = 1
 
+  const length = text.length
+  let array = []
+  for (let i = 0; i < length; i += 40) {
+    array.push(text.substring(i, i + 40))
+  }
   // set text change
-  document.getElementById('text').innerHTML = text
+  document.getElementById('text').innerHTML = array[0]
 
-  // split pharagraph to span
-  const charming = require('charming')
-  const element = document.getElementById('text')
-  charming(element, {
-    tagName: 'span',
-    classPrefix: 'letter'
-  })
-
-  // list text to change color
-  const listText = element.children
+  let listText = getCharming()
 
   // global window keydown event from real keyboard
   window.addEventListener('keydown', function (e) {
+    // FIXME: fix when turn 2 
+    let positionCheck = positionCurrent + 2
+    if (positionCheck % 40 === 0) {
+      document.getElementById('text').innerHTML = array[++countTextArray]
+      positionCurrent = 0
+      listText = getCharming()
+    }
     // check code space then prevent
     if (e.keyCode === 32) {
       e.preventDefault()
@@ -38,4 +42,17 @@ export default text => {
     }
     positionCurrent++
   })
+}
+
+// split pharagraph to span
+function getCharming () {
+  const charming = require('charming')
+  const element = document.getElementById('text')
+  charming(element, {
+    tagName: 'span',
+    classPrefix: 'letter'
+  })
+
+  // list text to change color
+  return element.children
 }
