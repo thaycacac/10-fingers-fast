@@ -4,7 +4,6 @@
     --keyboard-bg-color: #e6af2a;
     --key-bg-color: #353535;
     --key-color: #FDF6FF;
-    --lock-on-color: #00AE94;
     --font: 'Montserrat', sans-serif
 }
 
@@ -37,15 +36,15 @@
     background: rgba(0, 137, 150, 0.7);
 }
 
-body {
-    padding: 0;
-    margin: 0;
-    background-color: #f5f5f5;
-    min-height: 100vh;
-    display: grid;
-    grid-template-rows: 1fr auto;
-    grid-template-columns: 100%;
-}
+// body {
+//     padding: 0;
+//     margin: 0;
+//     background-color: #f5f5f5;
+//     min-height: 100vh;
+//     display: grid;
+//     grid-template-rows: 1fr auto;
+//     grid-template-columns: 100%;
+// }
 
  ::selection {
     background-color: #5b5b5b;
@@ -201,22 +200,11 @@ i.underscore {
     border-radius: 5px;
 }
 
-.off {
-    color: var(--key-color);
-    border: 1px solid var(--key-color);
-}
-
-.on {
-    color: var(--lock-on-color);
-    border: 1px solid var(--lock-on-color);
-}
-
-
 /* keyboard layout */
 
 .keyboard {
     background-color: var(--keyboard-bg-color);
-    width: 1250px;
+    width: min-content;
     margin: 75px auto;
     padding: 20px 10px;
     border-radius: 15px;
@@ -231,7 +219,6 @@ i.underscore {
 .row {
     display: grid;
     grid-template-columns: auto 0.2fr 0.2fr;
-    grid-gap: 25px;
     padding: 5px;
     margin-top: 5px;
 }

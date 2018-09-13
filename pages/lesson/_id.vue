@@ -6,42 +6,6 @@
       <p class="__text" id="text">10 Fingers Fast</p>
     </div>
     <div class="keyboard">
-    <!-- 1st row -->
-    <div class="row">
-      <div class="group">
-        <kbd data-key="27" class="key">Esc</kbd>
-        <div class="mini-group">
-          <kbd data-key="112" class="key">F1<i class="fas fa-home"></i></kbd>
-          <kbd data-key="113" class="key">F2<i class="fas fa-envelope"></i></kbd>
-          <kbd data-key="114" class="key">F3<i class="fas fa-search"></i></kbd>
-          <kbd data-key="115" class="key">F4<i class="fas fa-copy"></i></kbd>
-        </div>
-        <div class="mini-group">
-          <kbd data-key="116" class="key">F5<i class="fas fa-play"><i class="fas fa-pause"></i></i></kbd>
-          <kbd data-key="117" class="key">F6<i class="fas fa-stop"></i></kbd>
-          <kbd data-key="118" class="key">F7<i class="fas fa-fast-backward"></i></kbd>
-          <kbd data-key="119" class="key">F8<i class="fas fa-fast-forward"></i></kbd>
-        </div>
-        <div class="mini-group">
-          <kbd data-key="120" class="key">F9<i class="fas fa-volume-down"></i></kbd>
-          <kbd data-key="121" class="key">F10<i class="fas fa-volume-up"></i></kbd>
-          <kbd data-key="122" class="key">F11<i class="fas fa-volume-off"></i></kbd>
-          <kbd data-key="123" class="key">F12<i class="fas fa-sun"></i></kbd>
-        </div>
-      </div>
-      <div class="group locks">
-        <p class="lock"><span class="light-key off" id="nlk">N</span></p>
-        <p class="lock"><span class="light-key off" id="clk">C</span></p>
-        <p class="lock"><span class="light-key off" id="slk">S</span></p>
-      </div>
-      <div class="right">
-        <div class="group">
-          <kbd data-key="-1" class="key">Print Screen</kbd>
-          <kbd data-key="145" class="key">Scroll Lock</kbd>
-          <kbd data-key="19" class="key">Pause Break</kbd>
-        </div>
-      </div>
-    </div>
 
     <!-- 2nd row -->
     <div class="row">
@@ -60,17 +24,6 @@
         <kbd data-key="189" class="key">-<i class="underscore">_</i></kbd>
         <kbd data-key="187" class="key">+<span>=</span></kbd>
         <kbd data-key="8" class="key backspace">Backspace</kbd>
-      </div>
-      <div class="group">
-        <kbd data-key="45" class="key">Insert</kbd>
-        <kbd data-key="36" class="key">Home</kbd>
-        <kbd data-key="33" class="key">Page Up</kbd>
-      </div>
-      <div class="group">
-        <kbd data-key="144" class="key">Num Lock</kbd>
-        <kbd data-key="111" class="key">/</kbd>
-        <kbd data-key="106" class="key">*</kbd>
-        <kbd data-key="109" class="key">-</kbd>
       </div>
     </div>
 
@@ -92,17 +45,6 @@
         <kbd data-key="221" class="key">}<span>]</span></kbd>
         <kbd data-key="220" class="key">|<span>\</span></kbd>
       </div>
-      <div class="group">
-        <kbd data-key="46" class="key">Delete</kbd>
-        <kbd data-key="35" class="key">End</kbd>
-        <kbd data-key="34" class="key">Page Down</kbd>
-      </div>
-      <div class="group">
-        <kbd data-key="103" class="key">7<span>Home</span></kbd>
-        <kbd data-key="104" class="key num-special">8<i class="fas fa-long-arrow-alt-up"></i></kbd>
-        <kbd data-key="105" class="key">9<span>PgUp</span></kbd>
-        <kbd data-key="107" class="key num-large">+</kbd>
-      </div>
     </div>
 
     <!-- 4th row -->
@@ -122,13 +64,6 @@
         <kbd data-key="222" class="key">"<span>'</span></kbd>
         <kbd data-key="13" class="key enter">Enter ↩</kbd>
       </div>
-      <div class="empty-group"></div>
-      <div class="group">
-        <kbd data-key="100" class="key">4<i class="fas fa-long-arrow-alt-left"></i></kbd>
-        <kbd data-key="101" class="key num-special">5<i>_</i></kbd>
-        <kbd data-key="102" class="key">6<i class="fas fa-long-arrow-alt-right"></i></kbd>
-        <p class="key key-empty"></p>
-      </div>
     </div>
 
     <!-- 5th row -->
@@ -147,17 +82,6 @@
         <kbd data-key="191" class="key">?<span>/</span></kbd>
         <kbd data-key="16" class="key shift r-s"><span>⇧</span>&nbsp;Shift</kbd>
       </div>
-      <div class="group">
-        <p class="key key-empty"></p>
-        <kbd data-key="38" class="key"><i class="fas fa-arrow-up"></i></kbd>
-        <p class="key key-empty"></p>
-      </div>
-      <div class="group">
-        <kbd data-key="97" class="key">1<span>End</span></kbd>
-        <kbd data-key="98" class="key">2<i class="fas fa-long-arrow-alt-down"></i></kbd>
-        <kbd data-key="99" class="key">3<span>PdDn</span></kbd>
-        <kbd data-key="13" class="key num-large">Enter</kbd>
-      </div>
     </div>
 
     <!-- 6th row -->
@@ -171,16 +95,6 @@
         <kbd data-key="-2" class="key">Fn</kbd>
         <kbd data-key="93" class="key c-menu"><i class="fas fa-bars"></i></kbd>
         <kbd data-key="17" class="key">Ctrl</kbd>
-      </div>
-      <div class="group">
-        <kbd data-key="37" class="key"><i class="fas fa-arrow-left"></i></kbd>
-        <kbd data-key="40" class="key"><i class="fas fa-arrow-down"></i></kbd>
-        <kbd data-key="39" class="key"><i class="fas fa-arrow-right"></i></kbd>
-      </div>
-      <div class="group">
-        <kbd data-key="96" class="key num-ins">0<span>Ins</span></kbd>
-        <kbd data-key="110" class="key">.<span>Del</span></kbd>
-        <p class="key key-empty"></p>
       </div>
     </div>
   </div>
