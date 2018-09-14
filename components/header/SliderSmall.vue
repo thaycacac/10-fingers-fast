@@ -7,11 +7,12 @@
 </script>
 <style lang="scss" scoped>
   .--img-slider-small {
-    background-image: url("../../assets/img/background-fix2.jpg");
+    background-image: url("../../assets/img/slider/3.jpg");
     background-color: #cccccc; 
-    height: 300px; 
+    height: 400px; 
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    filter: brightness(60%);
   }
 </style>

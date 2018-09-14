@@ -19,5 +19,9 @@ export default {
     MyFooter,
   }
 }
-
 </script>
+<style lang="scss" scoped>
+  nav.navbar.is-transparent.is-fixed-top {
+    background-color: white;
+  }
+</style>
