@@ -1,8 +1,7 @@
 export default text => {
-  console.log('mount')
   // declare
   let positionCurrent = 0
-  let countTextArray = 1
+  let countTextArray = 0
 
   const length = text.length
   let array = []
@@ -16,12 +15,15 @@ export default text => {
 
   // global window keydown event from real keyboard
   window.addEventListener('keydown', function (e) {
-    // FIXME: fix when turn 2  
-    let positionCheck = positionCurrent + 2
-    if (positionCheck % 40 === 0) {
-      document.getElementById('text').innerHTML = array[++countTextArray]
+    console.log(positionCurrent)
+    if ((positionCurrent + 1) % 40 === 0 && positionCurrent !== 0) {
+      console.log('true')
       positionCurrent = 0
+      document.getElementById('text').innerHTML = array[++countTextArray]
       listText = getCharming()
+      listText[0].style.textDecoration = 'underline'
+      listText[0].style.color = '#6f6f6f'
+      return
     }
     // check code space then prevent
     if (e.keyCode === 32) {
@@ -53,7 +55,6 @@ function getCharming () {
     tagName: 'span',
     classPrefix: 'letter'
   })
-
   // list text to change color
   return element.children
 }
