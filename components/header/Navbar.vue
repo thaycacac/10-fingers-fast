@@ -2,7 +2,7 @@
     <nav class="navbar is-transparent is-fixed-top">
         <div class="container">
             <div class="navbar-brand">
-                <a class="navbar-item" href="#">
+                <a class="navbar-item" href="/">
                     <img src="../../assets/img/logo2.png" alt="logo">
                 </a>
                 <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
@@ -15,24 +15,24 @@
                 <div class="navbar-end">
                     <div class="group-navbar">
                         <div class="navbar-start">
-                            <a class="navbar-item" href="#">
+                            <a class="navbar-item" href="/">
                                 Trang chủ
                             </a>
-                            <a class="navbar-item" href="#">
+                            <a class="navbar-item" href="/learn">
                                 Luyện gõ 10 ngón
                             </a>
                         </div>
                     </div>
                     <div class="navbar-item">
                         <div class="navbar-item has-dropdown is-hoverable">
-                            <a class="navbar-link" href="#">
+                            <a class="navbar-link" href="/">
                                 Tài khoản
                             </a>
                             <div class="navbar-dropdown is-boxed">
-                                <a class="navbar-item" href="#">
+                                <a class="navbar-item" href="/profile">
                                     Trang cá nhân
                                 </a>
-                                <a class="navbar-item" href="#">
+                                <a class="navbar-item" href="/logout">
                                     Đăng xuất
                                 </a>
                             </div>
