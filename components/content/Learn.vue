@@ -28,35 +28,9 @@
           Danh Sách Bài Học
         </p>
         <ul class="menu-list">
-          <!-- FIXME: get type together lesson -->
-          <li><a>Phím Mới</a>
+            <li v-for="type in listType" :key="type.id"><a>{{ type.name }}</a>
             <ul v-for="lesson in listLesson" :key="lesson.ContentID">
-              <li v-show="lesson.TypeID === 1"><a :href="'lesson/' + lesson.ContentID">Bài {{ lesson.TypeID }}</a></li>
-            </ul>
-          </li>
-          <li><a>Luyện Phím</a>
-            <ul v-for="lesson in listLesson" :key="lesson.ContentID">
-              <li v-show="lesson.TypeID === 2"><a :href="'lesson/' + lesson.ContentID">Bài {{ lesson.TypeID }}</a></li>
-            </ul>
-          </li>
-          <li><a>Luyện Từ</a>
-            <ul v-for="lesson in listLesson" :key="lesson.ContentID">
-              <li v-show="lesson.TypeID === 3"><a :href="'lesson/' + lesson.ContentID">Bài {{ lesson.TypeID }}</a></li>
-            </ul>
-          </li>
-          <li><a>Luyện Không Nhìn</a>
-            <ul v-for="lesson in listLesson" :key="lesson.ContentID">
-              <li v-show="lesson.TypeID === 4"><a :href="'lesson/' + lesson.ContentID">Bài {{ lesson.TypeID }}</a></li>
-            </ul>
-          </li>
-          <li><a>Luyện Văn Bản</a>
-            <ul v-for="lesson in listLesson" :key="lesson.ContentID">
-              <li v-show="lesson.TypeID === 5"><a :href="'lesson/' + lesson.ContentID">Bài {{ lesson.TypeID }}</a></li>
-            </ul>
-          </li>
-          <li><a>Luyện Thêm</a>
-            <ul v-for="lesson in listLesson" :key="lesson.ContentID">
-              <li v-show="lesson.TypeID === 6"><a :href="'lesson/' + lesson.ContentID">Bài {{ lesson.TypeID }}</a></li>
+              <li v-show="lesson.TypeID === type.id"><a :href="'lesson/' + lesson.ContentID">Bài {{ lesson.ContentID }}</a></li>
             </ul>
           </li>
         </ul>
@@ -78,7 +52,14 @@ export default {
     return {
       records: '',
       listLesson: '',
-      listType: '',
+      listType: [
+        { id: 1, name: 'Luyện Phím' },
+        { id: 2, name: 'Luyện Phím' },
+        { id: 3, name: 'Luyện Từ' },
+        { id: 4, name: 'Luyện Không Nhìn' },
+        { id: 5, name: 'Luyện Văn Bản' },
+        { id: 6, name: 'Luyện Thêm' }
+      ],
       isShowLesson: false,
     }
   },
@@ -86,6 +67,7 @@ export default {
     getListLesson(lessonID) {
       axios.post('/api/listlesson', { lessonID: lessonID })
       .then(response => {
+        console.log(response.data.recordset)
         this.listLesson = response.data.recordset
       })
       .catch(err => {
