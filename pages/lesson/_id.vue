@@ -17,9 +17,20 @@
           </aside>
         </div>
         <div class="column">
-          <div class="box --box-keyboard">
-            <p class="__text" id="text">10 Fingers Fast</p>
+          <div class="columns">
+            <div class="column is-2">
+              <svg-hand-left></svg-hand-left>
+            </div>
+            <div class="column is-8">
+              <div class="box --box-keyboard">
+                <p class="__text" id="text">10 Fingers Fast</p>
+              </div>
+            </div>
+            <div class="column is-2">
+              <svg-hand-right></svg-hand-right>
+            </div>
           </div>
+          
           <div class="keyboard">
             <!-- 1nd row -->
             <div class="row">
@@ -130,6 +141,8 @@ import MyFooter from '../../components/footer/Footer'
 import keyboard from '../../assets/javascript/keyboard'
 import handleKeyboard from '../../assets/javascript/handleKeyboard'
 import axios from 'axios'
+import SvgHandLeft from '../../assets/svg/HandLeft.svg'
+import SvgHandRight from '../../assets/svg/HandRight.svg'
 export default {
   data() {
     return {
@@ -140,6 +153,8 @@ export default {
     Navbar,
     Slider,
     MyFooter,
+    SvgHandLeft,
+    SvgHandRight
   },
   beforeMount() {
     keyboard()
