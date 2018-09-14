@@ -20,6 +20,8 @@ app.use('/api/signup', signUpRouter)
 // lesson
 const getLesson = require('./routes/lesson/getLesson')
 const getListLesson = require('./routes/lesson/getListLesson')
+const getContentByID = require('./routes/lesson/getContentByID')
 
 app.use('/api/lesson', getLesson)
 app.use('/api/listlesson', getListLesson)
+app.use('/api/getcontent', getContentByID)

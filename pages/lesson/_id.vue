@@ -102,7 +102,6 @@
 </template>
 <style lang="scss" scoped>
 @import '../../assets/sass/learn/keyboard.scss';
-
 </style>
 
 
@@ -112,12 +111,8 @@ import Slider from '../../components/header/SliderSmall'
 import MyFooter from '../../components/footer/Footer'
 import keyboard from '../../assets/javascript/keyboard'
 import handleKeyboard from '../../assets/javascript/handleKeyboard'
+import axios from 'axios'
 export default {
-  data() {
-    return {
-      text: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur architecto consectetur, mollitia exercitationem porro voluptate aspernatur totam eius, ex facilis iure dolor. Recusandae necessitatibus error architecto minus nulla, molestiae velit!'
-    }
-  },
   components: {
     Navbar,
     Slider,
@@ -126,8 +121,17 @@ export default {
   beforeMount() {
     keyboard()
   },
-  mounted() {
-    return handleKeyboard(this.text)
+  mounted() { 
+    return axios.post('/api/getcontent', { contentID: this.$route.params.id })
+      .then (response => {
+        return response.data.recordset[0].Content
+      })
+      .then ( (textContent) => {
+        handleKeyboard(textContent)
+      })
+      .catch (err => {
+        console.log(err)
+      })
   },
 };
 </script>

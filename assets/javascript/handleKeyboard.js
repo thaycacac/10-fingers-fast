@@ -1,4 +1,5 @@
 export default text => {
+  console.log('mount')
   // declare
   let positionCurrent = 0
   let countTextArray = 1
@@ -15,7 +16,7 @@ export default text => {
 
   // global window keydown event from real keyboard
   window.addEventListener('keydown', function (e) {
-    // FIXME: fix when turn 2 
+    // FIXME: fix when turn 2  
     let positionCheck = positionCurrent + 2
     if (positionCheck % 40 === 0) {
       document.getElementById('text').innerHTML = array[++countTextArray]

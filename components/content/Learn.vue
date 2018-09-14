@@ -31,32 +31,32 @@
           <!-- FIXME: get type together lesson -->
           <li><a>Phím Mới</a>
             <ul v-for="lesson in listLesson" :key="lesson.ContentID">
-              <li v-show="lesson.TypeID === 1"><a>Bài {{ lesson.TypeID }}</a></li>
+              <li v-show="lesson.TypeID === 1"><a :href="'lesson/' + lesson.ContentID">Bài {{ lesson.TypeID }}</a></li>
             </ul>
           </li>
           <li><a>Luyện Phím</a>
             <ul v-for="lesson in listLesson" :key="lesson.ContentID">
-              <li v-show="lesson.TypeID === 2"><a>Bài {{ lesson.TypeID }}</a></li>
+              <li v-show="lesson.TypeID === 2"><a :href="'lesson/' + lesson.ContentID">Bài {{ lesson.TypeID }}</a></li>
             </ul>
           </li>
           <li><a>Luyện Từ</a>
             <ul v-for="lesson in listLesson" :key="lesson.ContentID">
-              <li v-show="lesson.TypeID === 3"><a>Bài {{ lesson.TypeID }}</a></li>
+              <li v-show="lesson.TypeID === 3"><a :href="'lesson/' + lesson.ContentID">Bài {{ lesson.TypeID }}</a></li>
             </ul>
           </li>
           <li><a>Luyện Không Nhìn</a>
             <ul v-for="lesson in listLesson" :key="lesson.ContentID">
-              <li v-show="lesson.TypeID === 4"><a>Bài {{ lesson.TypeID }}</a></li>
+              <li v-show="lesson.TypeID === 4"><a :href="'lesson/' + lesson.ContentID">Bài {{ lesson.TypeID }}</a></li>
             </ul>
           </li>
           <li><a>Luyện Văn Bản</a>
             <ul v-for="lesson in listLesson" :key="lesson.ContentID">
-              <li v-show="lesson.TypeID === 5"><a>Bài {{ lesson.TypeID }}</a></li>
+              <li v-show="lesson.TypeID === 5"><a :href="'lesson/' + lesson.ContentID">Bài {{ lesson.TypeID }}</a></li>
             </ul>
           </li>
           <li><a>Luyện Thêm</a>
             <ul v-for="lesson in listLesson" :key="lesson.ContentID">
-              <li v-show="lesson.TypeID === 6"><a>Bài {{ lesson.TypeID }}</a></li>
+              <li v-show="lesson.TypeID === 6"><a :href="'lesson/' + lesson.ContentID">Bài {{ lesson.TypeID }}</a></li>
             </ul>
           </li>
         </ul>
