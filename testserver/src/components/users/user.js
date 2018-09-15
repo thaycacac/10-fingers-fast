@@ -20,8 +20,7 @@ const User = new Schema({
   },
   dob: {
     type: Date,
-    required: true,
-    trim: true
+    required: true
   },
   email: {
     type: String,
@@ -34,4 +33,4 @@ const User = new Schema({
   }
 })
 
-module.exports = mongoose.model('users', User)
+module.exports = mongoose.model('User', User)
