@@ -1,3 +1,4 @@
+--get content and type by lesson id
 SELECT c.ID AS 'ContentID', t.ID AS 'TypeID'FROM Lesson_Content lc
 INNER JOIN Content c 
 ON lc.ContentID = c.ID 
