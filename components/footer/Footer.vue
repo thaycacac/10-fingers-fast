@@ -2,7 +2,7 @@
     <footer class="footer is-footer">
         <div class="content has-text-centered">
             <p>
-                Copyright © 2018 <strong><a href="https://github.com/thaycacac">THAYCACAC</a></strong>.
+                Copyright © 2018 <strong><a href="https://github.com/thaycacac" class="__link-footer">THAYCACAC</a></strong>.
             </p>
         </div>
     </footer>

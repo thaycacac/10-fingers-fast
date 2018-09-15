@@ -30,7 +30,8 @@
         <ul class="menu-list">
             <li v-for="type in listType" :key="type.id"><a>{{ type.name }}</a>
             <ul v-for="lesson in listLesson" :key="lesson.ContentID">
-              <li v-show="lesson.TypeID === type.id"><a :href="'lesson/' + lesson.ContentID">Bài {{ lesson.ContentID }}</a></li>
+              <li v-show="lesson.TypeID === type.id">
+                <a :href="'lesson/' + lesson.ContentID">Bài {{ lesson.ContentID }}</a></li>
             </ul>
           </li>
         </ul>

@@ -8,9 +8,13 @@
           <aside class="menu">
             <ul class="menu-list">
               <li>
-                <a>Bài tiếp theo</a>
+                <a>Lesson {{ idLessonCurrent }}</a>
                 <ul>
-                  <li v-for="n in numberLesson" :key="n"><a href="/lesson/ + 'n'"> Bài {{ n }}<br/></a></li>
+                  <li v-for="lesson in listLesson" :key="lesson.ContentID">
+                    <a 
+                    :href="'/lesson/' + lesson.ContentID"
+                    :class="lesson.ContentID == idCurrent ? 'is-active' : ''"> Bài {{ lesson.ContentID }}<br/></a>
+                  </li>
                 </ul>
               </li>
             </ul>
@@ -146,7 +150,9 @@ import SvgHandRight from '../../assets/svg/HandRight.svg'
 export default {
   data() {
     return {
-      numberLesson: Number(this.$route.params.id)
+      listLesson: '',
+      idCurrent: this.$route.params.id,
+      idLessonCurrent: ''
     }
   },
   components: {
@@ -162,10 +168,12 @@ export default {
   mounted() {
     return axios.post('/api/getcontent', { contentID: this.$route.params.id })
       .then (response => {
-        return response.data.recordset[0].Content
+        this.listLesson = response.data.recordset
+        return response.data.recordset
       })
-      .then ( (textContent) => {
-        handleKeyboard(textContent)
+      .then ( (listLesson) => {
+        handleKeyboard(listLesson[0].Content)
+        this.idLessonCurrent = listLesson[0].LessonID
       })
       .catch (err => {
         console.log(err)
