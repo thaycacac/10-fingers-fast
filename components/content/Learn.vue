@@ -68,7 +68,6 @@ export default {
     getListLesson(lessonID) {
       axios.post('/api/listlesson', { lessonID: lessonID })
       .then(response => {
-        console.log(response.data.recordset)
         this.listLesson = response.data.recordset
       })
       .catch(err => {

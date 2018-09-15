@@ -44,7 +44,7 @@
                                     <input class="input is-large" type="password" :value=user.password disabled>
                                 </div>
                             </div>
-                            <button class="button is-block is-warning is-large is-fullwidth" @click.prevent="signup">Đăng Ký</button>
+                            <button class="button is-block is-warning is-large is-fullwidth" @click.prevent="signup">Update</button>
                         </form>
                     </div>
                     <p class="has-choose-more">

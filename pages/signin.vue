@@ -12,12 +12,21 @@
                         <form>
                             <div class="field">
                                 <div class="control">
-                                    <input class="input is-large" type="text" placeholder="Nhập tên tài khoản" autofocus="" v-model="username">
+                                    <input 
+                                    class="input is-large" 
+                                    type="text" 
+                                    placeholder="Nhập tên tài khoản" 
+                                    autofocus="" 
+                                    v-model="username">
                                 </div>
                             </div>
                             <div class="field">
                                 <div class="control">
-                                    <input class="input is-large" type="password" placeholder="Nhập mật khẩu" v-model="password">
+                                    <input 
+                                    class="input is-large" 
+                                    type="password" 
+                                    placeholder="Nhập mật khẩu" 
+                                    v-model="password">
                                 </div>
                             </div>
                             <div class="field">
@@ -26,7 +35,9 @@
                                     Nhớ mật khẩu
                                 </label>
                             </div>
-                            <button class="button is-block is-warning is-large is-fullwidth" @click.prevent="signin">Đăng Nhập</button>
+                            <button 
+                            class="button is-block is-warning is-large is-fullwidth" 
+                            @click.prevent="signin">Đăng Nhập</button>
                         </form>
                     </div>
                     <p class="has-choose-more">
