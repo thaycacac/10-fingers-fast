@@ -37,18 +37,9 @@ export default {
     Guide,
     Follow,
     TypingStudy,
-    MyFooter
+    MyFooter,
   }
-  // async asyncData () {
-  //   let { data } = await axios.get('/api/users')
-  //   return { users: data }
-  // },
-  // head () {
-  //   return {
-  //     title: 'Users'
-  //   }
-  // }
-};
+}
 </script>
 
 <style scoped>

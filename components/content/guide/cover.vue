@@ -12,6 +12,7 @@
         </div>
     </div>
 </template>
+
 <script>
 export default {
   props: {
@@ -29,7 +30,6 @@ export default {
     }
   }
 }
-// url(/img/keyboard/1.jpg)
 </script>
 
 <style lang="scss" scoped>

@@ -51,28 +51,4 @@
 </script>
 <style lang="scss" scoped>
     @import '../../assets/sass/main.sass';
-
-    h1 strong {
-        color: white;
-        text-transform: uppercase;
-        font-weight: 700
-    }
-
-    .text-description {
-        color: #e4e4e4;
-        font-family: $font-opensan;
-    }
-
-    .my-break {
-        height: 1px;
-    }
-
-    .my-button {
-        margin-top: 35px;
-        font-family: $font-opensan;
-        font-size: 25px
-    }
-    svg#Layer_1 {
-        margin-top: -45px;
-    }
 </style>

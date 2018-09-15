@@ -152,7 +152,7 @@ export default {
     return {
       listLesson: '',
       idCurrent: this.$route.params.id,
-      idLessonCurrent: ''
+      idLessonCurrent: '',
     }
   },
   components: {

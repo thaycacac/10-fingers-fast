@@ -6,9 +6,6 @@
         <p class="is-title-guide">{{ title }}</p>
         <p class="is-content-guide" v-html="content">
         </p>
-        <!-- <a href="#">
-          <button class="is-button">Read More</button>
-        </a> -->
       </div>
     </div>
 </template>
