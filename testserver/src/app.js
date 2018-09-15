@@ -1,7 +1,9 @@
 
+const DBConfig = require('./database/config')
 const express = require('express')
 const app = express()
 var bodyParser = require('body-parser')
+const mongoose = require('mongoose')
 
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
@@ -10,18 +12,26 @@ app.listen(5000, () => {
   console.log(`Server started on port 5000`)
 })
 
-// user
-const signInRouter = require('./routes/user/signin')
-const signUpRouter = require('./routes/user/signup')
+mongoose.Promise = global.Promise
+mongoose.connect(DBConfig.dbconfig.nameDB, {
+  useNewUrlParser: true
+})
+  .then(() => {
+    console.log('Database connected')
+  })
 
-app.use('/api/signin', signInRouter)
-app.use('/api/signup', signUpRouter)
+// // user
+// const signInRouter = require('./routes/user/signin')
+// const signUpRouter = require('./routes/user/signup')
 
-// lesson
-const getLesson = require('./routes/lesson/getLesson')
-const getListLesson = require('./routes/lesson/getListLesson')
-const getContentByID = require('./routes/lesson/getContentByID')
+// app.use('/api/signin', signInRouter)
+// app.use('/api/signup', signUpRouter)
 
-app.use('/api/lesson', getLesson)
-app.use('/api/listlesson', getListLesson)
-app.use('/api/getcontent', getContentByID)
+// // lesson
+// const getLesson = require('./routes/lesson/getLesson')
+// const getListLesson = require('./routes/lesson/getListLesson')
+// const getContentByID = require('./routes/lesson/getContentByID')
+
+// app.use('/api/lesson', getLesson)
+// app.use('/api/listlesson', getListLesson)
+// app.use('/api/getcontent', getContentByID)
