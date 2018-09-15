@@ -64,7 +64,7 @@
 
 <script>
 import Navbar from '../components/header/Navbar'
-import axios from 'axios'
+import { signup } from '../axios/user/usersController'
 export default {
   data () {
     return {
@@ -109,23 +109,9 @@ export default {
       } else if (!(this.password === this.repassword)) {
         this.error = '· Password and Repassword not the same<br>'
       } else {
-        
+        signup(this.username, this.firstname, this.lastname, this.dob, this.email, this.password)
+        this.$router.push('/signin')
       }
-      axios.post('/api/signup',{
-        username: this.username,
-        firstname: this.firstname,
-        lastname: this.lastname,
-        dob: this.dob,
-        email: this.email,
-        password: this.password
-      })
-      .then(function (response) {
-        console.log(response.data.error)
-        console.log(response.data.message)
-      })
-      .catch(function (error) {
-        console.log(error)
-      })
     }
   },
   computed: {
