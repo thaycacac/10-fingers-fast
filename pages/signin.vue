@@ -9,6 +9,7 @@
                         <figure class="avatar">
                             <img src="../assets/img/user/logo-login.png">
                         </figure>
+                        <p style="color: red" v-show="checkError">{{ error }}</p>
                         <form>
                             <div class="field">
                                 <div class="control">
@@ -58,7 +59,8 @@ export default {
   data () {
     return {
       username: '',
-      password: ''
+      password: '',
+      error: ''
     }
   },
   components: {
@@ -66,19 +68,31 @@ export default {
   },
   methods: {
     signin() {
-      axios.post('/api/signin',{
+      // check input
+      if (this.username.trim() === '' || this.password.trim() === '') {
+        this.error = 'Must be input all field'
+        return
+      } 
+      axios.post('/api/user/signin',{
         username: this.username,
         password: this.password
       })
       .then( response => {
-        console.log(response.data.error)
-        //set profile to
-        this.$store.dispatch('setUser', response.data.message)
-        this.$router.push('/profile') 
+        if (response.data.error) {
+          this.error = response.data.error
+        } else {
+          this.$store.dispatch('setUser', response.data.message)
+          this.$router.push('/') 
+        }
       })
       .catch(function (error) {
         console.log(error)
       })
+    }
+  },
+  computed: {
+    checkError () {
+      return this.error !== ''
     }
   }
 }

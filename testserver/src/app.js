@@ -23,9 +23,8 @@ mongoose.connect(DBConfig.dbconfig.nameDB, {
 
 require('./components/users/user')
 
-const signUpRouter = require('./components/users/userDAL')
-app.use('/api/signup', signUpRouter)
-
+const userDAL = require('./components/users/userDAL')
+app.use('/api/user', userDAL)
 
 // // user
 // const signInRouter = require('./routes/user/signin')
