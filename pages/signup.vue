@@ -110,7 +110,7 @@ export default {
         this.error = '· Password and Repassword not the same<br>'
       } else {
         signup(this.username, this.firstname, this.lastname, this.dob, this.email, this.password)
-        this.$router.push('/signin')
+        this.$router.push('/user/signin')
       }
     }
   },
