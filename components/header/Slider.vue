@@ -7,7 +7,7 @@
                         <div class=" my-auto">
                             <div class="row">
                                 <h1>
-                                    <strong>Bàn Tay Ta Làm Nên Tất Cả</strong>
+                                    <strong class="title is-1">Bàn Tay Ta Làm Nên Tất Cả</strong>
                                 </h1>
                                 <hr class="my-break">
                                 <p class="text-description">Tìm hiểu các khái niệm, bài học cơ bản đến nâng cao của
@@ -50,5 +50,5 @@
   }
 </script>
 <style lang="scss" scoped>
-    @import '../../assets/sass/main.sass';
+@import '../../assets/sass/main.sass';
 </style>
