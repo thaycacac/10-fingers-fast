@@ -61,13 +61,7 @@
         </div>
     </section>
 </template>
-<style lang="scss" scoped>
-@import '../assets/sass/user/signup.sass';
-@import '../assets/sass/main.sass';
-nav.navbar.is-transparent.is-fixed-top {
-    background-color: white;
-}
-</style>
+
 <script>
 import Navbar from '../components/header/Navbar'
 import axios from 'axios'
@@ -142,3 +136,9 @@ export default {
 }
 </script>
 
+<style lang="scss" scoped>
+@import '../assets/sass/user/signup.sass';
+@import '../assets/sass/main.sass';
+@import '../assets/sass/main.sass';
+@include setupBackgroundNav();
+</style>

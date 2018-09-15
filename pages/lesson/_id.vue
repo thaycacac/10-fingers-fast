@@ -182,7 +182,6 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-  nav.navbar.is-transparent.is-fixed-top {
-    background-color: white;
-  }
+@import '../../assets/sass/main.sass';
+@include setupBackgroundNav();
 </style>
