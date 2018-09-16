@@ -84,7 +84,9 @@ export default {
           this.error = response.data.error
         } else {
           this.$store.dispatch('setUser', response.data.message)
-          console.log(this)
+          // set session
+          this.$session.start()
+          this.$session.set('username', this.username)
           this.$router.push('/') 
         }
       })

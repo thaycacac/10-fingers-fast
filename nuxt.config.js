@@ -50,7 +50,10 @@ module.exports = {
     }
   },
   build: {
-    vendor: ['axios'],
+    vendor: [
+      'axios',
+      '~/plugins/vue-session.js'
+    ],
     /*
     ** Run ESLINT on save
     */
