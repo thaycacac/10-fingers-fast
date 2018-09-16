@@ -70,7 +70,10 @@ export default {
     signup(){
       console.log(this)
     }
-  }
+  },
+  mounted() {
+    console.log(this.$session.get(username))
+  },
 }
 </script>
 

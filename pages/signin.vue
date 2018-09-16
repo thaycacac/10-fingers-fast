@@ -84,6 +84,7 @@ export default {
           this.error = response.data.error
         } else {
           this.$store.dispatch('setUser', response.data.message)
+          console.log(this)
           this.$router.push('/') 
         }
       })
