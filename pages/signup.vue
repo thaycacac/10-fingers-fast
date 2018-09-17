@@ -1,65 +1,98 @@
 <template>
-    <section class="hero is-success is-fullheight is-login">
-        <navbar></navbar>
-        <div class="hero-body">
-            <div class="container has-text-centered">
-                <div class="column is-8 is-offset-2">
-                    <h3 class="title has-text-black">Đăng Ký</h3>
-                    <div class="box">
-                        <p class="has-error" v-show="!hasError" v-html="error"></p>
-                        <form>
-                            <div class="field">
-                                <label class="label">Username</label>
-                                <div class="control">
-                                    <input class="input is-large" type="text" placeholder="Nhập tên tài khoản" autofocus="" v-model="username">
-                                </div>
-                            </div>
-                            <div class="field">
-                                <label class="label">First Name</label>
-                                <div class="control">
-                                    <input class="input is-large" type="text" placeholder="Nhập tên họ" v-model="firstname">
-                                </div>
-                            </div>
-                            <div class="field">
-                                <label class="label">Last Name</label>
-                                <div class="control">
-                                    <input class="input is-large" type="text" placeholder="Nhập tên tài khoản" v-model="lastname">
-                                </div>
-                            </div>
-                            <div class="field">
-                                <label class="label">Date of Birth</label>
-                                <div class="control">
-                                    <input class="input is-large" type="date" v-model="dob">
-                                </div>
-                            </div>
-                            <div class="field">
-                                <label class="label">Email</label>
-                                <div class="control">
-                                    <input class="input is-large" type="email" placeholder="Nhập email" v-model="email">
-                                </div>
-                            </div>
-                            <div class="field">
-                                <label class="label">Password</label>
-                                <div class="control">
-                                    <input class="input is-large" type="password" placeholder="Nhập mật khẩu" v-model="password">
-                                </div>
-                            </div>
-                            <div class="field">
-                                <label class="label">Repassword</label>
-                                <div class="control">
-                                    <input class="input is-large" type="password" placeholder="Nhập lại mật khẩu" v-model="repassword">
-                                </div>
-                            </div>
-                            <button class="button is-block is-warning is-large is-fullwidth" @click.prevent="signup">Đăng Ký</button>
-                        </form>
-                    </div>
-                    <p class="has-choose-more">
-                        <a href="../">Đăng nhập</a>
-                    </p>
+  <section class="hero is-success is-fullheight is-login">
+    <navbar></navbar>
+    <div class="hero-body">
+      <div class="container has-text-centered">
+        <div class="column is-8 is-offset-2">
+          <h3 class="title has-text-black">Đăng Ký</h3>
+          <div class="box">
+            <p 
+              class="has-error" 
+              v-show="!hasError" 
+              v-html="error"></p>
+            <form>
+              <div class="field">
+                <label class="label">Username</label>
+                <div class="control">
+                  <input 
+                    class="input is-large" 
+                    type="text" 
+                    placeholder="Nhập tên tài khoản" 
+                    autofocus="" 
+                    v-model="username">
                 </div>
-            </div>
+              </div>
+              <div class="field">
+                <label class="label">First Name</label>
+                <div class="control">
+                  <input 
+                    class="input is-large" 
+                    type="text" 
+                    placeholder="Nhập tên họ" 
+                    v-model="firstname">
+                </div>
+              </div>
+              <div class="field">
+                <label class="label">Last Name</label>
+                <div class="control">
+                  <input 
+                    class="input is-large" 
+                    type="text" 
+                    placeholder="Nhập tên tài khoản" 
+                    v-model="lastname">
+                </div>
+              </div>
+              <div class="field">
+                <label class="label">Date of Birth</label>
+                <div class="control">
+                  <input 
+                    class="input is-large" 
+                    type="date" 
+                    v-model="dob">
+                </div>
+              </div>
+              <div class="field">
+                <label class="label">Email</label>
+                <div class="control">
+                  <input 
+                    class="input is-large" 
+                    type="email" 
+                    placeholder="Nhập email" 
+                    v-model="email">
+                </div>
+              </div>
+              <div class="field">
+                <label class="label">Password</label>
+                <div class="control">
+                  <input 
+                    class="input is-large" 
+                    type="password" 
+                    placeholder="Nhập mật khẩu" 
+                    v-model="password">
+                </div>
+              </div>
+              <div class="field">
+                <label class="label">Repassword</label>
+                <div class="control">
+                  <input 
+                    class="input is-large" 
+                    type="password" 
+                    placeholder="Nhập lại mật khẩu" 
+                    v-model="repassword">
+                </div>
+              </div>
+              <button 
+                class="button is-block is-warning is-large is-fullwidth" 
+                @click.prevent="signup">Đăng Ký</button>
+            </form>
+          </div>
+          <p class="has-choose-more">
+            <a href="../">Đăng nhập</a>
+          </p>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 </template>
 
 <script>
@@ -118,6 +151,11 @@ export default {
     hasError(){
       return this.error === ''
     } 
+  },
+  beforeMount() {
+    if (this.$session.exists()) {
+      this.$router.push('/')
+    }
   }
 }
 </script>

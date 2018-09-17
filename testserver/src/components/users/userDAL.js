@@ -45,4 +45,16 @@ router.post('/signin', (req, res) => {
     })
 })
 
+router.post('/getProfile', (req, res) => {
+  let username = req.body.username
+  User.findOne({username: username})
+    .then(result => {
+      res.status(200).json(result)
+    })
+    .catch(err => {
+      console.log(err)
+      res.status(200).json(err)
+    })
+})
+
 module.exports = router
