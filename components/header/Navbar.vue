@@ -5,13 +5,17 @@
         <a class="navbar-item" href="/">
           <img src="../../assets/img/logo2.png" alt="logo">
         </a>
-        <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
+        <div 
+          class="navbar-burger burger" 
+          data-target="navbarExampleTransparentExample">
           <span></span>
           <span></span>
           <span></span>
         </div>
       </div>
-      <div id="navbarExampleTransparentExample" class="navbar-menu">
+      <div 
+        id="navbarExampleTransparentExample" 
+        class="navbar-menu">
         <div class="navbar-end">
         <div class="group-navbar">
           <div class="navbar-start">

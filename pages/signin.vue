@@ -56,7 +56,6 @@
 
 <script>
 import Navbar from '../components/header/Navbar'
-import axios from 'axios'
 export default {
   data () {
     return {
@@ -75,7 +74,7 @@ export default {
         this.error = 'Must be input all field'
         return
       } 
-      axios.post('/api/user/signin',{
+      this.$axios.post('/api/user/signin',{
         username: this.username,
         password: this.password
       })
