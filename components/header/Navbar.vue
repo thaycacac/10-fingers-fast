@@ -1,60 +1,61 @@
 <template>
-    <nav class="navbar is-transparent is-fixed-top">
-        <div class="container">
-            <div class="navbar-brand">
-                <a class="navbar-item" href="/">
-                    <img src="../../assets/img/logo2.png" alt="logo">
-                </a>
-                <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </div>
-            <div id="navbarExampleTransparentExample" class="navbar-menu">
-                <div class="navbar-end">
-                    <div class="group-navbar">
-                        <div class="navbar-start">
-                            <a class="navbar-item" href="/">
-                                Trang chủ
-                            </a>
-                            <a class="navbar-item" href="/learn">
-                                Luyện gõ 10 ngón
-                            </a>
-                        </div>
-                    </div>
-                    <div class="navbar-item">
-                        <div class="navbar-item has-dropdown is-hoverable">
-                            <a class="navbar-link" href="/">
-                                Tài khoản
-                            </a>
-                            <div class="navbar-dropdown is-boxed">
-                                <a class="navbar-item" href="/profile">
-                                    Trang cá nhân
-                                </a>
-                                <a class="navbar-item" href="/logout">
-                                    Đăng xuất
-                                </a>
-                            </div>
-                        </div>
-                        <div class="navbar-item has-dropdown is-hoverable">
-                            <a class="navbar-link" href="#">
-                                Ngôn ngữ
-                            </a>
-                            <div class="navbar-dropdown is-boxed">
-                                <a class="navbar-item" href="#">
-                                    Tiếng Việt
-                                </a>
-                                <a class="navbar-item" href="#">
-                                    Tiếng Anh
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+  <nav class="navbar is-transparent is-fixed-top">
+    <div class="container">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="/">
+          <img src="../../assets/img/logo2.png" alt="logo">
+        </a>
+        <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
-    </nav>
+      </div>
+      <div id="navbarExampleTransparentExample" class="navbar-menu">
+        <div class="navbar-end">
+        <div class="group-navbar">
+          <div class="navbar-start">
+            <a class="navbar-item" href="/">
+              Trang chủ
+            </a>
+            <a class="navbar-item" href="/learn">
+              Luyện gõ 10 ngón
+            </a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link" href="/">
+              Tài khoản
+            </a>
+            <div class="navbar-dropdown is-boxed">
+              <a 
+                v-for="item in navigator" 
+                :href="item.link" 
+                :key="item.link"
+                class="navbar-item">
+                {{ item.name }}
+              </a>
+            </div>
+          </div>
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link" href="#">
+              Ngôn ngữ
+            </a>
+            <div class="navbar-dropdown is-boxed">
+              <a class="navbar-item" href="#">
+                Tiếng Việt
+              </a>
+              <a class="navbar-item" href="#">
+                Tiếng Anh
+              </a>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </nav>
 </template>
 <style lang="scss" scoped>
 @import '../../assets/sass/main.sass';
@@ -65,6 +66,11 @@
 </style>
 <script>
 export default {
+  data () {
+    return {
+      navigator: '',
+    }
+  },
   methods: {
     getOffsetTop () {
       return window.scrollY
@@ -79,6 +85,18 @@ export default {
     }
   },
   beforeMount () {
+    // check login or not
+    if (this.$session.get('username')) {
+      this.navigator = [
+        { link: '/profile', name: 'Trang cá nhân' },
+        { link: '/logout', name: 'Đăng xuất' }
+      ]
+    } else {
+      this.navigator = [
+        { link: '/signup', name: 'Đăng ký' },
+        { link: '/signin', name: 'Đăng nhập' }
+      ]
+    }
     window.addEventListener('scroll', this.handleScroll);
   }
 };
