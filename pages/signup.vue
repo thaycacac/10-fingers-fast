@@ -118,6 +118,11 @@ export default {
     hasError(){
       return this.error === ''
     } 
+  },
+  beforeMount() {
+    if (this.$session.exists()) {
+      this.$router.push('/')
+    }
   }
 }
 </script>

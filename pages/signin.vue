@@ -99,6 +99,11 @@ export default {
     checkError () {
       return this.error !== ''
     }
+  },
+  beforeMount() {
+    if (this.$session.exists()) {
+      this.$router.push('/')
+    }
   }
 }
 </script>
