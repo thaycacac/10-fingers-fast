@@ -11,5 +11,12 @@ const Lesson = new Schema({
     type: String,
     required: true,
     trim: true
+  },
+  content: {
+    type: String,
+    required: true,
+    trim: true
   }
 })
+
+module.exports = mongoose.model('Lesson', Lesson)

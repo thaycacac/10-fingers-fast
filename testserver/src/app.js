@@ -22,6 +22,10 @@ mongoose.connect(DBConfig.dbconfig.nameDB, {
   })
 
 require('./components/users/user')
+require('./components/lessons/lesson')
 
 const userDAL = require('./components/users/userDAL')
 app.use('/api/user', userDAL)
+
+const lessonDAL = require('./components/lessons/lessonDAL')
+app.use('/api/lesson', lessonDAL)
