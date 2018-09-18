@@ -13,5 +13,25 @@ router.post('/createLesson', (req, res) => {
       console.log(err)
     })
 })
+router.get('/:lessonID', (req, res) => {
+  const lessonID = req.params.lessonID
+  Lesson.findById(lessonID)
+    .exec()
+    .then(result => {
+      return result.lesson
+    })
+    .then((lessonID) => {
+      Lesson.find({lesson: lessonID})
+        .exec()
+        .then(listLesson => {
+          res.status(200).json({
+            listLesson: listLesson
+          })
+        })
+    })
+    .catch((err) => {
+      console.log(err)
+    })
+})
 
 module.exports = router
