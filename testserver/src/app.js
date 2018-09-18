@@ -25,17 +25,3 @@ require('./components/users/user')
 
 const userDAL = require('./components/users/userDAL')
 app.use('/api/user', userDAL)
-
-// // user
-// const signInRouter = require('./routes/user/signin')
-
-// app.use('/api/signin', signInRouter)
-
-// // lesson
-// const getLesson = require('./routes/lesson/getLesson')
-// const getListLesson = require('./routes/lesson/getListLesson')
-// const getContentByID = require('./routes/lesson/getContentByID')
-
-// app.use('/api/lesson', getLesson)
-// app.use('/api/listlesson', getListLesson)
-// app.use('/api/getcontent', getContentByID)
