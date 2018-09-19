@@ -66,7 +66,7 @@ export default {
   },
   methods: {
     getListLesson(lessonID) {
-      axios.post('/api/listlesson', { lessonID: lessonID })
+      axios.post('/api/lessond', { lessonID: lessonID })
       .then(response => {
         this.listLesson = response.data.recordset
       })
@@ -76,7 +76,7 @@ export default {
     },
   },
   beforeMount() {
-    axios.post('/api/lesson')
+    axios.get('/api/lesson/listlesson')
     .then(response => {
       this.records = response.data.recordset
     })
