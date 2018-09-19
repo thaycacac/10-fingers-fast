@@ -10,7 +10,9 @@
               <li>
                 <a>Lesson {{ idLessonCurrent }}</a>
                 <ul>
-                  <li v-for="lesson in listLesson" :key="lesson._id">
+                  <li 
+                    v-for="lesson in listLesson" 
+                    :key="lesson._id">
                     <a 
                     :href="'/lesson/' + lesson._id"
                     :class="lesson._id == idCurrent ? 'is-active' : ''"> Bài {{ listLesson.indexOf(lesson) + 1 }}<br/></a>
