@@ -33,5 +33,16 @@ router.get('/:lessonID', (req, res) => {
       console.log(err)
     })
 })
+router.get('/listlesson/:lesson', (req, res) => {
+  const lesson = req.params.lesson
+  Lesson.find({ lesson: lesson })
+    .select('lesson type')
+    .then(result => {
+      res.status(200).json(result)
+    })
+    .catch(err => {
+      console.log(err)
+    })
+})
 
 module.exports = router

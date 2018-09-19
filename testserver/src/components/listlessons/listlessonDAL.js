@@ -14,4 +14,15 @@ router.post('/createListLesson', (req, res) => {
     })
 })
 
+router.get('/', (req, res) => {
+  ListLesson.find({})
+    .select('lessonID lessonTitle lessonDescription')
+    .then(result => {
+      res.status(200).json(result)
+    })
+    .catch(err => {
+      console.log(err)
+    })
+})
+
 module.exports = router
