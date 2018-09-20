@@ -24,16 +24,26 @@
         </div>
         <div class="column">
           <div class="columns">
-            <div class="column is-2">
+            <div class="column is-2 hand-left">
               <svg-hand-left></svg-hand-left>
+              <div class="position-finger --is-1"></div>
+              <div class="position-finger --is-2"></div>
+              <div class="position-finger --is-3"></div>
+              <div class="position-finger --is-4"></div>
+              <div class="position-finger --is-5"></div>
             </div>
             <div class="column is-8">
               <div class="box --box-keyboard">
                 <p class="__text" id="text">10 Fingers Fast</p>
               </div>
             </div>
-            <div class="column is-2">
+            <div class="column is-2 hand-right">
               <svg-hand-right></svg-hand-right>
+              <div class="position-finger --is-6"></div>
+              <div class="position-finger --is-7"></div>
+              <div class="position-finger --is-8"></div>
+              <div class="position-finger --is-9"></div>
+              <div class="position-finger --is-10"></div>
             </div>
           </div>
           
@@ -135,10 +145,6 @@
     <my-footer/>
   </div>
 </template>
-<style lang="scss" scoped>
-@import '../../assets/sass/learn/keyboard.scss';
-</style>
-
 
 <script>
 import Navbar from '../../components/header/Navbar'
@@ -189,5 +195,6 @@ export default {
 </script>
 <style lang="scss" scoped>
 @import '../../assets/sass/main.sass';
+@import '../../assets/sass/learn/keyboard.scss';
 @include setupBackgroundNav();
 </style>

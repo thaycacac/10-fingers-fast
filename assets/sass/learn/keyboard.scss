@@ -36,16 +36,6 @@
     background: rgba(0, 137, 150, 0.7);
 }
 
-// body {
-//     padding: 0;
-//     margin: 0;
-//     background-color: #f5f5f5;
-//     min-height: 100vh;
-//     display: grid;
-//     grid-template-rows: 1fr auto;
-//     grid-template-columns: 100%;
-// }
-
  ::selection {
     background-color: #5b5b5b;
     color: #fff;
@@ -292,3 +282,70 @@ i.underscore {
     letter-spacing: 1px;
   }
 }
+
+/**
+*
+* Finger
+*
+*/
+.position-finger {
+    width: 15px;
+    height: 15px;
+    background-color: red;
+    border-radius: 10px;
+    position: absolute;
+}
+
+.hand-left {
+  position: relative;
+  svg {
+    position: absolute;
+  }
+  .position-finger.--is-1 {
+    margin-left: 25px;
+    margin-top: 45px;
+  }
+  .position-finger.--is-2 {
+    margin-left: 52px;
+    margin-top: 15px;
+  }
+  .position-finger.--is-3 {
+    margin-left: 85px;
+    margin-top: 11px;
+  }
+  .position-finger.--is-4 {
+    margin-left: 110px;
+    margin-top: 20px;
+  }
+  .position-finger.--is-5 {
+    margin-left: 139px;
+    margin-top: 89px;
+  }
+}
+
+.hand-right {
+    position: relative;
+    svg {
+      position: absolute;
+    }
+    .position-finger.--is-6 {
+      margin-left: 16px;
+      margin-top: 90px;
+    }
+    .position-finger.--is-7 {
+      margin-left: 46px;
+      margin-top: 18px;
+    }
+    .position-finger.--is-8 {
+      margin-left: 70px;
+      margin-top: 10px;
+    }
+    .position-finger.--is-9 {
+      margin-left: 103px;
+      margin-top: 16px;
+    }
+    .position-finger.--is-10 {
+      margin-left: 131px;
+      margin-top: 45px;
+    }
+  }
