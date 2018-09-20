@@ -33,14 +33,11 @@ export default text => {
       e.preventDefault()
     }
 
-    const code = e.keyCode.toString()
-    const keyElement = document.querySelector(`kbd[data-key="${code}"]`)
-
     // check input of user
     let afterPositionCurrent = positionCurrent + 1
     listText[afterPositionCurrent].style.textDecoration = 'underline'
     listText[afterPositionCurrent].style.color = '#6f6f6f'
-    if (keyElement.innerHTML.toUpperCase() === listText[positionCurrent].innerHTML.toUpperCase()) {
+    if (e.key.toUpperCase() === listText[positionCurrent].innerHTML.toUpperCase()) {
       // when true
       listText[positionCurrent].style.color = '#27ff1b'
       listText[positionCurrent].style.textDecoration = ''
