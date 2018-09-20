@@ -1,10 +1,18 @@
 <template>
     <div>
       <div class=" is-guide">
-        <i class="is-icon"
-        :class=icon></i>
-        <p class="is-title-guide">{{ title }}</p>
-        <p class="is-content-guide" v-html="content">
+        <i 
+          class="is-icon"
+          :class=icon
+          data-aos="fade-left"></i>
+        <p 
+        class="is-title-guide"
+        data-aos="fade-left">{{ title }}</p>
+        <p 
+        class="is-content-guide" 
+        v-html="content"
+        data-aos="fade-left">
+        <!-- FIXME: Error the client-side rendered virtual DOM -->
         </p>
       </div>
     </div>

@@ -1,8 +1,8 @@
 <template>
   <div>  
-    <p>Lesson: </p>
+    <p data-aos="fade-up">Lesson: </p>
     <input type="text" v-model="lesson">
-    <p>Type: </p>
+    <p data-aos="fade-up">Type: </p>
     <input type="text" v-model="type">
     <p>Content</p>
     <input type="text" v-model="content">
