@@ -26,11 +26,11 @@
           <div class="columns">
             <div class="column is-2 hand-left">
               <svg-hand-left></svg-hand-left>
-              <div class="position-finger --is-1"></div>
-              <div class="position-finger --is-2"></div>
-              <div class="position-finger --is-3"></div>
-              <div class="position-finger --is-4"></div>
-              <div class="position-finger --is-5"></div>
+              <div class="position-finger --is-1" style="visibility: hidden;"></div>
+              <div class="position-finger --is-2" style="visibility: hidden;"></div>
+              <div class="position-finger --is-3" style="visibility: hidden;"></div>
+              <div class="position-finger --is-4" style="visibility: hidden;"></div>
+              <div class="position-finger --is-5" style="visibility: hidden;"></div>
             </div>
             <div class="column is-8">
               <div class="box --box-keyboard">
@@ -39,11 +39,11 @@
             </div>
             <div class="column is-2 hand-right">
               <svg-hand-right></svg-hand-right>
-              <div class="position-finger --is-6"></div>
-              <div class="position-finger --is-7"></div>
-              <div class="position-finger --is-8"></div>
-              <div class="position-finger --is-9"></div>
-              <div class="position-finger --is-10"></div>
+              <div class="position-finger --is-6" style="visibility: hidden;"></div>
+              <div class="position-finger --is-7" style="visibility: hidden;"></div>
+              <div class="position-finger --is-8" style="visibility: hidden;"></div>
+              <div class="position-finger --is-9" style="visibility: hidden;"></div>
+              <div class="position-finger --is-10" style="visibility: hidden;"></div>
             </div>
           </div>
           
@@ -176,7 +176,6 @@ export default {
   mounted() {
     return axios.get('/api/lesson/' + this.$route.params.id)
       .then (response => {
-        console.log(response.data.listLesson)
         this.listLesson = response.data.listLesson
         return response.data.listLesson
       })
