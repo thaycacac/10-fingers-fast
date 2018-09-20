@@ -62,6 +62,10 @@ export default text => {
     })
     // check user input keyboard then show position finger
     positionFinger = document.getElementsByClassName('position-finger')[indexInList]
+    if (indexInList === 4) {
+      const positionFingerSpace = document.getElementsByClassName('position-finger')[5]
+      positionFingerSpace.setAttribute('style', 'visibility: visible;')
+    }
     positionFinger.setAttribute('style', 'visibility: visible;')
   }
 
@@ -73,6 +77,10 @@ export default text => {
     const indexInList = map.findIndex(number => {
       return number !== -1
     })
+    if (indexInList === 4) {
+      const positionFingerSpace = document.getElementsByClassName('position-finger')[5]
+      positionFingerSpace.setAttribute('style', 'visibility: hidden;')
+    }
     // check user input keyboard then show position finger
     positionFinger = document.getElementsByClassName('position-finger')[indexInList]
     positionFinger.setAttribute('style', 'visibility: hidden;')
