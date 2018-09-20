@@ -20,7 +20,7 @@ export default {
   },
   methods: {
     createListLesson() {
-      this.$axios.post('/api/listLesson/createListLesson', {
+      this.$axios.post('/api/listLesson', {
         lessonID: this.lessonID,
         lessonTitle: this.lessonTitle,
         lessonDescription: this.lessonDescription
