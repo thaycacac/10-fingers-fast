@@ -4,7 +4,7 @@
     <form>
       <input 
         type="email" 
-        placeholder="Nhập Email Của Bạn" 
+        placeholder="Nhập Email..." 
         class="is-email"
         v-model="email">
       <input 

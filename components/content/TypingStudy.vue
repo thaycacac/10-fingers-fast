@@ -1,5 +1,5 @@
 <template>
-  <div class="container" id="typing-study">
+  <div class="container is-hidden-mobile" id="typing-study">
     <h1 class="is-title-typing">Luyện gõ 10 ngón</h1>
     <div class="columns">
       <div class="column is-typing-left">

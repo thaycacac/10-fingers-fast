@@ -1,5 +1,5 @@
 <template>
-<div class="is-navigation-map">
+<div class="is-navigation-map is-hidden-mobile">
   <div class="container is-container-navigation">
     <p class="has-text">
       <a href="/#target">Bạn Có Thể Làm Gì</a>

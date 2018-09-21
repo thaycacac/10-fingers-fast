@@ -1,5 +1,5 @@
 <template>
-    <div class="is-fixed-bg is-fixed-bg-image">
+    <div class="is-fixed-bg is-fixed-bg-image is-hidden-mobile">
       <div class="container">
         <div class="columns">
           <div class="column">
