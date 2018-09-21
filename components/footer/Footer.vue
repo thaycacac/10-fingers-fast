@@ -18,6 +18,14 @@
     </div>
   </footer>
 </template>
-<style lang="scss" scoped>
-@import '../../assets/sass/main.sass';
+<style lang="sass" scoped>
+@import '../../assets/sass/main.sass'
+ul
+  list-style-type: none
+  li
+    display: inline-block
+    color: white
+    margin-right: 5px
+    a
+      color: white
 </style>

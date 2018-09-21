@@ -10,7 +10,7 @@
 <script>
 // import axios from '~/plugins/axios'
 import Navbar from "../components/header/Navbar"
-import Slider from "../components/header/Slider"
+import Slider from "../components/header/SliderSmall"
 import MyFooter from '../components/footer/Footer';
 
 export default {
@@ -21,3 +21,8 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+@import '../assets/sass/main.sass';
+@include setupBackgroundNav();
+</style>
