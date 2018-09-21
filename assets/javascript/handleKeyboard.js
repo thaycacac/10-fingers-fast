@@ -22,6 +22,12 @@ export default text => {
   // catch event when user enter keyboard
   showPositionFinger(listText[0].innerHTML.toUpperCase(), listPositionFinger)
   window.addEventListener('keydown', function (e) {
+    // check done string
+    if (countNumberInput === text.length) {
+      checkEnd = true
+      return
+    }
+
     // set nummber input
     document.getElementById('__number-input').innerHTML = ++countNumberInput
 
@@ -29,14 +35,19 @@ export default text => {
     checkStart = !checkStart
     if (checkStart) {
       let countTime = 0
-      setInterval(() => {
+      let countTimeThread = setInterval(() => {
         countTime++
         let seconds = countTime % 60
         let minute = parseInt(countTime / 60)
         document.getElementById('__number-time').innerHTML = ('0' + minute).slice(-2) + ':' + ('0' + seconds).slice(-2)
         document.getElementById('__number-speed').innerHTML = parseInt(60 * countNumberInput / countTime) + ' Từ/Phút'
+        // check end string
+        if (checkEnd) {
+          clearInterval(countTimeThread)
+        }
       }, 1000)
     }
+
     checkStart = true
 
     // if end  string have 40 character
