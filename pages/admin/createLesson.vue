@@ -1,8 +1,8 @@
 <template>
-  <div>  
-    <p data-aos="fade-up">Lesson: </p>
+  <div class="box">  
+    <p>Lesson: </p>
     <input type="text" v-model="lesson">
-    <p data-aos="fade-up">Type: </p>
+    <p>Type: </p>
     <input type="text" v-model="type">
     <p>Content</p>
     <input type="text" v-model="content">
@@ -18,6 +18,7 @@ export default {
       content: ''
     }
   },
+  layout: 'admin',
   methods: {
     createLesson() {
       this.$axios.post('/api/lesson/createLesson', {
@@ -36,5 +37,9 @@ export default {
     }
   }
 };
-
 </script>
+<style lang="scss" scoped>
+.box {
+  margin-top: 30px;
+}
+</style>

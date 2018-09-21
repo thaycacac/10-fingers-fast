@@ -1,5 +1,5 @@
 <template>
-  <div>  
+  <div class="box">  
     <p>Lesson ID: </p>
     <input type="text" v-model="lessonID">
     <p>Lesson Title</p>
@@ -18,6 +18,7 @@ export default {
       lessonDescription: ''
     }
   },
+  layout: 'admin',
   methods: {
     createListLesson() {
       this.$axios.post('/api/listLesson', {
@@ -37,3 +38,9 @@ export default {
   }
 };
 </script>
+
+<style lang="scss" scoped>
+.box {
+  margin-top: 30px;
+}
+</style>
