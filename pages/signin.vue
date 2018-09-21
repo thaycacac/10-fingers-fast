@@ -1,6 +1,5 @@
 <template>
   <section class="hero is-success is-fullheight is-login">
-    <navbar></navbar>
     <div class="hero-body">
       <div class="container has-text-centered">
         <div class="column is-4 is-offset-4">
@@ -55,7 +54,6 @@
 </template>
 
 <script>
-import Navbar from '../components/header/Navbar'
 export default {
   data () {
     return {
@@ -64,9 +62,7 @@ export default {
       error: ''
     }
   },
-  components: {
-    Navbar
-  },
+  layout: 'user',
   methods: {
     signin() {
       // check input
@@ -111,6 +107,5 @@ export default {
 @import '../assets/sass/user/signin.sass';
 @import '../assets/sass/main.sass';
 @import '../assets/sass/animation.scss';
-@include setupBackgroundNav();
 @include setupAnimationError();
 </style>

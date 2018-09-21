@@ -1,6 +1,5 @@
 <template>
   <section class="hero is-success is-fullheight is-login">
-    <navbar></navbar>
     <div class="hero-body">
       <div class="container has-text-centered">
         <div class="column is-8 is-offset-2">
@@ -87,7 +86,7 @@
             </form>
           </div>
           <p class="has-choose-more">
-            <a href="../">Đăng nhập</a>
+            <a href="/signin">Đăng nhập</a>
           </p>
         </div>
       </div>
@@ -96,7 +95,6 @@
 </template>
 
 <script>
-import Navbar from '../components/header/Navbar'
 import { signup } from '../axios/user/usersController'
 export default {
   data () {
@@ -111,9 +109,7 @@ export default {
       error: ''
     }
   },
-  components: {
-    Navbar
-  },
+  layout: 'user',
   methods: {
     signup() {
       this.error = ''
@@ -164,5 +160,4 @@ export default {
 @import '../assets/sass/user/signup.sass';
 @import '../assets/sass/main.sass';
 @import '../assets/sass/main.sass';
-@include setupBackgroundNav();
 </style>

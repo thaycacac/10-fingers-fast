@@ -1,6 +1,5 @@
 <template>
   <section class="hero is-success is-fullheight is-login">
-    <navbar></navbar>
     <div class="hero-body">
       <div class="container has-text-centered">
         <div class="column is-10 is-offset-1">
@@ -84,11 +83,8 @@
 
 <script>
 import { mapGetters } from 'vuex'
-import Navbar from '../components/header/Navbar'
 export default {
-  components: {
-    Navbar
-  },
+  layout: 'user',
   computed: mapGetters([
     'user'
   ]),
@@ -125,6 +121,5 @@ export default {
 @import '../assets/sass/user/profile.sass';
 @import '../assets/sass/main.sass';
 @import '../assets/sass/main.sass';
-@include setupBackgroundNav();
 </style>
 
