@@ -1,7 +1,5 @@
 <template>
   <div>
-    <navbar/>
-    <slider/>
     <div class="container">
       <div class="columns">
         <div class="column is-2">
@@ -156,14 +154,10 @@
     <audio id="keyAudio">
       <source src="http://www.freesfx.co.uk/rx2/mp3s/5/16952_1461335341.mp3" type="audio/mpeg">
     </audio>
-    <my-footer/>
   </div>
 </template>
 
 <script>
-import Navbar from '../../components/header/Navbar'
-import Slider from '../../components/header/SliderSmall'
-import MyFooter from '../../components/footer/Footer'
 import keyboard from '../../assets/javascript/keyboard'
 import handleKeyboard from '../../assets/javascript/handleKeyboard'
 import axios from 'axios'
@@ -178,12 +172,10 @@ export default {
     }
   },
   components: {
-    Navbar,
-    Slider,
-    MyFooter,
     SvgHandLeft,
     SvgHandRight
   },
+  layout: 'typing',
   beforeMount() {
     keyboard()
   },
