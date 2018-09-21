@@ -1,8 +1,14 @@
 <template>
   <div>
     <div class="is-container-guide">
-        <h1 class="is-title">Hướng Dẫn</h1>
-        <p class="is-description">Phương pháp 10 ngón tay là một kỹ thuật được lập ra để sử dụng hiệu quả bàn phím máy tính của bạn. 
+        <h1 
+          class="is-title"
+          data-aos="zoom-in-up"
+          data-aos-duration="500">Hướng Dẫn</h1>
+        <p 
+          class="is-description"
+          data-aos="zoom-in-up"
+          data-aos-duration="500">Phương pháp 10 ngón tay là một kỹ thuật được lập ra để sử dụng hiệu quả bàn phím máy tính của bạn. 
           Với một số bài thực hành và luyện cho bạn vị trí ngón tay chính xác, bạn không còn "gõ một cách mù 
           quáng" trên bàn phím. Sau đó, bạn có thể giảm đáng kể tỷ lệ lỗi và tăng tốc độ đánh một cách nhanh chóng.</p>
       <div class="columns">

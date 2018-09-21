@@ -1,12 +1,14 @@
 <template>
-    <div>
+    <div data-aos="fade-right">
         <div class="columns">
             <div class="column is-image" :style="{backgroundImage: image}">
                 <div class="is-mask">
                 </div>
                 <div class="is-intro">
                     <p class="is-number-page">{{ numpage }}</p>
-                    <p class="is-text-intro">{{ step }}</p>
+                    <p 
+                      class="is-text-intro" 
+                      data-aos="fade-right">{{ step }}</p>
                 </div>
             </div>
         </div>

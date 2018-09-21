@@ -2,36 +2,48 @@
   <div id="learn">
     <div class="time-line">
       <div class="__container">
-        <div class="__block" v-for="record in records" :key="record.ID">
-          <div class="__img" 
-            :class="{ '--success': record.ID % 3 == 0,  
-                      '--danger': record.ID % 3 == 1,
-                      '--warning': record.ID % 3 == 2}">
+        <div 
+          class="__block" 
+          v-for="record in records" 
+          :key="record.lessonID">
+          <div 
+            class="__img" 
+            :class="{ '--success': record.lessonID % 3 == 0,  
+                      '--danger': record.lessonID % 3 == 1,
+                      '--warning': record.lessonID % 3 == 2}">
             <i class="fas fa-medal __icon"></i>
           </div>
           <div class="__content">
-            <h2>{{ record.Intro }}</h2>
-            <p>{{ record.Tips }}</p>
+            <h2>{{ record.lessonTitle }}</h2>
+            <p>{{ record.lessonDescription }}</p>
             <button 
               class="__read-more" 
-              @click="isShowLesson = true, getListLesson(record.ID)">Read more</button>
+              @click="isShowLesson = true, getListLesson(record.lessonID)">Read more</button>
             <span 
-            class="__date">Lesson {{ record.ID }}</span>
+            class="__date">Lesson {{ record.lessonID }}</span>
           </div>
         </div>
       </div>
     </div>
     <!-- use buefy for show all lesson -->
-    <b-modal :active.sync="isShowLesson" :width="640" scroll="keep">
+    <b-modal 
+      :active.sync="isShowLesson" 
+      :width="640" 
+      scroll="keep">
       <aside class="menu --menu-lesson">
         <p class="menu-label">
           Danh Sách Bài Học
         </p>
         <ul class="menu-list">
-            <li v-for="type in listType" :key="type.id"><a>{{ type.name }}</a>
-            <ul v-for="lesson in listLesson" :key="lesson.ContentID">
-              <li v-show="lesson.TypeID === type.id">
-                <a :href="'lesson/' + lesson.ContentID">Bài {{ lesson.ContentID }}</a></li>
+            <li 
+              v-for="type in listType" 
+              :key="type.id"><a>{{ type.name }}</a>
+            <ul 
+              v-for="(lesson, index) in listLesson" 
+              :key="lesson._id">
+              <li v-show="lesson.type.toUpperCase() === type.name.toUpperCase()">
+                <a :href="'lesson/' + lesson._id">Bài {{ index + 1 }}</a>
+              </li>
             </ul>
           </li>
         </ul>
@@ -54,21 +66,21 @@ export default {
       records: '',
       listLesson: '',
       listType: [
-        { id: 1, name: 'Luyện Phím' },
-        { id: 2, name: 'Luyện Phím' },
-        { id: 3, name: 'Luyện Từ' },
-        { id: 4, name: 'Luyện Không Nhìn' },
-        { id: 5, name: 'Luyện Văn Bản' },
-        { id: 6, name: 'Luyện Thêm' }
+        { name: 'Luyện Phím Mới' },
+        { name: 'Luyện Phím' },
+        { name: 'Luyện Từ' },
+        { name: 'Luyện Không Nhìn' },
+        { name: 'Luyện Văn Bản' },
+        { name: 'Luyện Thêm' }
       ],
       isShowLesson: false,
     }
   },
   methods: {
     getListLesson(lessonID) {
-      axios.post('/api/listlesson', { lessonID: lessonID })
+      axios.get('/api/lesson/listlesson/' + lessonID)
       .then(response => {
-        this.listLesson = response.data.recordset
+        this.listLesson = response.data
       })
       .catch(err => {
         console.log(err)
@@ -76,9 +88,9 @@ export default {
     },
   },
   beforeMount() {
-    axios.post('/api/lesson')
+    axios.get('/api/listlesson')
     .then(response => {
-      this.records = response.data.recordset
+      this.records = response.data
     })
     .catch(err => {
       console.log(err)

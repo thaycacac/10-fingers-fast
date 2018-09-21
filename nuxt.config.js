@@ -33,12 +33,16 @@ module.exports = {
   },
   css: [
     '~/assets/css/main.css',
-    './assets/sass/main.sass'
+    './assets/sass/main.sass',
+    'aos/dist/aos.css'
   ],
   modules: [
     '@nuxtjs/axios',
     'nuxt-buefy'
     // ['nuxt-buefy', { css: false, materialDesignIcons: false }]
+  ],
+  plugins: [
+    { src: '~/plugins/aos.js', ssr: false }
   ],
   axios: {
     proxy: true
@@ -52,7 +56,8 @@ module.exports = {
   build: {
     vendor: [
       'axios',
-      '~/plugins/vue-session.js'
+      '~/plugins/vue-session.js',
+      'aos'
     ],
     /*
     ** Run ESLINT on save

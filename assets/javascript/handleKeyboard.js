@@ -1,23 +1,51 @@
 export default text => {
-  // declare
+  // declare variable
   let positionCurrent = 0
   let countTextArray = 0
+  let countNumberInput = 0
+  let countNumberCorrect = 0
+  let countNumberIncorrect = 0
+  let checkStart = false
+  const listPositionFinger = ['AQZ', 'WSX', 'EDC', 'RTFVB', ' ', ' ', 'YUJMN', 'IK', 'OL', 'P;']
 
-  const length = text.length
-  let array = []
-  for (let i = 0; i < length; i += 40) {
-    array.push(text.substring(i, i + 40))
-  }
-  // set text change
+  // setup number total leng
+  setNumberTotal(text)
+
+  // plit text to have length = 40
+  let array = splitText(text)
+
+  // get list text and use charming to split each character is span
   document.getElementById('text').innerHTML = array[0]
-
   let listText = getCharming()
 
-  // global window keydown event from real keyboard
+  // catch event when user enter keyboard
+  showPositionFinger(listText[0].innerHTML.toUpperCase(), listPositionFinger)
   window.addEventListener('keydown', function (e) {
-    console.log(positionCurrent)
+    // check done string
+    if (countNumberInput === text.length) {
+      return
+    }
+
+    // set nummber input
+    document.getElementById('__number-input').innerHTML = ++countNumberInput
+
+    // check the first time to count time
+    checkStart = !checkStart
+    if (checkStart) {
+      let countTime = 0
+      setInterval(() => {
+        countTime++
+        let seconds = countTime % 60
+        let minute = parseInt(countTime / 60)
+        document.getElementById('__number-time').innerHTML = ('0' + minute).slice(-2) + ':' + ('0' + seconds).slice(-2)
+        document.getElementById('__number-speed').innerHTML = parseInt(60 * countNumberInput / countTime) + ' Từ/Phút'
+      }, 1000)
+    }
+
+    checkStart = true
+
+    // if end  string have 40 character
     if ((positionCurrent + 1) % 40 === 0 && positionCurrent !== 0) {
-      console.log('true')
       positionCurrent = 0
       document.getElementById('text').innerHTML = array[++countTextArray]
       listText = getCharming()
@@ -25,26 +53,100 @@ export default text => {
       listText[0].style.color = '#6f6f6f'
       return
     }
-    // check code space then prevent
+
+    // show position next and remove position enter
+    hiddenPositionFinger(listText[positionCurrent].innerHTML.toUpperCase(), listPositionFinger)
+    showPositionFinger(listText[positionCurrent + 1].innerHTML.toUpperCase(), listPositionFinger)
+
+    // check code space then prevent scrolling
     if (e.keyCode === 32) {
       e.preventDefault()
     }
 
-    const code = e.keyCode.toString()
-    const keyElement = document.querySelector(`kbd[data-key="${code}"]`)
-    // check input of user
-    let afterPositionCurrent = positionCurrent + 1
-    listText[afterPositionCurrent].style.textDecoration = 'underline'
-    listText[afterPositionCurrent].style.color = '#6f6f6f'
-    if (keyElement.innerHTML.toUpperCase() === listText[positionCurrent].innerHTML.toUpperCase()) {
-      listText[positionCurrent].style.color = '#27ff1b'
-      listText[positionCurrent].style.textDecoration = ''
+    // show text need input
+    updateTextAfter(positionCurrent, listText)
+    if (e.key.toUpperCase() === listText[positionCurrent].innerHTML.toUpperCase()) {
+      // when input correct
+      updateInputCorrect(listText, positionCurrent, ++countNumberCorrect, countNumberInput)
     } else {
-      listText[positionCurrent].style.color = '#fd2020'
-      listText[positionCurrent].style.textDecoration = ''
+      // when input incorrect
+      updateInputIncorrect(listText, positionCurrent, ++countNumberIncorrect)
     }
     positionCurrent++
   })
+}
+
+// split text to array have length is 40
+function splitText (textOrigin) {
+  const length = textOrigin.length
+  let array = []
+  for (let i = 0; i < length; i += 40) {
+    array.push(textOrigin.substring(i, i + 40))
+  }
+  return array
+}
+
+// hidden position finger in hand when enter new keyboard
+function hiddenPositionFinger (textCheck, listPositionFinger) {
+  let positionFinger
+  // get index of list include character have key input
+  const map = listPositionFinger.map(text => text.indexOf(textCheck))
+  const indexInList = map.findIndex(number => {
+    return number !== -1
+  })
+  if (indexInList === 4) {
+    const positionFingerSpace = document.getElementsByClassName('position-finger')[5]
+    positionFingerSpace.setAttribute('style', 'visibility: hidden;')
+  }
+  // check user input keyboard then show position finger
+  positionFinger = document.getElementsByClassName('position-finger')[indexInList]
+  positionFinger.setAttribute('style', 'visibility: hidden;')
+}
+
+// show position finger in hand
+function showPositionFinger (textCheck, listPositionFinger) {
+  let positionFinger
+  // get index of list include character have key input
+  const map = listPositionFinger.map(text => text.indexOf(textCheck))
+  const indexInList = map.findIndex(number => {
+    return number !== -1
+  })
+  // check user input keyboard then show position finger
+  positionFinger = document.getElementsByClassName('position-finger')[indexInList]
+  if (indexInList === 4) {
+    const positionFingerSpace = document.getElementsByClassName('position-finger')[5]
+    positionFingerSpace.setAttribute('style', 'visibility: visible;')
+  }
+  positionFinger.setAttribute('style', 'visibility: visible;')
+}
+
+// set up number total leng
+function setNumberTotal (text) {
+  document.getElementById('__number-total').innerHTML = text.length
+}
+
+// check input of user
+function updateTextAfter (positionCurrent, listText) {
+  let afterPositionCurrent = positionCurrent + 1
+  listText[afterPositionCurrent].style.textDecoration = 'underline'
+  listText[afterPositionCurrent].style.color = '#6f6f6f'
+}
+
+// update when user input correct
+function updateInputCorrect (listText, positionCurrent, countNumberCorrect, countNumberInput) {
+  // update color text
+  listText[positionCurrent].style.color = '#27ff1b'
+  listText[positionCurrent].style.textDecoration = ''
+  // update percent
+  const percent = countNumberCorrect / countNumberInput * 100
+  document.getElementById('__number-percent').innerHTML = parseFloat(Math.round(percent * 100) / 100).toFixed(2)
+}
+
+// update when user input incorrect
+function updateInputIncorrect (listText, positionCurrent, countNumberIncorrect) {
+  listText[positionCurrent].style.color = '#fd2020'
+  listText[positionCurrent].style.textDecoration = ''
+  document.getElementById('__number-incorrect').innerHTML = countNumberIncorrect
 }
 
 // split pharagraph to span

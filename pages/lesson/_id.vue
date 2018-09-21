@@ -10,10 +10,12 @@
               <li>
                 <a>Lesson {{ idLessonCurrent }}</a>
                 <ul>
-                  <li v-for="lesson in listLesson" :key="lesson.ContentID">
+                  <li 
+                    v-for="lesson in listLesson" 
+                    :key="lesson._id">
                     <a 
-                    :href="'/lesson/' + lesson.ContentID"
-                    :class="lesson.ContentID == idCurrent ? 'is-active' : ''"> Bài {{ lesson.ContentID }}<br/></a>
+                    :href="'/lesson/' + lesson._id"
+                    :class="lesson._id == idCurrent ? 'is-active' : ''"> Bài {{ listLesson.indexOf(lesson) + 1 }}<br/></a>
                   </li>
                 </ul>
               </li>
@@ -22,16 +24,40 @@
         </div>
         <div class="column">
           <div class="columns">
-            <div class="column is-2">
+            <div class="column is-2 hand-left">
               <svg-hand-left></svg-hand-left>
+              <div class="position-finger --is-1" style="visibility: hidden;"></div>
+              <div class="position-finger --is-2" style="visibility: hidden;"></div>
+              <div class="position-finger --is-3" style="visibility: hidden;"></div>
+              <div class="position-finger --is-4" style="visibility: hidden;"></div>
+              <div class="position-finger --is-5" style="visibility: hidden;"></div>
             </div>
             <div class="column is-8">
+              <div class="box --box-result">
+                <article class="media">
+                  <div class="media-content">
+                    <div class="content has-text-centered">
+                      <p class="result">
+                        Đã gõ: <strong id="__number-input">0</strong> / <strong id="__number-total">0</strong> ( Đúng <strong id="__number-percent">0</strong>%)
+                        Lỗi: <strong id="__number-incorrect">0</strong>
+                        Thời gian: <strong id="__number-time">00:00</strong>
+                        Tốc độ: <strong id="__number-speed">5 từ/phút</strong>
+                      </p>
+                    </div>
+                  </div>
+                </article>
+              </div>
               <div class="box --box-keyboard">
                 <p class="__text" id="text">10 Fingers Fast</p>
               </div>
             </div>
-            <div class="column is-2">
+            <div class="column is-2 hand-right">
               <svg-hand-right></svg-hand-right>
+              <div class="position-finger --is-6" style="visibility: hidden;"></div>
+              <div class="position-finger --is-7" style="visibility: hidden;"></div>
+              <div class="position-finger --is-8" style="visibility: hidden;"></div>
+              <div class="position-finger --is-9" style="visibility: hidden;"></div>
+              <div class="position-finger --is-10" style="visibility: hidden;"></div>
             </div>
           </div>
           
@@ -133,10 +159,6 @@
     <my-footer/>
   </div>
 </template>
-<style lang="scss" scoped>
-@import '../../assets/sass/learn/keyboard.scss';
-</style>
-
 
 <script>
 import Navbar from '../../components/header/Navbar'
@@ -166,14 +188,17 @@ export default {
     keyboard()
   },
   mounted() {
-    return axios.post('/api/getcontent', { contentID: this.$route.params.id })
+    return axios.get('/api/lesson/' + this.$route.params.id)
       .then (response => {
-        this.listLesson = response.data.recordset
-        return response.data.recordset
+        this.listLesson = response.data.listLesson
+        return response.data.listLesson
       })
-      .then ( (listLesson) => {
-        handleKeyboard(listLesson[0].Content)
-        this.idLessonCurrent = listLesson[0].LessonID
+      .then ((listLesson) => {
+        const lessonCurrent = listLesson.find(lesson => {
+          return lesson._id === this.$route.params.id
+        })
+        handleKeyboard(lessonCurrent.content)
+        this.idLessonCurrent = lessonCurrent.lesson
       })
       .catch (err => {
         console.log(err)
@@ -183,5 +208,6 @@ export default {
 </script>
 <style lang="scss" scoped>
 @import '../../assets/sass/main.sass';
+@import '../../assets/sass/learn/keyboard.scss';
 @include setupBackgroundNav();
 </style>

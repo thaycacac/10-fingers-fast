@@ -1,24 +1,38 @@
-<template>
+<template data-aos="fade-up">
     <div class="my-target">
         <div class="container-intro">
-            <h1 class="title">Bạn có thể làm gì?</h1>
-            <h5 class="title  is-5 my-descrip">Đến với 10FingersFast, chúng tôi có thể giúp bạn</h5>
+            <h1 
+              class="title" 
+              data-aos="zoom-in-up"
+              data-aos-duration="500">Bạn có thể làm gì?</h1>
+            <h5 
+              class="title  is-5 my-descrip" 
+              data-aos="zoom-in-up">Đến với 10FingersFast, chúng tôi có thể giúp bạn</h5>
         </div>
         <div class="container">
             <div class="columns">
-                <div class="column">
+                <div 
+                  class="column" 
+                  data-aos="fade-right" 
+                  data-aos-duration="1000">
                     <one-view
                     :icon=icon.icon1
                     :title = title.title1
                     :content = content.content1></one-view>
                 </div>
-                <div class="column">
+                <div 
+                  class="column" 
+                  data-aos="fade-up" 
+                  data-aos-duration="1000">
                     <one-view
                     :icon=icon.icon2
                     :title = title.title2
                     :content = content.content2></one-view>
                 </div>
-                <div class="column">
+                <div 
+                  class="column" 
+                  data-aos="fade-left" 
+                  data-aos-duration="1000">
                     <one-view
                     :icon=icon.icon3
                     :title = title.title3
