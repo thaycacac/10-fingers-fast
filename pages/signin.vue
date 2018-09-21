@@ -44,9 +44,9 @@
             </form>
           </div>
           <p class="has-choose-more">
-            <a href="../">Đăng ký</a> &nbsp;·&nbsp;
-            <a href="../">Quên mật khẩu</a> &nbsp;·&nbsp;
-            <a href="../">Giúp?</a>
+            <a href="/signup">Đăng ký</a> &nbsp;·&nbsp;
+            <a href="/#">Quên mật khẩu</a> &nbsp;·&nbsp;
+            <a href="/#">Giúp?</a>
           </p>
         </div>
       </div>
