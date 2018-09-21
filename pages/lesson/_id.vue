@@ -33,6 +33,20 @@
               <div class="position-finger --is-5" style="visibility: hidden;"></div>
             </div>
             <div class="column is-8">
+              <div class="box --box-result">
+                <article class="media">
+                  <div class="media-content">
+                    <div class="content has-text-centered">
+                      <p class="result">
+                        Đã gõ: <strong id="__number-input">0</strong> / <strong id="__number-total">0</strong> ( Đúng <strong id="__number-percent">0</strong>%)
+                        Lỗi: <strong id="__number-incorrect">0</strong>
+                        Thời gian: <strong id="__number-time">00:00</strong>
+                        Tốc độ: <strong id="__number-speed">5 từ/phút</strong>
+                      </p>
+                    </div>
+                  </div>
+                </article>
+              </div>
               <div class="box --box-keyboard">
                 <p class="__text" id="text">10 Fingers Fast</p>
               </div>

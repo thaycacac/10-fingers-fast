@@ -1,7 +1,7 @@
 <template>
     <div class="is-fixed-bg is-fixed-bg-image">
       <div class="container">
-        <div class="columns" data-aos="zoom-in">
+        <div class="columns">
           <div class="column">
             <one-view
             :icon="icon.icon1"
