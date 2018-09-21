@@ -6,7 +6,6 @@ export default text => {
   let countNumberCorrect = 0
   let countNumberIncorrect = 0
   let checkStart = false
-  let checkEnd = false
   const listPositionFinger = ['AQZ', 'WSX', 'EDC', 'RTFVB', ' ', ' ', 'YUJMN', 'IK', 'OL', 'P;']
 
   // setup number total leng
@@ -24,7 +23,6 @@ export default text => {
   window.addEventListener('keydown', function (e) {
     // check done string
     if (countNumberInput === text.length) {
-      checkEnd = true
       return
     }
 
@@ -35,16 +33,12 @@ export default text => {
     checkStart = !checkStart
     if (checkStart) {
       let countTime = 0
-      let countTimeThread = setInterval(() => {
+      setInterval(() => {
         countTime++
         let seconds = countTime % 60
         let minute = parseInt(countTime / 60)
         document.getElementById('__number-time').innerHTML = ('0' + minute).slice(-2) + ':' + ('0' + seconds).slice(-2)
         document.getElementById('__number-speed').innerHTML = parseInt(60 * countNumberInput / countTime) + ' Từ/Phút'
-        // check end string
-        if (checkEnd) {
-          clearInterval(countTimeThread)
-        }
       }, 1000)
     }
 
