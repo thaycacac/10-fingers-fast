@@ -10,10 +10,13 @@
             class="__img" 
             :class="{ '--success': record.lessonID % 3 == 0,  
                       '--danger': record.lessonID % 3 == 1,
-                      '--warning': record.lessonID % 3 == 2}">
+                      '--warning': record.lessonID % 3 == 2}"
+            data-aos="fade-down"
+            data-aos-easing="linear"
+            data-aos-duration="1500">
             <i class="fas fa-medal __icon"></i>
           </div>
-          <div class="__content">
+          <div class="__content" data-aos="zoom-out-right">
             <h2>{{ record.lessonTitle }}</h2>
             <p>{{ record.lessonDescription }}</p>
             <button 

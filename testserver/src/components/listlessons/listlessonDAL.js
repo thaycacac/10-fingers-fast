@@ -3,7 +3,7 @@ const router = express.Router()
 const mongoose = require('mongoose')
 const ListLesson = mongoose.model('ListLesson')
 
-router.post('/createListLesson', (req, res) => {
+router.post('/', (req, res) => {
   const listLesson = new ListLesson(req.body)
   listLesson.save()
     .then(() => {

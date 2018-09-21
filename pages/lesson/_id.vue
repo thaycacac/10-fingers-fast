@@ -41,7 +41,7 @@
                         Đã gõ: <strong id="__number-input">0</strong> / <strong id="__number-total">0</strong> ( Đúng <strong id="__number-percent">0</strong>%)
                         Lỗi: <strong id="__number-incorrect">0</strong>
                         Thời gian: <strong id="__number-time">00:00</strong>
-                        Tốc độ: <strong id="__number-speed">5 từ/phút</strong>
+                        Tốc độ: <strong id="__number-speed">0 từ/phút</strong>
                       </p>
                     </div>
                   </div>
