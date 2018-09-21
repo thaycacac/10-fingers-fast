@@ -60,7 +60,6 @@
       OneView
     }
   };
-  
 </script>
 
 <style lang="scss" scoped>
