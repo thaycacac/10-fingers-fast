@@ -1,5 +1,5 @@
-<template data-aos="fade-up">
-    <div class="my-target">
+<template>
+    <div class="my-target" id="target">
         <div class="container-intro">
             <h1 
               class="title" 
@@ -29,7 +29,7 @@
                     :title = title.title2
                     :content = content.content2></one-view>
                 </div>
-                <div 
+                <div
                   class="column" 
                   data-aos="fade-left" 
                   data-aos-duration="1000">
@@ -58,9 +58,9 @@
           content3: 'Các trò chơi và các bài test giúp bạn hứng thú hơn trong quá trình học và kiểm tra trình độ của bạn, sự tiến bộ của bạn đến đâu...'
         },
         icon: {
-           icon1: 'fas fa-bookmark',
-           icon2: 'fas fa-graduation-cap',
-           icon3: 'fas fa-layer-group'
+          icon1: 'fas fa-bookmark',
+          icon2: 'fas fa-graduation-cap',
+          icon3: 'fas fa-layer-group'
         }
       }
     },

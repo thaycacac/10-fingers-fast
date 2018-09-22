@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="guide">
     <div class="is-container-guide">
         <h1 
           class="is-title"

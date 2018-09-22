@@ -1,5 +1,5 @@
 import AOS from 'aos'
 
 export default ({ app }, inject) => {
-  app.AOS = new AOS.init({ disable: 'phone' })
+  app.AOS = new AOS.init({ disable: 'mobile' })
 }

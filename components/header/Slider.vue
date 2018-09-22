@@ -1,30 +1,30 @@
 <template>
-    <div>
-        <header class="masthead text-center d-flex">
-            <div class="container">
-                <div class="columns ">
-                    <div class="column">
-                        <div class=" my-auto">
-                            <div class="row">
-                                <h1>
-                                    <strong class="title is-1">Bàn Tay Ta Làm Nên Tất Cả</strong>
-                                </h1>
-                                <hr class="my-break">
-                                <p class="text-description">Tìm hiểu các khái niệm, bài học cơ bản đến nâng cao của
-                                    phương
-                                    pháp 10
-                                    ngón tay trong thời gian ngắn!</p>
-                                <a class="button is-white my-button" href="#">Đọc thêm</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="column">
-                        <svg-slider></svg-slider>
-                    </div>
-                </div>
+  <div>
+    <header class="masthead text-center d-flex">
+      <div class="container">
+        <div class="columns ">
+          <div class="column">
+            <div class=" my-auto">
+              <div class="row">
+                <h1>
+                  <strong class="title is-1">Bàn Tay Ta Làm Nên Tất Cả</strong>
+                </h1>
+                <hr class="my-break">
+                <p class="text-description">Tìm hiểu các khái niệm, bài học cơ bản đến nâng cao của
+                  phương
+                  pháp 10
+                  ngón tay trong thời gian ngắn!</p>
+                <a class="button is-white my-button" href="#">Đọc thêm</a>
+              </div>
             </div>
-        </header>
-    </div>
+          </div>
+          <div class="column is-hidden-mobile">
+            <svg-slider></svg-slider>
+          </div>
+        </div>
+      </div>
+    </header>
+  </div>
 </template>
 <script>
   import anime from 'animejs'

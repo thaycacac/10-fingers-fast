@@ -39,7 +39,7 @@
                         Đã gõ: <strong id="__number-input">0</strong> / <strong id="__number-total">0</strong> ( Đúng <strong id="__number-percent">0</strong>%)
                         Lỗi: <strong id="__number-incorrect">0</strong>
                         Thời gian: <strong id="__number-time">00:00</strong>
-                        Tốc độ: <strong id="__number-speed">5 từ/phút</strong>
+                        Tốc độ: <strong id="__number-speed">0 từ/phút</strong>
                       </p>
                     </div>
                   </div>
@@ -196,6 +196,13 @@ export default {
         console.log(err)
       })
   },
+  head: {
+    title: 'Luyện gõ 10 ngón',
+    meta: [
+      { hid: 'description', name: 'description', content: 'Trang luyện gõ bàn phím 10 ngón' },
+      { hid: 'keywords', name: 'keywords', content: 'luyện gõ bàn phím, luyen go ban phim, luyện gõ 10 ngón, luyen go 10 ngon, gõ bàn phím nhanh, go ban phim nhanh, 10 fingers fast, học gõ 10 ngón, hoc go 10 ngon, gõ 10 ngón, go 10 ngon' }
+    ]
+  }
 };
 </script>
 <style lang="scss" scoped>
