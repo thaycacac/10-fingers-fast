@@ -6,8 +6,7 @@
           :class=icon
           data-aos="fade-left"></i>
         <p 
-        class="is-title-guide"
-        data-aos="fade-left">{{ title }}</p>
+        class="is-title-guide">{{ title }}</p>
         <page01 v-if="title === 'Quy tắc đặt tay trên bàn phím'"/>
         <page02 v-if="title === 'Phân công nhiệm vụ cho từng ngón tay'"/>
         <page03 v-if="title === 'Tư thế ngồi khi đánh máy'"/>

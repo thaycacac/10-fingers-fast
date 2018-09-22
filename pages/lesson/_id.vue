@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container-id">
     <div class="container">
       <div class="columns">
         <div class="column is-2">
@@ -18,9 +18,10 @@
                 </ul>
               </li>
             </ul>
+            <a class="button is-large is-fullwidth is-primary is-outlined" @click="fullScreen">Phóng to</a>
           </aside>
         </div>
-        <div class="column">
+        <div class="column" id="full-screen">
           <div class="columns">
             <div class="column is-2 hand-left">
               <svg-hand-left></svg-hand-left>
@@ -174,6 +175,20 @@ export default {
   components: {
     SvgHandLeft,
     SvgHandRight
+  },
+  methods: {
+    fullScreen () {
+      var elem = document.getElementById("full-screen")
+      if (elem.requestFullscreen) {
+        elem.requestFullscreen();
+      } else if (elem.msRequestFullscreen) {
+        elem.msRequestFullscreen();
+      } else if (elem.mozRequestFullScreen) {
+        elem.mozRequestFullScreen();
+      } else if (elem.webkitRequestFullscreen) {
+        elem.webkitRequestFullscreen();
+      }
+    }
   },
   layout: 'typing',
   beforeMount () {
