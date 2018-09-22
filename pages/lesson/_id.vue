@@ -176,6 +176,7 @@ export default {
     SvgHandRight
   },
   layout: 'typing',
+  transition: 'test',
   beforeMount() {
     keyboard()
     this.$nextTick(() => {

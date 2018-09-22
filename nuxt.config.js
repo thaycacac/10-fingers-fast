@@ -35,6 +35,7 @@ module.exports = {
   css: [
     '~/assets/css/main.css',
     './assets/sass/main.sass',
+    './assets/css/transition.css',
     'aos/dist/aos.css'
   ],
   modules: [

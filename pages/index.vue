@@ -21,6 +21,7 @@ import TypingStudy from '../components/content/TypingStudy'
 
 export default {
   layout: 'homepage',
+  transition: 'test',
   components: {
     Introduction,
     Navigation,
