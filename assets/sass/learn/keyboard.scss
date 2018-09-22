@@ -1,7 +1,7 @@
 /* colors */ 
 
 :root {
-    --keyboard-bg-color: #e6af2a;
+    --keyboard-bg-color: rgba(0, 0, 0, 0.3);
     --key-bg-color: #353535;
     --key-color: #FDF6FF;
     --font: 'Montserrat', sans-serif
@@ -195,10 +195,10 @@ i.underscore {
 .keyboard {
     background-color: var(--keyboard-bg-color);
     width: min-content;
-    margin: 75px auto;
+    margin: 20px auto;
     padding: 20px 10px;
     border-radius: 15px;
-    box-shadow: 0 27px 24px 0 rgba(0, 0, 0, .2), 0 40px 77px 0 rgba(0, 0, 0, .22);
+    box-shadow: 0 27px 24px 0 rgba(0, 0, 0, .6), 0 40px 77px 0 rgba(0, 0, 0, .22);
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
@@ -354,3 +354,7 @@ i.underscore {
       margin-top: 45px;
     }
   }
+
+.container-id {
+  margin-top: 50px;
+}
