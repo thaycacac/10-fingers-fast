@@ -1,5 +1,5 @@
 <template>
-  <div data-aos="fade-right">
+  <div>
     <div class="columns">
       <div class="column is-image" :style="{backgroundImage: image}">
         <div class="is-mask">

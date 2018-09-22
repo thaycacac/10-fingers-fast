@@ -8,16 +8,16 @@
         <p 
         class="is-title-guide"
         data-aos="fade-left">{{ title }}</p>
-        <p 
-        class="is-content-guide" 
-        v-html="content"
-        data-aos="fade-left">
-        <!-- FIXME: Error the client-side rendered virtual DOM -->
-        </p>
+        <page01 v-if="title === 'Quy tắc đặt tay trên bàn phím'"/>
+        <page02 v-if="title === 'Phân công nhiệm vụ cho từng ngón tay'"/>
+        <page03 v-if="title === 'Tư thế ngồi khi đánh máy'"/>
       </div>
     </div>
 </template>
 <script>
+import page01 from '../guide/01'
+import page02 from '../guide/02'
+import page03 from '../guide/03'
 export default {
   props: {
     icon: {
@@ -27,11 +27,12 @@ export default {
     title: {
       type: String,
       required: true
-    },
-    content: {
-      type: String,
-      required: true
     }
+  },
+  components: {
+    page01: page01,
+    page02: page02,
+    page03: page03
   }
 }
 </script>
