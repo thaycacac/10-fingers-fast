@@ -16,7 +16,7 @@
             </div>
           </div>
           <div class="column is-hidden-mobile">
-            <svg-slider></svg-slider>
+            <svg-slider class="svg-slider"></svg-slider>
           </div>
         </div>
       </div>
@@ -27,27 +27,16 @@
   </div>
 </template>
 <script>
-  import anime from 'animejs'
   import SvgSlider from '../../assets/svg/Slider.svg'
-  import animation from '../../assets/javascript/animationSlider.js'
+  import animationSlider from '../../assets/javascript/animationSlider.js'
+  import animationSVG from '../../assets/javascript/animationSVG.js'
   export default {
     components: {
       SvgSlider
     },
-    methods: {
-      animate () {
-        anime({
-          targets: 'g.st0',
-          strokeDashoffset: [anime.setDashoffset, 0],
-          duration: 4000,
-          delay: 500,
-          easing: 'easeOutSine'
-        })
-      }
-    },
     mounted () {
-      animation()
-      // return this.animate()
+      animationSlider()
+      animationSVG()
     }
   }
 </script>
