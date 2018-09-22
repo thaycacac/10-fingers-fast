@@ -20,23 +20,21 @@ export default {
   },
   layout: 'admin',
   methods: {
-    createLesson() {
+    createLesson () {
       this.$axios.post('/api/lesson', {
         lesson: this.lesson,
         type: this.type,
         content: this.content
       })
-      .then(() => {
-        this.lesson = '',
-        this.type = '',
-        this.content =''
-      })
-      .catch(err => {
-        console.log(err)
-      })
+        .then(() => {
+          console.log('create success')
+        })
+        .catch(err => {
+          console.log(err)
+        })
     }
   }
-};
+}
 </script>
 <style lang="scss" scoped>
 .box {

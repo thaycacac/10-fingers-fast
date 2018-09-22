@@ -29,7 +29,7 @@ export default {
     Background,
     Guide,
     Follow,
-    TypingStudy,
+    TypingStudy
   },
   head: {
     title: 'Trang chủ',

@@ -43,14 +43,14 @@
     </div>
 </template>
 <script>
-  import oneView from './target/view.vue';
+  import oneView from './target/view.vue'
   export default {
     data () {
       return {
         title: {
-          title1 : 'Học',
+          title1: 'Học',
           title2: 'Hành',
-          title3: 'Chơi',
+          title3: 'Chơi'
         },
         content: {
           content1: 'Tìm hiểu các khái niệm cơ bản của phương pháp 10 ngón tay chỉ trong vài phút - để có cái nhìn thoáng qua đầu tiên hoặc để bắt đầu thực hành đánh máy ngay lập tức.',
@@ -66,8 +66,8 @@
     },
     components: {
       oneView
-    }    
-  };
+    }
+  }
 </script>
 
 <style lang="scss" scoped>

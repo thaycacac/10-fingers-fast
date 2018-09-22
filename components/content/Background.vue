@@ -32,7 +32,7 @@
 </template>
 
 <script>
-  import OneView from './background/view.vue';
+  import OneView from './background/view.vue'
   export default {
     data () {
       return {
@@ -59,7 +59,7 @@
     components: {
       OneView
     }
-  };
+  }
 </script>
 
 <style lang="scss" scoped>

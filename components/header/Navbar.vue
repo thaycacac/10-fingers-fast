@@ -72,7 +72,7 @@
 export default {
   data () {
     return {
-      navigator: '',
+      navigator: ''
     }
   },
   methods: {
@@ -101,7 +101,7 @@ export default {
         { link: '/signin', name: 'Đăng nhập' }
       ]
     }
-    window.addEventListener('scroll', this.handleScroll);
+    window.addEventListener('scroll', this.handleScroll)
   }
-};
+}
 </script>

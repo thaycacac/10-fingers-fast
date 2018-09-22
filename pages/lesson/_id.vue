@@ -164,11 +164,11 @@ import axios from 'axios'
 import SvgHandLeft from '../../assets/svg/HandLeft.svg'
 import SvgHandRight from '../../assets/svg/HandRight.svg'
 export default {
-  data() {
+  data () {
     return {
       listLesson: '',
       idCurrent: this.$route.params.id,
-      idLessonCurrent: '',
+      idLessonCurrent: ''
     }
   },
   components: {
@@ -176,20 +176,19 @@ export default {
     SvgHandRight
   },
   layout: 'typing',
-  transition: 'test',
-  beforeMount() {
+  beforeMount () {
     keyboard()
     this.$nextTick(() => {
       this.$nuxt.$loading.start()
     })
   },
-  mounted() {
+  mounted () {
     return axios.get('/api/lesson/' + this.$route.params.id)
-      .then (response => {
+      .then(response => {
         this.listLesson = response.data.listLesson
         return response.data.listLesson
       })
-      .then ((listLesson) => {
+      .then((listLesson) => {
         const lessonCurrent = listLesson.find(lesson => {
           return lesson._id === this.$route.params.id
         })
@@ -197,7 +196,7 @@ export default {
         this.idLessonCurrent = lessonCurrent.lesson
         this.$nuxt.$loading.finish()
       })
-      .catch (err => {
+      .catch(err => {
         console.log(err)
       })
   },
@@ -208,7 +207,7 @@ export default {
       { hid: 'keywords', name: 'keywords', content: 'luyện gõ bàn phím, luyen go ban phim, luyện gõ 10 ngón, luyen go 10 ngon, gõ bàn phím nhanh, go ban phim nhanh, 10 fingers fast, học gõ 10 ngón, hoc go 10 ngon, gõ 10 ngón, go 10 ngon' }
     ]
   }
-};
+}
 </script>
 <style lang="scss" scoped>
 @import '../../assets/sass/main.sass';

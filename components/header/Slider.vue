@@ -34,17 +34,17 @@
       SvgSlider
     },
     methods: {
-      animate() {
+      animate () {
         anime({
-            targets: 'g.st0',
-            strokeDashoffset: [anime.setDashoffset, 0],
-            duration: 4000,
-            delay: 500,
-            easing: 'easeOutSine',
-          })
+          targets: 'g.st0',
+          strokeDashoffset: [anime.setDashoffset, 0],
+          duration: 4000,
+          delay: 500,
+          easing: 'easeOutSine'
+        })
       }
     },
-    mounted() {
+    mounted () {
       return this.animate()
     }
   }

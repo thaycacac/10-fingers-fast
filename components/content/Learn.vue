@@ -64,7 +64,7 @@
 <script>
 import axios from 'axios'
 export default {
-  data(){
+  data () {
     return {
       records: '',
       listLesson: '',
@@ -81,28 +81,28 @@ export default {
     }
   },
   methods: {
-    getListLesson(lessonID) {
+    getListLesson (lessonID) {
       axios.get('/api/lesson/listlesson/' + lessonID)
-      .then(response => {
-        this.listLesson = response.data
-      })
-      .catch(err => {
-        console.log(err)
-      })
-    },
+        .then(response => {
+          this.listLesson = response.data
+        })
+        .catch(err => {
+          console.log(err)
+        })
+    }
   },
-  beforeMount() {
+  beforeMount () {
     this.$nextTick(() => {
       this.$nuxt.$loading.start()
     })
     axios.get('/api/listlesson')
-    .then(response => {
-      this.records = response.data
-      this.$nuxt.$loading.finish()
-    })
-    .catch(err => {
-      console.log(err)
-    })
-  },
-};
+      .then(response => {
+        this.records = response.data
+        this.$nuxt.$loading.finish()
+      })
+      .catch(err => {
+        console.log(err)
+      })
+  }
+}
 </script>

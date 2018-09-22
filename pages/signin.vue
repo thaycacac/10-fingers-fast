@@ -64,34 +64,34 @@ export default {
   },
   layout: 'user',
   methods: {
-    signin() {
+    signin () {
       this.$nextTick(() => {
-      this.$nuxt.$loading.start()
+        this.$nuxt.$loading.start()
       })
       // check input
       if (this.username.trim() === '' || this.password.trim() === '') {
         this.error = 'Must be input all field'
         return
-      } 
-      this.$axios.post('/api/user/signin',{
+      }
+      this.$axios.post('/api/user/signin', {
         username: this.username,
         password: this.password
       })
-      .then( response => {
-        this.$nuxt.$loading.finish()
-        if (response.data.error) {
-          this.error = response.data.error
-        } else {
-          this.$store.dispatch('setUser', response.data.message)
-          // set session
-          this.$session.start()
-          this.$session.set('username', this.username)
-          this.$router.push('/') 
-        }
-      })
-      .catch(function (error) {
-        console.log(error)
-      })
+        .then(response => {
+          this.$nuxt.$loading.finish()
+          if (response.data.error) {
+            this.error = response.data.error
+          } else {
+            this.$store.dispatch('setUser', response.data.message)
+            // set session
+            this.$session.start()
+            this.$session.set('username', this.username)
+            this.$router.push('/')
+          }
+        })
+        .catch(function (error) {
+          console.log(error)
+        })
     }
   },
   computed: {
@@ -99,7 +99,7 @@ export default {
       return this.error !== ''
     }
   },
-  beforeMount() {
+  beforeMount () {
     if (this.$session.exists()) {
       this.$router.push('/')
     }

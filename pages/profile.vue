@@ -90,7 +90,7 @@ export default {
   ]),
   methods: {
     // TODO: update
-    signup(){
+    signup () {
       console.log(this)
     }
   },
@@ -113,11 +113,11 @@ export default {
           lastname: userCurrent.lastname,
           dob: userCurrent.dob.toString().split('T')[0],
           email: userCurrent.email,
-          password: userCurrent.password,
+          password: userCurrent.password
         })
         this.$nuxt.$loading.finish()
       })
-  } 
+  }
 }
 </script>
 

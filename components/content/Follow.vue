@@ -28,19 +28,19 @@ export default {
       this.$axios.post('/api/email', {
         email: this.email
       })
-      .then((result) => {
-        this.email = ''
-        this.$toast.open({
-          message: 'Register Success!',
-          type: 'is-success'
+        .then(result => {
+          this.email = ''
+          this.$toast.open({
+            message: 'Register Success!',
+            type: 'is-success'
+          })
         })
-      })
-      .catch(err => {
-        console.log(err)
-      })
+        .catch(err => {
+          console.log(err)
+        })
     }
   }
-};
+}
 </script>
 
 <style lang="scss" scoped>

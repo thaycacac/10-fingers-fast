@@ -86,7 +86,7 @@ export default {
       icon: {
         icon1: 'fas fa-handshake',
         icon2: 'fas fa-sitemap',
-        icon3 : 'fas fa-wheelchair'
+        icon3: 'fas fa-wheelchair'
 
       },
       image: {
@@ -106,7 +106,7 @@ export default {
       }
     }
   }
-};
+}
 </script>
 <style lang="scss" scoped>
 @import '../../assets/sass/main.sass';
