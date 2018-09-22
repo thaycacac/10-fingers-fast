@@ -30,6 +30,9 @@ module.exports = {
         href: 'https://fonts.googleapis.com/css?family=Montserrat:400,700',
         rel: 'stylesheet'
       }
+    ],
+    script: [
+      { src: 'https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js' }
     ]
   },
   css: [

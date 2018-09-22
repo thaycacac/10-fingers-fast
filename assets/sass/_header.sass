@@ -15,18 +15,23 @@
 
 //slider
 .masthead
-  padding-top: 10rem
   padding-bottom: calc(10rem - 56px)
   background-position: center center
   -webkit-background-size: cover
   -moz-background-size: cover
   -o-background-size: cover
+  min-height: 100%
+  background-image: url("/slider/2.png")
   background-size: cover
-  background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB)
-  animation: Gradient 15s ease infinite
-  -moz-animation: Gradient 15s ease infinite
-  -webkit-animation: Gradient 15s ease infinite
-  background-size: 400% 400%
+  background-position: center
+  font-family: Raleway, sans-serif
+  position: relative
+  .container
+    padding-top: 10rem
+    position: absolute
+    margin: 0 auto
+    left: 5%
+    right: 5%
   hr
     margin-top: 30px
     margin-bottom: 30px
@@ -34,30 +39,6 @@
     font-size: 2rem
   p
     font-weight: 300
-
-@-webkit-keyframes Gradient 
-	0%
-		background-position: 0% 50%
-	50% 
-		background-position: 100% 50%
-	100%
-		background-position: 0% 50%
-
-@-moz-keyframes Gradient 
-	0%
-		background-position: 0% 50%
-	50% 
-		background-position: 100% 50%
-	100% 
-		background-position: 0% 50%
-
-@keyframes Gradient
-	0%
-		background-position: 0% 50%
-	50%
-		background-position: 100% 50%
-	100%
-		background-position: 0% 50%
 
 @media (min-width: 768px)
   .masthead p
