@@ -86,7 +86,11 @@ export default {
             // set session
             this.$session.start()
             this.$session.set('username', this.username)
-            this.$router.push('/')
+            if (this.username === 'admin') {
+              this.$router.push('/admin')
+            } else {
+              this.$router.push('/')
+            }
           }
         })
         .catch(function (error) {
