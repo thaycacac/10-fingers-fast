@@ -54,6 +54,7 @@ module.exports = {
       pathRewrite: { '^/api': '' }
     }
   },
+  loading: '~/components/share/loading.vue',
   build: {
     vendor: [
       'axios',

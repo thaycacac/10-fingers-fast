@@ -77,6 +77,7 @@ export default {
         { name: 'Luyện Thêm' }
       ],
       isShowLesson: false,
+      loading: false
     }
   },
   methods: {
