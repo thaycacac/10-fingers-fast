@@ -19,6 +19,7 @@ export default {
     }
   },
   layout: 'admin',
+  middleware: 'authentication',
   methods: {
     createLesson () {
       this.$axios.post('/api/lesson', {
@@ -32,6 +33,11 @@ export default {
         .catch(err => {
           console.log(err)
         })
+    }
+  },
+  beforeMount() {
+    if (this.$session.get('username') !== 'admin') {
+      this.$router.push('/')
     }
   }
 }

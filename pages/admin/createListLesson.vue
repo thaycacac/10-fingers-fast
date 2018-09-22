@@ -33,6 +33,11 @@ export default {
           console.log(err)
         })
     }
+  },
+  beforeMount() {
+    if (this.$session.get('username') !== 'admin') {
+      this.$router.push('/')
+    }
   }
 }
 </script>

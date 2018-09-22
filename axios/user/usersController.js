@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const signup = (username, firstname, lastname, dob, email, password) => {
-  axios.post('/api/signup', {
+  axios.post('/api/user/signup', {
     username: username,
     firstname: firstname,
     lastname: lastname,
