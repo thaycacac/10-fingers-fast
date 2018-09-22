@@ -95,6 +95,9 @@ export default {
     }
   },
   beforeMount () {
+    this.$nextTick(() => {
+      this.$nuxt.$loading.start()
+    })
     // check login or not
     if (!this.$session.exists()) {
       this.$router.push('/')
@@ -112,6 +115,7 @@ export default {
           email: userCurrent.email,
           password: userCurrent.password,
         })
+        this.$nuxt.$loading.finish()
       })
   } 
 }

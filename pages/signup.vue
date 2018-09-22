@@ -112,8 +112,11 @@ export default {
   layout: 'user',
   methods: {
     signup() {
+      this.$nextTick(() => {
+        this.$nuxt.$loading.start()
+      })
+      
       this.error = ''
-
       const regexEmail = /^(([^<>()\\[\]\\.,;:\s@"]+(\.[^<>()\\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
 
       window.scrollTo(0, top);
@@ -141,6 +144,7 @@ export default {
         signup(this.username, this.firstname, this.lastname, this.dob, this.email, this.password)
         this.$router.push('/user/signin')
       }
+      this.$nuxt.$loading.finish()
     }
   },
   computed: {

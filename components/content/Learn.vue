@@ -92,9 +92,13 @@ export default {
     },
   },
   beforeMount() {
+    this.$nextTick(() => {
+      this.$nuxt.$loading.start()
+    })
     axios.get('/api/listlesson')
     .then(response => {
       this.records = response.data
+      this.$nuxt.$loading.finish()
     })
     .catch(err => {
       console.log(err)

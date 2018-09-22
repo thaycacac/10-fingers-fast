@@ -65,6 +65,9 @@ export default {
   layout: 'user',
   methods: {
     signin() {
+      this.$nextTick(() => {
+      this.$nuxt.$loading.start()
+      })
       // check input
       if (this.username.trim() === '' || this.password.trim() === '') {
         this.error = 'Must be input all field'
@@ -75,6 +78,7 @@ export default {
         password: this.password
       })
       .then( response => {
+        this.$nuxt.$loading.finish()
         if (response.data.error) {
           this.error = response.data.error
         } else {
