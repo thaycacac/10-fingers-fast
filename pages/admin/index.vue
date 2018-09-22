@@ -34,6 +34,12 @@
 
 <script>
 export default {
-  layout: 'admin'
+  beforeMount() {
+    if (this.$session.get('username') !== 'admin') {
+      this.$router.push('/')
+    }
+  },
+  layout: 'admin',
+  middleware: 'authentication'
 }
 </script>

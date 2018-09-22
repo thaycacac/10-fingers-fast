@@ -9,15 +9,15 @@
 
 <script>
 // import axios from '~/plugins/axios'
-import Navbar from "../components/header/Navbar"
-import Slider from "../components/header/SliderSmall"
-import MyFooter from '../components/footer/Footer';
+import Navbar from '../components/header/Navbar'
+import Slider from '../components/header/SliderSmall'
+import MyFooter from '../components/footer/Footer'
 
 export default {
   components: {
     Navbar,
     Slider,
-    MyFooter,
+    MyFooter
   }
 }
 </script>

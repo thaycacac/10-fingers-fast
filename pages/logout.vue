@@ -2,10 +2,10 @@
 </template>
 <script>
 export default {
-  beforeMount() {
+  beforeMount () {
     this.$session.destroy()
     this.$router.push('/')
-  },
+  }
 }
 </script>
 

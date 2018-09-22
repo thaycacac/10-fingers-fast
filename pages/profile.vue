@@ -90,11 +90,14 @@ export default {
   ]),
   methods: {
     // TODO: update
-    signup(){
+    signup () {
       console.log(this)
     }
   },
   beforeMount () {
+    this.$nextTick(() => {
+      this.$nuxt.$loading.start()
+    })
     // check login or not
     if (!this.$session.exists()) {
       this.$router.push('/')
@@ -110,10 +113,11 @@ export default {
           lastname: userCurrent.lastname,
           dob: userCurrent.dob.toString().split('T')[0],
           email: userCurrent.email,
-          password: userCurrent.password,
+          password: userCurrent.password
         })
+        this.$nuxt.$loading.finish()
       })
-  } 
+  }
 }
 </script>
 

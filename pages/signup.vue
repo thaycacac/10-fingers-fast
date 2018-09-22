@@ -111,12 +111,11 @@ export default {
   },
   layout: 'user',
   methods: {
-    signup() {
+    signup () {
       this.error = ''
-
       const regexEmail = /^(([^<>()\\[\]\\.,;:\s@"]+(\.[^<>()\\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
 
-      window.scrollTo(0, top);
+      window.scrollTo(0, top)
       if (!this.username.trim() || this.username === undefined) {
         this.error = '· You must be input username<br>'
       } else if (!this.firstname.trim() || this.firstname === undefined) {
@@ -138,17 +137,21 @@ export default {
       } else if (!(this.password === this.repassword)) {
         this.error = '· Password and Repassword not the same<br>'
       } else {
+        this.$nextTick(() => {
+          this.$nuxt.$loading.start()
+        })
         signup(this.username, this.firstname, this.lastname, this.dob, this.email, this.password)
-        this.$router.push('/user/signin')
+        this.$router.push('/signin')
       }
+      this.$nuxt.$loading.finish()
     }
   },
   computed: {
-    hasError(){
+    hasError () {
       return this.error === ''
-    } 
+    }
   },
-  beforeMount() {
+  beforeMount () {
     if (this.$session.exists()) {
       this.$router.push('/')
     }

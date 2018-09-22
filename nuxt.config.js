@@ -11,7 +11,7 @@ module.exports = {
       { hid: 'keywords', name: 'keywords', content: 'luyện gõ bàn phím, luyen go ban phim, luyện gõ 10 ngón, luyen go 10 ngon, gõ bàn phím nhanh, go ban phim nhanh, 10 fingers fast, học gõ 10 ngón, hoc go 10 ngon, gõ 10 ngón, go 10 ngon' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/static/favicon.ico' },
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       {
         rel: 'stylesheet',
         href: 'https://use.fontawesome.com/releases/v5.2.0/css/all.css',
@@ -35,6 +35,7 @@ module.exports = {
   css: [
     '~/assets/css/main.css',
     './assets/sass/main.sass',
+    './assets/css/transition.css',
     'aos/dist/aos.css'
   ],
   modules: [
