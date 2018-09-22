@@ -178,6 +178,9 @@ export default {
   layout: 'typing',
   beforeMount() {
     keyboard()
+    this.$nextTick(() => {
+      this.$nuxt.$loading.start()
+    })
   },
   mounted() {
     return axios.get('/api/lesson/' + this.$route.params.id)
@@ -191,6 +194,7 @@ export default {
         })
         handleKeyboard(lessonCurrent.content)
         this.idLessonCurrent = lessonCurrent.lesson
+        this.$nuxt.$loading.finish()
       })
       .catch (err => {
         console.log(err)
