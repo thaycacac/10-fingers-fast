@@ -47,12 +47,12 @@
               Ngôn ngữ
             </a>
             <div class="navbar-dropdown is-boxed">
-              <a class="navbar-item" href="#">
-                Tiếng Việt
-              </a>
-              <a class="navbar-item" href="#">
-                Tiếng Anh
-              </a>
+              <nuxt-link
+                v-for="(locale, i) in showLocales"
+                :key="i"
+                :to="switchLocalePath(locale.code)">
+                {{ locale.name }}
+              </nuxt-link>
             </div>
           </div>
         </div>
@@ -102,6 +102,11 @@ export default {
       ]
     }
     window.addEventListener('scroll', this.handleScroll)
+  },
+  computed: {
+    showLocales () {
+      return this.$i18n.locales.filter(locale => locale.code !== this.$i18n.locale)
+    }
   }
 }
 </script>

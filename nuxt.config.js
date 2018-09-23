@@ -1,3 +1,4 @@
+const { I18N } = require('./config')
 module.exports = {
   /*
   ** Headers of the page
@@ -43,7 +44,8 @@ module.exports = {
   ],
   modules: [
     '@nuxtjs/axios',
-    'nuxt-buefy'
+    'nuxt-buefy',
+    [ 'nuxt-i18n', I18N ]
     // ['nuxt-buefy', { css: false, materialDesignIcons: false }]
   ],
   plugins: [

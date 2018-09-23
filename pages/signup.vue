@@ -46,7 +46,14 @@ export default {
       email: '',
       password: '',
       repassword: '',
-      error: ''
+      error: '',
+      i18nusername: this.$i18n.t('signup.username'),
+      i18nfirstname: '',
+      i18nlastname: '',
+      i18ndob: '',
+      i18nemail: '',
+      i18npassword: '',
+      i18nrepassword: ''
     }
   },
   layout: 'user',

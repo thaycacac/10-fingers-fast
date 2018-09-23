@@ -2,6 +2,10 @@
 # yarn lockfile v1
 
 
+"@kazupon/vue-i18n-loader@^0.3.0":
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/@kazupon/vue-i18n-loader/-/vue-i18n-loader-0.3.0.tgz#e068de2d75d891275814ae28ad1fcaf1b537694f"
+
 "@nuxtjs/axios@^5.3.1":
   version "5.3.1"
   resolved "http://registry.npmjs.org/@nuxtjs/axios/-/axios-5.3.1.tgz#9f9e6c817dae44c16955af659f6d5ac2a8085148"
@@ -87,6 +91,10 @@ acorn@^5.0.0, acorn@^5.0.1:
 acorn@^5.3.0:
   version "5.7.1"
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-5.7.1.tgz#f095829297706a7c9776958c0afc8930a9b9d9d8"
+
+acorn@^5.7.2:
+  version "5.7.3"
+  resolved "https://registry.yarnpkg.com/acorn/-/acorn-5.7.3.tgz#67aa231bf8812974b85235a96771eb6bd07ea279"
 
 ajv-keywords@^1.0.0:
   version "1.5.1"
@@ -4128,6 +4136,10 @@ js-base64@^2.1.9:
   version "2.1.9"
   resolved "https://registry.yarnpkg.com/js-base64/-/js-base64-2.1.9.tgz#f0e80ae039a4bd654b5f281fc93f04a914a7fcce"
 
+js-cookie@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/js-cookie/-/js-cookie-2.2.0.tgz#1b2c279a6eece380a12168b92485265b35b1effb"
+
 js-stringify@^1.0.1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/js-stringify/-/js-stringify-1.0.2.tgz#1736fddfd9724f28a3682adc6230ae7e4e9679db"
@@ -5068,6 +5080,17 @@ nuxt-buefy@^0.1.0:
   resolved "https://registry.yarnpkg.com/nuxt-buefy/-/nuxt-buefy-0.1.0.tgz#eb480301d3d4e841060d6323f407894b6ad7ea5a"
   dependencies:
     buefy "0.6.6"
+
+nuxt-i18n@^5.3.0:
+  version "5.3.0"
+  resolved "https://registry.yarnpkg.com/nuxt-i18n/-/nuxt-i18n-5.3.0.tgz#d6ae7d3840d604c24406210ce8244f3d42972ee4"
+  dependencies:
+    "@kazupon/vue-i18n-loader" "^0.3.0"
+    acorn "^5.7.2"
+    cookie "^0.3.1"
+    js-cookie "^2.2.0"
+    vue-i18n "^8.0.0"
+    vue-i18n-extensions "^0.2.0"
 
 nuxt@latest:
   version "1.4.2"
@@ -7913,6 +7936,10 @@ vm-browserify@0.0.4:
   dependencies:
     indexof "0.0.1"
 
+vm2@^3.5.0:
+  version "3.6.3"
+  resolved "https://registry.yarnpkg.com/vm2/-/vm2-3.6.3.tgz#6dd426bb67a387d03055c5d276720f3f23203b72"
+
 void-elements@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/void-elements/-/void-elements-2.0.1.tgz#c066afb582bb1cb4128d60ea92392e94d5e9dbec"
@@ -7920,6 +7947,16 @@ void-elements@^2.0.1:
 vue-hot-reload-api@^2.2.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/vue-hot-reload-api/-/vue-hot-reload-api-2.3.0.tgz#97976142405d13d8efae154749e88c4e358cf926"
+
+vue-i18n-extensions@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/vue-i18n-extensions/-/vue-i18n-extensions-0.2.0.tgz#be566a1988f0d736a8d6cea4cc1462ffca520bc6"
+  dependencies:
+    vm2 "^3.5.0"
+
+vue-i18n@^8.0.0:
+  version "8.1.0"
+  resolved "https://registry.yarnpkg.com/vue-i18n/-/vue-i18n-8.1.0.tgz#a2bce3879f595b6188b419f8d2c6a74d8aee5eb7"
 
 vue-loader@^13.7.2:
   version "13.7.2"
