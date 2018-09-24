@@ -26,5 +26,11 @@ module.exports = {
     lastname: 'Tên',
     email: 'Email',
     password: 'Mật khẩu'
+  },
+  navbar: {
+    home: 'Trang chủ',
+    practice: 'Luyện gõ 10 ngón',
+    account: 'Tài khoản',
+    language: 'Ngôn ngữ'
   }
 }

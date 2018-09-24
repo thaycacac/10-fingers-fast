@@ -1,66 +1,36 @@
-<template>
-  <nav class="navbar is-transparent is-fixed-top">
-    <div class="container">
-      <div class="navbar-brand">
-        <a class="navbar-item" href="/">
-          <img src="../../assets/img/logo2.png" alt="logo">
-        </a>
-        <div 
-          class="navbar-burger burger" 
-          data-target="navbarExampleTransparentExample">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-      </div>
-      <div 
-        id="navbarExampleTransparentExample" 
-        class="navbar-menu">
-        <div class="navbar-end">
-        <div class="group-navbar">
-          <div class="navbar-start">
-            <a class="navbar-item" href="/">
-              Trang chủ
-            </a>
-            <a class="navbar-item" href="/learn">
-              Luyện gõ 10 ngón
-            </a>
-          </div>
-        </div>
-        <div class="navbar-item">
-          <div class="navbar-item has-dropdown is-hoverable">
-            <a class="navbar-link" href="/">
-              Tài khoản
-            </a>
-            <div class="navbar-dropdown is-boxed">
-              <a 
-                v-for="item in navigator" 
-                :href="item.link" 
-                :key="item.link"
-                class="navbar-item">
-                {{ item.name }}
-              </a>
-            </div>
-          </div>
-          <div class="navbar-item has-dropdown is-hoverable">
-            <a class="navbar-link" href="#">
-              Ngôn ngữ
-            </a>
-            <div class="navbar-dropdown is-boxed">
-              <nuxt-link
-                class="navbar-item"
-                v-for="(locale, i) in showLocales"
-                :key="i"
-                :to="switchLocalePath(locale.code)">
-                {{ locale.name }}
-              </nuxt-link>
-            </div>
-          </div>
-        </div>
-        </div>
-      </div>
-    </div>
-  </nav>
+<template lang="pug">
+  nav.navbar.is-transparent.is-fixed-top
+    div.container
+      div.navbar-brand
+        a.navbar-item(href='/')
+          img(src='../../assets/img/logo2.png' alt='logo')
+        div.navbar-burger.burger(data-target='navbarExampleTransparentExample')
+          span
+          span
+          span
+      div.navbar-menu#navbarExampleTransparentExample
+        div.navbar-end
+        div.group-navbar
+          div.navbar-start
+            a.navbar-item.is-navbar-text(href='/') {{ $t('navbar.home') }}
+            a.navbar-item.is-navbar-text(href='/learn') {{ $t('navbar.practice') }}
+        div.navbar-item
+          div.navbar-item.has-dropdown.is-hoverable
+            a.navbar-link(href='/') {{ $t('navbar.account') }}
+            div.navbar-dropdown.is-boxed
+              a.navbar-item(
+                v-for='item in navigator'
+                :href='item.link'
+                :key='item.link'
+              ) {{ item.name }}
+          div.navbar-item.has-dropdown.is-hoverable
+            a.navbar-link(href='#') {{ $t('navbar.language') }}
+            div.navbar-dropdown.is-boxed
+              nuxt-link.navbar-item(
+                v-for='(locale, i) in showLocales'
+                :key='i',
+                :to='switchLocalePath(locale.code)'
+              ) {{ locale.name }}
 </template>
 <style lang="scss" scoped>
 @import '../../assets/sass/main.sass';

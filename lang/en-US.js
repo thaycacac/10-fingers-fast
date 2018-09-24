@@ -26,5 +26,11 @@ module.exports = {
     lastname: 'Last name',
     email: 'Email',
     password: 'Password'
+  },
+  navbar: {
+    home: 'Home',
+    practice: 'Practice learn 10 fingers',
+    account: 'Account',
+    language: 'Language'
   }
 }
