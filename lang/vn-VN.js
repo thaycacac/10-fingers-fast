@@ -32,5 +32,10 @@ module.exports = {
     practice: 'Luyện gõ 10 ngón',
     account: 'Tài khoản',
     language: 'Ngôn ngữ'
+  },
+  slider: {
+    title: 'Bàn Tay Ta Làm Nên Tất Cả',
+    description: 'Tìm hiểu các khái niệm, bài học cơ bản đến nâng cao của phương pháp 10 ngón tay trong thời gian ngắn!',
+    readmore: 'Đọc thêm'
   }
 }

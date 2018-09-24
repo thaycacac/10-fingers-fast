@@ -32,5 +32,10 @@ module.exports = {
     practice: 'Practice learn 10 fingers',
     account: 'Account',
     language: 'Language'
+  },
+  slider: {
+    title: 'Our hands make it all',
+    description: 'Learn the basics, concepts to the advanced of the 10 finger method in a short time!',
+    readmore: 'Readmore'
   }
 }
