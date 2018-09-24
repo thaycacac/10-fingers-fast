@@ -48,6 +48,7 @@
             </a>
             <div class="navbar-dropdown is-boxed">
               <nuxt-link
+                class="navbar-item"
                 v-for="(locale, i) in showLocales"
                 :key="i"
                 :to="switchLocalePath(locale.code)">

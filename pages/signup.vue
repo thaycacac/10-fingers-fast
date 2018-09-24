@@ -1,18 +1,9 @@
 <template lang="pug">
-  mixin oneField (label, type, placeholder, vmode)
-    div.field
-      label.label=label
-      div.control
-        input.input.is-large(
-          type=type
-          placeholder=placeholder
-          v-model=vmode
-        )
   section.hero.is-success.is-fullheight.is-login
     div.hero-body
       div.container.has-text-centered
         div.column.is-8.is-offset-2
-          h3.title.has-text-black Đăng Ký
+          h3.title.has-text-black {{ $t('signup.title') }}
           div.box
             p(
               class='has-error'
@@ -20,18 +11,39 @@
               v-html='error'
             )
             form
-              +oneField('Username', 'text', 'Nhập tên tài khoản', 'username')
-              +oneField('First Name', 'text', 'Nhập tên họ và đệm', 'firstname')
-              +oneField('Last Name', 'text', 'Nhập tên', 'lastname')
-              +oneField('Date of Birth', 'date', '', 'dob')
-              +oneField('Email', 'email', 'Nhập email', 'email')
-              +oneField('Password', 'password', 'Nhập mật khẩu', 'password')
-              +oneField('Repassword', 'password', 'Nhập lại mật khẩu', 'repassword')
+              div.field
+                label.label {{ $t('signup.title') }}
+                div.control
+                  input.input.is-large(type='text' placeholder='Input username' v-model='username')
+              div.field
+                label.label {{ $t('signup.firstname') }}
+                div.control
+                  input.input.is-large(type='text' placeholder='Input first name' v-model='firstname')
+              div.field
+                label.label {{ $t('signup.lastname') }}
+                div.control
+                  input.input.is-large(type='text' placeholder='Input last name' v-model='lastname')
+              div.field
+                label.label {{ $t('signup.dob') }}
+                div.control
+                  input.input.is-large(type='date' v-model='dob')
+              div.field
+                label.label {{ $t('signup.email') }}
+                div.control
+                  input.input.is-large(type='email' placeholder='Input email' v-model='email')
+              div.field
+                label.label {{ $t('signup.password') }}
+                div.control
+                  input.input.is-large(type='password' placeholder='Input password' v-model='password')
+              div.field
+                label.label {{ $t('signup.repassword') }}
+                div.control
+                  input.input.is-large(type='password' placeholder='Input repassword' v-model='repassword')
               button.button.is-block.is-warning.is-large.is-fullheight(
                 @click.prevent='signup'
-              ) Đăng Ký
+              ) {{ $t('signup.title') }}
           p.has-choose-more
-            a(href='/signin') Đăng nhập
+            a(href='/signin') {{ $t('signup.signin') }}
 </template>
 
 <script>
@@ -42,18 +54,11 @@ export default {
       username: '',
       firstname: '',
       lastname: '',
-      dob: '',
+      dob: new Date(),
       email: '',
       password: '',
       repassword: '',
-      error: '',
-      i18nusername: this.$i18n.t('signup.username'),
-      i18nfirstname: '',
-      i18nlastname: '',
-      i18ndob: '',
-      i18nemail: '',
-      i18npassword: '',
-      i18nrepassword: ''
+      error: ''
     }
   },
   layout: 'user',

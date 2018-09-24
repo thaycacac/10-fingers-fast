@@ -17,24 +17,19 @@ const I18N = {
   defaultLocale: 'vn',
   routes: {
     'index': {
-      en: '/en',
-      vn: '/vn'
+      en: '/en'
     },
     'learn': {
-      en: '/en',
-      vn: '/vn'
+      en: '/en'
     },
     'profile': {
-      en: '/en',
-      vn: '/vn'
+      en: '/en'
     },
     'signin': {
-      en: '/en',
-      vn: '/vn'
+      en: '/en'
     },
     'signup': {
-      en: '/en',
-      vn: '/vn'
+      en: '/en'
     },
     'lesson/_id': {
       en: '/lesson/:id?',

@@ -1,10 +1,30 @@
 module.exports = {
   signup: {
-    username: 'Input username',
-    firstname: 'Input first name',
-    lastname: 'Input last name',
-    email: 'Input email',
-    password: 'Input password',
-    repassword: 'Input repassword'
+    title: 'Signup',
+    signin: 'Signin',
+    username: 'Username',
+    firstname: 'First name',
+    dob: 'Date of birth',
+    lastname: 'Last name',
+    email: 'Email',
+    password: 'Password',
+    repassword: 'Repassword'
+  },
+  signin: {
+    title: 'Signin',
+    remember: 'Remember password',
+    signup: 'Signup',
+    forgot: 'Forgot password',
+    help: 'Help?'
+  },
+  profile: {
+    title: 'Profile',
+    update: 'Update',
+    username: 'Username',
+    firstname: 'First name',
+    dob: 'Date of birth',
+    lastname: 'Last name',
+    email: 'Email',
+    password: 'Password'
   }
 }

@@ -1,58 +1,37 @@
-<template>
-  <section class="hero is-success is-fullheight is-login">
-    <div class="hero-body">
-      <div class="container has-text-centered">
-        <div class="column is-4 is-offset-4">
-          <h3 class="title has-text-black">Đăng Nhập</h3>
-          <div class="box">
-            <figure class="avatar">
-              <img src="../assets/img/user/logo-login.png">
-            </figure>
-            <transition name="bounce">
-              <p style="color: red" v-show="checkError">{{ error }}</p>
-            </transition>
-            <form>
-              <div class="field">
-                <div class="control">
-                  <input 
-                  class="input is-large" 
-                  type="text" 
-                  placeholder="Nhập tên tài khoản" 
-                  autofocus="" 
-                  v-model="username">
-                </div>
-              </div>
-              <div class="field">
-                <div class="control">
-                  <input 
-                  class="input is-large" 
-                  type="password" 
-                  placeholder="Nhập mật khẩu" 
-                  v-model="password">
-                </div>
-              </div>
-              <div class="field">
-                <label class="checkbox">
-                  <input type="checkbox">
-                  Nhớ mật khẩu
-                </label>
-              </div>
-              <button 
-              class="button is-block is-warning is-large is-fullwidth" 
-              @click.prevent="signin">Đăng Nhập</button>
-            </form>
-          </div>
-          <p class="has-choose-more">
-            <a href="/signup">Đăng ký</a> &nbsp;·&nbsp;
-            <a href="/#">Quên mật khẩu</a> &nbsp;·&nbsp;
-            <a href="/#">Giúp?</a>
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
+<template lang="pug">
+  section.hero.is-success.is-fullheight.is-login
+    div.hero-body
+      div.container.has-text-centered
+        div.column.is-4.is-offset-4
+          h3.title.has-text-black {{ $t('signin.title') }}
+          div.box
+            figure.avatar
+              img(src='../assets/img/user/logo-login.png')
+            transition.bounce
+              p(style='color: red' v-show='checkError') {{ error }}
+            form
+              div.field
+                div.control
+                  input.input.is-large(
+                    type='text'
+                    placeholder='Input username'
+                    v-model='username')
+              div.field
+                div.control
+                  input.input.is-large(
+                    type='password' 
+                    placeholder='Input password'
+                    v-model='password')
+                button.button.is-block.is-warning.is-large.is-fullwidth.--is-button-signin(
+                  @click.prevent='signin'
+                ) {{ $t('signin.title') }}
+              div.field
+                label.checkbox #[input.checkbox(type='checkbox')] {{ $t('signin.remember') }}
+          p.has-choose-more
+            a(href='/signup') {{ $t('signin.signup') }} &nbsp·&nbsp
+            a(href='#') {{ $t('signin.forgot') }} &nbsp·&nbsp
+            a(href='#') {{ $t('signin.help') }}
 </template>
-
 <script>
 export default {
   data () {
@@ -65,14 +44,14 @@ export default {
   layout: 'user',
   methods: {
     signin () {
-      this.$nextTick(() => {
-        this.$nuxt.$loading.start()
-      })
       // check input
       if (this.username.trim() === '' || this.password.trim() === '') {
         this.error = 'Must be input all field'
         return
       }
+      this.$nextTick(() => {
+        this.$nuxt.$loading.start()
+      })
       this.$axios.post('/api/user/signin', {
         username: this.username,
         password: this.password

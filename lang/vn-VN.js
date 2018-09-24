@@ -1,10 +1,30 @@
 module.exports = {
   signup: {
-    username: 'Nhập tên tài khoản',
-    firstname: 'Nhập họ và tên đệm',
-    lastname: 'Nhập tên',
-    email: 'Nhập email',
-    password: 'Nhập mật khẩu',
+    title: 'Đăng ký',
+    signin: 'Đăng nhập',
+    username: 'Tên tài khoản',
+    firstname: 'Họ và tên đệm',
+    dob: 'Ngày sinh',
+    lastname: 'Tên',
+    email: 'Email',
+    password: 'Mật khẩu',
     repassword: 'Nhập lại mật khẩu'
+  },
+  signin: {
+    title: 'Đăng nhập',
+    remember: 'Nhớ mật khẩu',
+    signup: 'Đăng ký',
+    forgot: 'Quên mật khẩu',
+    help: 'Giúp?'
+  },
+  profile: {
+    title: 'Thông tin cá nhân',
+    update: 'Cập nhật',
+    username: 'Tên tài khoản',
+    firstname: 'Họ và tên đệm',
+    dob: 'Ngày sinh',
+    lastname: 'Tên',
+    email: 'Email',
+    password: 'Mật khẩu'
   }
 }
