@@ -1,46 +1,28 @@
-<template>
-    <div class="my-target" id="target">
-        <div class="container-intro">
-            <h1 
-              class="title" 
-              data-aos="zoom-in-up"
-              data-aos-duration="500">Bạn có thể làm gì?</h1>
-            <h5 
-              class="title  is-5 my-descrip" 
-              data-aos="zoom-in-up">Đến với 10FingersFast, chúng tôi có thể giúp bạn</h5>
-        </div>
-        <div class="container">
-            <div class="columns">
-                <div 
-                  class="column" 
-                  data-aos="fade-right" 
-                  data-aos-duration="1000">
-                    <one-view
-                    :icon=icon.icon1
-                    :title = title.title1
-                    :content = content.content1></one-view>
-                </div>
-                <div 
-                  class="column" 
-                  data-aos="fade-up" 
-                  data-aos-duration="1000">
-                    <one-view
-                    :icon=icon.icon2
-                    :title = title.title2
-                    :content = content.content2></one-view>
-                </div>
-                <div
-                  class="column" 
-                  data-aos="fade-left" 
-                  data-aos-duration="1000">
-                    <one-view
-                    :icon=icon.icon3
-                    :title = title.title3
-                    :content = content.content3></one-view>
-                </div>
-            </div>
-        </div>
-    </div>
+<template lang="pug">
+  div.my-target#target
+    div.container-intro
+      h1.title(data-aos='zoom-in-up') {{ $t('target.titleBig') }}
+      h5.title.is-5.my-descrip(data-aos='zoom-in-up') {{ $t('target.titleSmall') }}
+    div.container
+      div.columns.is-all
+        div.column.is-one(data-aos='fade-right')
+          one-view(
+            :icon='icon.icon1'
+            :title='title.title1'
+            :content='content.content1'
+          )
+        div.column.is-one(data-aos='fade-up')
+          one-view(
+            :icon='icon.icon2'
+            :title='title.title2'
+            :content='content.content2'
+          )
+        div.column.is-one(data-aos='fade-left')
+          one-view(
+            :icon='icon.icon3'
+            :title='title.title3'
+            :content='content.content3'
+          )
 </template>
 <script>
   import oneView from './target/view.vue'
@@ -48,14 +30,14 @@
     data () {
       return {
         title: {
-          title1: 'Học',
-          title2: 'Hành',
-          title3: 'Chơi'
+          title1: this.$i18n.t('target.title.title1'),
+          title2: this.$i18n.t('target.title.title2'),
+          title3: this.$i18n.t('target.title.title3'),
         },
         content: {
-          content1: 'Tìm hiểu các khái niệm cơ bản của phương pháp 10 ngón tay chỉ trong vài phút - để có cái nhìn thoáng qua đầu tiên hoặc để bắt đầu thực hành đánh máy ngay lập tức.',
-          content2: 'Thực hành các bài luyện gõ chữ 10 ngón từ cơ bản đến nâng cao giúp bạn có thể hình thành thói quen gõ 10 ngón một cách chính xác và điêu luyện. ',
-          content3: 'Các trò chơi và các bài test giúp bạn hứng thú hơn trong quá trình học và kiểm tra trình độ của bạn, sự tiến bộ của bạn đến đâu...'
+          content1: this.$i18n.t('target.content.content1'),
+          content2: this.$i18n.t('target.content.content2'),
+          content3: this.$i18n.t('target.content.content3'),
         },
         icon: {
           icon1: 'fas fa-bookmark',

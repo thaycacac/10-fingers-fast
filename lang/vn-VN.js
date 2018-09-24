@@ -48,5 +48,19 @@ module.exports = {
     guide: 'Hướng dẫn',
     typingStudy: 'Luyện Gõ',
     testSpeed: 'Kiểm tra tốc độ'
+  },
+  target: {
+    titleBig: 'Bạn có thể làm gì?',
+    titleSmall: 'Đến với 10FingersFast, chúng tôi có thể giúp bạn',
+    title: {
+      title1: 'Học',
+      title2: 'Hành',
+      title3: 'Chơi'
+    },
+    content: {
+      content1: 'Tìm hiểu các khái niệm cơ bản của phương pháp 10 ngón tay chỉ trong vài phút - để có cái nhìn thoáng qua đầu tiên hoặc để bắt đầu thực hành đánh máy ngay lập tức.',
+      content2: 'Thực hành các bài luyện gõ chữ 10 ngón từ cơ bản đến nâng cao giúp bạn có thể hình thành thói quen gõ 10 ngón một cách chính xác và điêu luyện.',
+      content3: 'Các trò chơi và các bài test giúp bạn hứng thú hơn trong quá trình học và kiểm tra trình độ của bạn, sự tiến bộ của bạn đến đâu...'
+    }
   }
 }

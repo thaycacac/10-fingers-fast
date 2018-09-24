@@ -48,5 +48,19 @@ module.exports = {
     guide: 'Guide',
     typingStudy: 'Learn Typing',
     testSpeed: 'Test Speed'
+  },
+  target: {
+    titleBig: 'What can you do?',
+    titleSmall: 'Coming to 10FingersFast, we can help you',
+    title: {
+      title1: 'Learn',
+      title2: 'Practice',
+      title3: 'Play'
+    },
+    content: {
+      content1: 'Learn the basics of the 10-finger method in just a few minutes - to get a glimpse first or to start typing practice right away.',
+      content2: 'Practice basic ten-to-advanced typing exercises that will allow you to form the habit of typing 10 fingers accurately and skillfully.',
+      content3: 'Games and tests help you get more excited while learning and testing your level, where your progress is ...'
+    }
   }
 }

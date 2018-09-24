@@ -1,9 +1,8 @@
-<template>
-    <div class="is-target">
-      <i :class="icon"></i>
-      <h5 class="title">{{ title }}</h5>
-      <p>{{ content }}</p>
-    </div>
+<template lang="pug">
+  div.is-target
+    i(:class='icon')
+    h5.title {{ title }}
+    p {{ content }}
 </template>
 
 <script>
