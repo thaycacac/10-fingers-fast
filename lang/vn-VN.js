@@ -37,5 +37,16 @@ module.exports = {
     title: 'Bàn Tay Ta Làm Nên Tất Cả',
     description: 'Tìm hiểu các khái niệm, bài học cơ bản đến nâng cao của phương pháp 10 ngón tay trong thời gian ngắn!',
     readmore: 'Đọc thêm'
+  },
+  introduction: {
+    title: 'Giới thiệu',
+    titleSmall: 'Chào mừng bạn đến với luyện gõ 10 ngón - 10FingersFast',
+    description: 'Bạn mới sử dụng máy tính và đang muốn tìm hiểu xem làm thế nào để có thể gõ phím bằng 10 ngón nhanh? Vậy thì không thể bỏ qua bài viết và các bài tập của chúng  tôi với các kỹ năng gõ phím 10 ngón nhanh người mới nên biết. Hy vọng sẽ là giải pháp hữu  ích giúp bạn cải thiện cũng như luyên tập thêm về kỹ năng đánh máy này!'
+  },
+  navigation: {
+    target: 'Bạn Có Thể Làm Gì',
+    guide: 'Hướng dẫn',
+    typingStudy: 'Luyện Gõ',
+    testSpeed: 'Kiểm tra tốc độ'
   }
 }

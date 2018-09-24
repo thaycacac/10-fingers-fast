@@ -37,5 +37,16 @@ module.exports = {
     title: 'Our hands make it all',
     description: 'Learn the basics, concepts to the advanced of the 10 finger method in a short time!',
     readmore: 'Readmore'
+  },
+  introduction: {
+    title: 'Introduction',
+    titleSmall: 'Welcome to the 10 fingers training - 10FingersFast',
+    description: 'New to the computer and want to find out how to be able to type with 10 fingers fast? Then, do not skip our articles and assignments with the ten finger tips that new beginners should know. Hope this is a useful solution to help you improve and practice more about typing skills!'
+  },
+  navigation: {
+    target: 'What can you do',
+    guide: 'Guide',
+    typingStudy: 'Learn Typing',
+    testSpeed: 'Test Speed'
   }
 }

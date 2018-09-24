@@ -1,23 +1,17 @@
-<template>
-<div class="is-navigation-map is-hidden-mobile">
-  <div class="container is-container-navigation">
-    <p class="has-text">
-      <a href="/#target">Bạn Có Thể Làm Gì</a>
-    </p>
-    <p>/</p>
-    <p class="has-text">
-      <a href="/#guide">Hướng dẫn</a>
-    </p>
-    <p>/</p>
-    <p class="has-text">
-      <a href="/#typing-study">Luyện Gõ</a>
-    </p>
-    <p>/</p>
-    <p class="has-text">
-      <a href="/#typing-study">Kiểm tra tốc độ</a>
-    </p>
-  </div>
-</div>
+<template lang="pug">
+  div.is-navigation-map.is-hidden-mobile
+    div.container.is-container-navigation
+      p.has-text
+        a(href='/#target') {{ $t('navigation.target') }}
+      p /
+      p.has-text
+        a(href='/#guide') {{ $t('navigation.guide') }}
+      p /
+      p.has-text
+        a(href='/#typing-study') {{ $t('navigation.typingStudy') }}
+      p /
+      p.has-text
+        a(href='/#typing-study') {{ $t('navigation.testSpeed') }}
 </template>
 <style lang="scss" scoped>
 @import '../../assets/sass/main.sass';
