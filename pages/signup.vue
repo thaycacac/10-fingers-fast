@@ -1,97 +1,49 @@
-<template>
-  <section class="hero is-success is-fullheight is-login">
-    <div class="hero-body">
-      <div class="container has-text-centered">
-        <div class="column is-8 is-offset-2">
-          <h3 class="title has-text-black">Đăng Ký</h3>
-          <div class="box">
-            <p 
-              class="has-error" 
-              v-show="!hasError" 
-              v-html="error"></p>
-            <form>
-              <div class="field">
-                <label class="label">Username</label>
-                <div class="control">
-                  <input 
-                    class="input is-large" 
-                    type="text" 
-                    placeholder="Nhập tên tài khoản" 
-                    autofocus="" 
-                    v-model="username">
-                </div>
-              </div>
-              <div class="field">
-                <label class="label">First Name</label>
-                <div class="control">
-                  <input 
-                    class="input is-large" 
-                    type="text" 
-                    placeholder="Nhập tên họ" 
-                    v-model="firstname">
-                </div>
-              </div>
-              <div class="field">
-                <label class="label">Last Name</label>
-                <div class="control">
-                  <input 
-                    class="input is-large" 
-                    type="text" 
-                    placeholder="Nhập tên tài khoản" 
-                    v-model="lastname">
-                </div>
-              </div>
-              <div class="field">
-                <label class="label">Date of Birth</label>
-                <div class="control">
-                  <input 
-                    class="input is-large" 
-                    type="date" 
-                    v-model="dob">
-                </div>
-              </div>
-              <div class="field">
-                <label class="label">Email</label>
-                <div class="control">
-                  <input 
-                    class="input is-large" 
-                    type="email" 
-                    placeholder="Nhập email" 
-                    v-model="email">
-                </div>
-              </div>
-              <div class="field">
-                <label class="label">Password</label>
-                <div class="control">
-                  <input 
-                    class="input is-large" 
-                    type="password" 
-                    placeholder="Nhập mật khẩu" 
-                    v-model="password">
-                </div>
-              </div>
-              <div class="field">
-                <label class="label">Repassword</label>
-                <div class="control">
-                  <input 
-                    class="input is-large" 
-                    type="password" 
-                    placeholder="Nhập lại mật khẩu" 
-                    v-model="repassword">
-                </div>
-              </div>
-              <button 
-                class="button is-block is-warning is-large is-fullwidth" 
-                @click.prevent="signup">Đăng Ký</button>
-            </form>
-          </div>
-          <p class="has-choose-more">
-            <a href="/signin">Đăng nhập</a>
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
+<template lang="pug">
+  section.hero.is-success.is-fullheight.is-login
+    div.hero-body
+      div.container.has-text-centered
+        div.column.is-8.is-offset-2
+          h3.title.has-text-black {{ $t('signup.title') }}
+          div.box
+            p(
+              class='has-error'
+              v-show='!hasError'
+              v-html='error'
+            )
+            form
+              div.field
+                label.label {{ $t('signup.title') }}
+                div.control
+                  input.input.is-large(type='text' placeholder='Input username' v-model='username')
+              div.field
+                label.label {{ $t('signup.firstname') }}
+                div.control
+                  input.input.is-large(type='text' placeholder='Input first name' v-model='firstname')
+              div.field
+                label.label {{ $t('signup.lastname') }}
+                div.control
+                  input.input.is-large(type='text' placeholder='Input last name' v-model='lastname')
+              div.field
+                label.label {{ $t('signup.dob') }}
+                div.control
+                  input.input.is-large(type='date' v-model='dob')
+              div.field
+                label.label {{ $t('signup.email') }}
+                div.control
+                  input.input.is-large(type='email' placeholder='Input email' v-model='email')
+              div.field
+                label.label {{ $t('signup.password') }}
+                div.control
+                  input.input.is-large(type='password' placeholder='Input password' v-model='password')
+              div.field
+                label.label {{ $t('signup.repassword') }}
+                div.control
+                  input.input.is-large(type='password' placeholder='Input repassword' v-model='repassword')
+              button.button.is-block.is-warning.is-large.is-fullheight(
+                @click.prevent='signup'
+              ) {{ $t('signup.title') }}
+          p.has-choose-more
+            a(href='/signin') {{ $t('signup.signin') }}
 </template>
 
 <script>
@@ -102,7 +54,7 @@ export default {
       username: '',
       firstname: '',
       lastname: '',
-      dob: '',
+      dob: new Date(),
       email: '',
       password: '',
       repassword: '',

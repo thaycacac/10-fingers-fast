@@ -1,13 +1,13 @@
-<template>
-  <section class="post-header">
-    <div class="hero-image-container">
-      <div class="window-background"></div>
-      <div class="moon"></div>
-      <img class="hero-image" src="/svg/slider-small.svg" alt="Daily emails animation">
-      <div class="screen-container"></div>
-      <div class="notification"></div>
-    </div>
-  </section>
+<template lang="pug">
+  section.post-header
+    div.hero-image-container
+      div.window-background
+      div.moon
+      img.hero-image(
+        src='/svg/slider-small.svg'
+        alt='slier small')
+      div.screen-container
+      div.notification
 </template>
 <script>
 </script>

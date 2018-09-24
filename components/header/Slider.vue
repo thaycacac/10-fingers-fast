@@ -1,30 +1,20 @@
-<template>
-  <div>
-    <header class="masthead text-center d-flex">
-      <div class="container">
-        <div class="columns">
-          <div class="column">
-            <div class=" my-auto">
-              <div class="row">
-                <h1>
-                  <strong class="title is-1">Bàn Tay Ta Làm Nên Tất Cả</strong>
-                </h1>
-                <hr class="my-break">
-                <p class="text-description">Tìm hiểu các khái niệm, bài học cơ bản đến nâng cao của phương pháp 10 ngón tay trong thời gian ngắn!</p>
-                <a class="button is-white my-button" href="#">Đọc thêm</a>
-              </div>
-            </div>
-          </div>
-          <div class="column is-hidden-mobile">
-            <svg-slider class="svg-slider"></svg-slider>
-          </div>
-        </div>
-      </div>
-      <div id="container">
-        <canvas id="canvas"></canvas>
-      </div>
-    </header>
-  </div>
+<template lang="pug">
+  div
+    header.masthead.text-center.d-flex
+      div.container
+        div.columns
+          div.column
+            div.my-auto
+              div.row
+                h1
+                  strong.title.is-1 {{ $t('slider.title') }}
+                hr.my-break
+                p.text-description {{ $t('slider.description') }}
+                a.button.is-white.my-button(href#) {{ $t('slider.readmore') }}
+          div.column.is-hidden-mobile
+            svg-slider.svg-slider
+      div.container
+        canvas#canvas
 </template>
 <script>
   import SvgSlider from '../../assets/svg/Slider.svg'
