@@ -62,5 +62,19 @@ module.exports = {
       content2: 'Thực hành các bài luyện gõ chữ 10 ngón từ cơ bản đến nâng cao giúp bạn có thể hình thành thói quen gõ 10 ngón một cách chính xác và điêu luyện.',
       content3: 'Các trò chơi và các bài test giúp bạn hứng thú hơn trong quá trình học và kiểm tra trình độ của bạn, sự tiến bộ của bạn đến đâu...'
     }
+  },
+  guide: {
+    titleBig: 'Hướng Dẫn',
+    titleSmall: 'Phương pháp 10 ngón tay là một kỹ thuật được lập ra để sử dụng hiệu quả bàn phím máy tính của bạn. Với một số bài thực hành và luyện cho bạn vị trí ngón tay chính xác, bạn không còn "gõ một cách mù  quáng" trên bàn phím. Sau đó, bạn có thể giảm đáng kể tỷ lệ lỗi và tăng tốc độ đánh một cách nhanh chóng.',
+    step: {
+      step1: 'Đặt Tay',
+      step2: 'Nhiệm Vụ',
+      step3: 'Tư Thế'
+    },
+    title: {
+      title1: 'Quy tắc đặt tay trên bàn phím',
+      title2: 'Phân công nhiệm vụ cho từng ngón tay',
+      title3: 'Tư thế ngồi khi đánh máy'
+    }
   }
 }

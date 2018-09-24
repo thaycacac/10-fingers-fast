@@ -62,5 +62,19 @@ module.exports = {
       content2: 'Practice basic ten-to-advanced typing exercises that will allow you to form the habit of typing 10 fingers accurately and skillfully.',
       content3: 'Games and tests help you get more excited while learning and testing your level, where your progress is ...'
     }
+  },
+  guide: {
+    titleBig: 'Guide',
+    titleSmall: 'The 10-finger method is a technique designed to effectively use your computer\'s keyboard. With some exercises and practice giving you precise finger position, you no longer "blindly type" on the keyboard. Then you can dramatically reduce the error rate and increase the typing speed quickly.',
+    step: {
+      step1: 'Put hand into',
+      step2: 'Mission',
+      step3: 'Posture'
+    },
+    title: {
+      title1: 'Rule hands on the keyboard',
+      title2: 'Assign tasks to each finger',
+      title3: 'Position while typing'
+    }
   }
 }

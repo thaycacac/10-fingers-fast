@@ -1,63 +1,46 @@
-<template>
-  <div id="guide">
-    <div class="is-container-guide">
-        <h1 
-          class="is-title"
-          data-aos="zoom-in-up"
-          data-aos-duration="500">Hướng Dẫn</h1>
-        <p 
-          class="is-description"
-          data-aos="zoom-in-up"
-          data-aos-duration="500">Phương pháp 10 ngón tay là một kỹ thuật được lập ra để sử dụng hiệu quả bàn phím máy tính của bạn. 
-          Với một số bài thực hành và luyện cho bạn vị trí ngón tay chính xác, bạn không còn "gõ một cách mù 
-          quáng" trên bàn phím. Sau đó, bạn có thể giảm đáng kể tỷ lệ lỗi và tăng tốc độ đánh một cách nhanh chóng.</p>
-      <div class="columns">
-        <div class="column is-4">
-          <cover-guide
-          :numpage=numpage.numpage1
-          :step=step.step1
-          :image=image.image1></cover-guide>
-        </div>
-        <div class="column">
-          <content-guide
-          :icon=icon.icon1
-          :title=title.title1></content-guide>  
-        </div>
-      </div>
-    </div>
-
-    <div class="is-container-guide">
-      <div class="columns">
-        <div class="column is-4">
-          <cover-guide
-          :numpage=numpage.numpage2
-          :step=step.step2
-          :image=image.image2></cover-guide>
-        </div>
-        <div class="column">
-          <content-guide
-          :icon=icon.icon2
-          :title=title.title2></content-guide>  
-        </div>
-      </div>
-    </div>
-
-    <div class="is-container-guide">
-      <div class="columns">
-        <div class="column is-4">
-          <cover-guide
-          :numpage=numpage.numpage3
-          :step=step.step3
-          :image=image.image3></cover-guide>
-        </div>
-        <div class="column">
-          <content-guide
-          :icon=icon.icon3
-          :title=title.title3></content-guide>  
-        </div>
-      </div>
-    </div>
-  </div>
+<template lang="pug">
+  div#guide
+    div.is-container-guide
+      h1.is-title(data-aos='zoom-in-up') {{ $t('guide.titleBig') }}
+      p.is-description(data-aos='zoom-in-up') {{ $t('guide.titleSmall') }}
+      div.columns
+        div.column.is-4
+          cover-guide(
+            :numpage='numpage.numpage1'
+            :step='step.step1'
+            :image='image.image1'
+          )
+        div.column
+          content-guide(
+            :icon='icon.icon1'
+            :title='title.title1'
+          )
+    div.is-container-guide
+      div.columns
+        div.column.is-4
+          cover-guide(
+            :numpage='numpage.numpage2'
+            :step='step.step2'
+            :image='image.image2'
+          )
+        div.column
+          content-guide(
+            :icon='icon.icon3'
+            :title='title.title3'
+          )
+    div.is-container-guide
+      div.columns
+        div.column.is-4
+          cover-guide(
+            :numpage='numpage.numpage3'
+            :step='step.step3'
+            :image='image.image3'
+          )
+        div.column
+          content-guide(
+            :icon='icon.icon1'
+            :title='title.title1'
+          )
 </template>
 
 <script>
@@ -76,9 +59,9 @@ export default {
         numpage3: '03'
       },
       step: {
-        step1: 'Đặt Tay',
-        step2: 'Nhiệm Vụ',
-        step3: 'Tư Thế'
+        step1: this.$i18n.t('guide.step.step1'),
+        step2: this.$i18n.t('guide.step.step2'),
+        step3: this.$i18n.t('guide.step.step3'),
       },
       icon: {
         icon1: 'fas fa-handshake',
@@ -91,9 +74,9 @@ export default {
         image3: 'url(/img/keyboard/5.jpg)'
       },
       title: {
-        title1: 'Quy tắc đặt tay trên bàn phím',
-        title2: 'Phân công nhiệm vụ cho từng ngón tay',
-        title3: 'Tư thế ngồi khi đánh máy'
+        title1: this.$i18n.t('guide.title.title1'),
+        title2: this.$i18n.t('guide.title.title2'),
+        title3: this.$i18n.t('guide.title.title3'),
       }
     }
   }
