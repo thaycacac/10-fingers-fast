@@ -26,7 +26,7 @@
         div.column
           content-guide(
             :icon='icon.icon3'
-            :title='title.title3'
+            :title='title.title2'
           )
     div.is-container-guide
       div.columns
@@ -39,7 +39,7 @@
         div.column
           content-guide(
             :icon='icon.icon1'
-            :title='title.title1'
+            :title='title.title3'
           )
 </template>
 

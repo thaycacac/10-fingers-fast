@@ -76,5 +76,59 @@ module.exports = {
       title2: 'Phân công nhiệm vụ cho từng ngón tay',
       title3: 'Tư thế ngồi khi đánh máy'
     }
+  },
+  guideFinger: {
+    description: {
+      one: 'Đây là bước quan trọng nhất và nó sẽ quyết định đến tốc độ gõ văn bản của bạn sau này. Nếu bước này mà bạn không đặt ngón tay hợp lý và chuẩn theo hướng dẫn thì bạn có gõ nhanh đến mấy cũng không thể bằng những người đặt theo đúng chuẩn được mặc dù bạn cũng không cần nhìn bàn phím. <br> Mỗi ngón tay của bạn sẽ đảm nhiệm một khu vực nhất định, điều đó giúp bạn gõ văn bản mà không cần nhìn bàn phím. Quy tắt đặt ngón tay sẽ như sau:',
+      two: 'Về cơ bản thì các ngón tay sẽ đảm nhiệm các phím chủ chốt như bảng bên dưới. Còn các phím số 1 đến 9, F1 đến F12 hay =, –, backspace… thì chúng ta sẽ ít sử dụng hơn chính vì thế mà bạn có thể gõ thế nào cho phù hợp và bạn cảm thấy thỏa mái là được. Quan trọng nhất là các ngón tay của bạn phải đảm nhiệm đúng nhiệm vụ của chúng như sau:',
+      three: 'Một điều khá quan trọng nữa giúp bạn gõ 10 ngón nhanh đó là tư thế ngồi. Nhiều người có thói quen rất xấu đó làngồi ngồi nghiêng, ngồi tựa vào ghế, ngồi vẹo hoặc ngồi quá cao hay quá thấp.. điều này ảnh hướng khá nhiều đếnviệc đánh máy của bạn. Vậy tư thế ngồi thế nào là chuẩn nhất, thỏa mái nhất và không bị gò bó? bạn có thể học cách ngồi như sau:'
+    },
+    left: 'Bàn Tay Trái',
+    right: 'Bàn Tay Phải',
+    finger: 'Ngón Tay',
+    putHand: 'Đảm nhiệm phím',
+    fingers: {
+      one: 'Ngón út',
+      two: 'Ngón Trỏ',
+      three: 'Ngón áp út',
+      four: 'Ngón giữa',
+      five: 'Ngón giữa',
+      six: 'Ngón áp út',
+      seven: 'Ngón trỏ',
+      eight: 'Ngón út',
+      nine: 'Ngón cái',
+      ten: 'Ngón cái'
+    },
+    one: {
+      one: 'Đặt lên chữ "A"',
+      two: 'Đặt lên chữ "J"',
+      three: 'Đặt lên chữ "S"',
+      four: 'Đặt lên chữ "K"',
+      five: 'Đặt lên chữ "D"',
+      six: 'Đặt lên chữ "L"',
+      seven: 'Đặt lên chữ "F"',
+      eight: 'Đặt lên dấu ";"',
+      nine: 'Đặt lên phím cách',
+      ten: 'Đặt lên phím cách'
+    },
+    two: {
+      one: 'Q, A, Z, Phím Ctrl trái, Shift trái',
+      two: 'Y, U, H, J, N, M',
+      three: 'W, S, X',
+      four: 'I, K',
+      five: 'E, D, C',
+      six: 'O, L',
+      seven: 'R, T, F, G, V, B',
+      eight: 'P, Phím Ctrl phải, Shift phải, ;, /',
+      nine: 'Space (Phím cách)',
+      ten: 'Space (Phím cách)'
+    },
+    three: {
+      one: '- Ngồi lưng thẳng, mặt đối chính diện với máy tính.',
+      two: '- Khủy tay bẻ cong ở góc bên phải.',
+      three: '- Giữ khoảng cách 45 tới 75 cm so với màn hình máy tính.',
+      four: '- Cổ tay chạm vào ngay mép của máy tính ở phía trước bàn phím.',
+      five: 'Bước cuối cùng cũng là bước rất quan trọng, đó chính là nỗ lực của bạn, các cụ vẫn có câu “trăm hay không bằng tay quen” mà đúng không, dù bạn có học thuộc lòng những lý thuyết bên trên nhưng nếu không luyện tập thường xuyên thì vẫn chỉ dừng lại ở ngưỡng “mổ cò” mà thôi.'
+    }
   }
 }

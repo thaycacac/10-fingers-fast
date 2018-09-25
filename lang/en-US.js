@@ -75,6 +75,63 @@ module.exports = {
       title1: 'Rule hands on the keyboard',
       title2: 'Assign tasks to each finger',
       title3: 'Position while typing'
+    },
+    one: {
+      description: ''
+    }
+  },
+  guideFinger: {
+    description: {
+      one: 'This is the most important step and it will determine the speed of typing your text later. If you do not put your fingers in the right direction and follow the instructions, you will not be able to type as fast as the standard ones, even if you do not need to look at the keyboard. Each of your fingers will handle a certain area, which will help you type the text without looking at the keyboard. The finger restriction will be as follows: <br>',
+      two: 'Essentially, the fingers will handle the key as in the table below. But the numbers 1 to 9, F1 to F12 or =, -, backspace ... then we will be less used so that you can type the appropriate and you feel comfortable. Most importantly, your fingers perform the following tasks:',
+      three: 'Another important thing to help you type 10 fingers quickly is sitting posture. Many people have very bad habits that sit sideways, leaning on chairs, sitting crooked or sitting too high or too low .. This affects quite a lot of typing. How is the posture the best, most comfortable and not restrained? You can learn how to sit as follows:'
+    },
+    left: 'Left hand',
+    right: 'Right hand',
+    finger: 'Finger',
+    putHand: 'Mission',
+    fingers: {
+      one: 'Little finger',
+      two: 'Index finger',
+      three: 'Ring finger',
+      four: 'Middle finger',
+      five: 'Middle finger',
+      six: 'Ring finger',
+      seven: 'Index finger',
+      eight: 'Little finger',
+      nine: 'Thumb',
+      ten: 'Thumb'
+    },
+    one: {
+      one: 'Put the letter "A"',
+      two: 'Put the letter "J"',
+      three: 'Put the letter "S"',
+      four: 'Put the letter "K"',
+      five: 'Put the letter "D"',
+      six: 'Put the letter "L"',
+      seven: 'Put the letter "F"',
+      eight: 'Put the letter ";"',
+      nine: 'Put the letter space',
+      ten: 'Put the letter space'
+    },
+    two: {
+      one: 'Q, A, Z, Ctrl left, Shift left',
+      two: 'Y, U, H, J, N, M',
+      three: 'W, S, X',
+      four: 'I, K',
+      five: 'E, D, C',
+      six: 'O, L',
+      seven: 'R, T, F, G, V, B',
+      eight: 'P, Ctrl right, Shift right, ;, /',
+      nine: 'Space',
+      ten: 'Space'
+    },
+    three: {
+      one: '- Sit back straight, facing the computer.',
+      two: '- Elbow bends in the right corner.',
+      three: '- Keep a distance of 45 to 75 cm from the computer screen.',
+      four: '- The wrist touches the edge of the computer in front of the keyboard.',
+      five: 'The last step is a very important step, it is your efforts, the instrument still have the sentence "hundred or not by hand familiar" but not if you memorize the theory above but if not training Regular exercise is still only at the threshold "Stomach" only.'
     }
   }
 }
