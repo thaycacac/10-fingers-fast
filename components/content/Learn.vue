@@ -1,66 +1,41 @@
-<template>
-  <div id="learn">
-    <div class="time-line">
-      <div class="__container">
-        <div 
-          class="__block" 
-          v-for="record in records" 
-          :key="record.lessonID">
-          <div 
-            class="__img" 
-            :class="{ '--success': record.lessonID % 3 == 0,  
-                      '--danger': record.lessonID % 3 == 1,
-                      '--warning': record.lessonID % 3 == 2}"
-            data-aos="fade-down"
-            data-aos-easing="linear"
-            data-aos-duration="1500">
-            <i class="fas fa-medal __icon"></i>
-          </div>
-          <div class="__content" data-aos="zoom-out-right">
-            <h2>{{ record.lessonTitle }}</h2>
-            <p>{{ record.lessonDescription }}</p>
-            <button 
-              class="__read-more" 
-              @click="isShowLesson = true, getListLesson(record.lessonID)">Read more</button>
-            <span 
-            class="__date">Lesson {{ record.lessonID }}</span>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- use buefy for show all lesson -->
-    <b-modal 
-      :active.sync="isShowLesson" 
-      :width="640" 
-      scroll="keep">
-      <aside class="menu --menu-lesson">
-        <p class="menu-label">
-          Danh Sách Bài Học
-        </p>
-        <ul class="menu-list">
-            <li 
-              v-for="type in listType" 
-              :key="type.id"><a>{{ type.name }}</a>
-            <ul 
-              v-for="(lesson, index) in listLesson" 
-              :key="lesson._id">
-              <li v-show="lesson.type.toUpperCase() === type.name.toUpperCase()">
-                <a :href="'lesson/' + lesson._id">Bài {{ index + 1 }}</a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </aside>
-    </b-modal>
-  </div>
+<template lang="pug">
+  div#learn
+    div.time-line
+      div.__container
+        div.__block(v-for='record in records' :key='record.lessonID')
+          div.__img(
+            data-aos='fade-down'
+            :class=`{'--success': record.lessonID % 3 == 0, '--danger': record.lessonID % 3 == 1, '--warning': record.lessonID % 3 == 2}`
+          )
+            i.fas.fa-medal.__icon
+          div.__content(data-aos='zoom-out-right')
+            h2 {{ record.lessonTitle }}
+            p {{ record.lessonDescription }}
+            button.__read-more(@click="isShowLesson = true, getListLesson(record.lessonID)") {{ $t('learn.readmore') }}
+            span.__date {{ $t('learn.lesson') }} {{ record.lessonID }}
+    b-modal(
+      :active.sync='isShowLesson' 
+      :width='640'
+      scroll='keep'
+    )
+      aside.menu.--menu-lesson
+        p.menu-label {{ $t('learn.listLessons') }}
+        ul.menu-list
+          li(
+            v-for='type in listType'
+            :key='type.id'
+          )
+            a {{ type.name }}
+            ul(v-for='(lesson, index) in listLesson' :key='lesson.id')
+              li(v-show='lesson.type.toUpperCase() === type.name.toUpperCase()')
+                a(:href="'lesson/' + lesson._id") {{ $t('learn.lesson') }} {{ index + 1 }}
 </template>
-<script>
 
-</script>
 <style lang="scss" scoped>
 @import '../../assets/sass/main.sass';
 @import '../../assets/sass/learn/_lession.scss';
 </style>
+
 <script>
 import axios from 'axios'
 export default {

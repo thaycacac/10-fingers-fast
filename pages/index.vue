@@ -1,13 +1,12 @@
-<template>
-  <div>
-    <introduction></introduction>
-    <navigation></navigation>
-    <target></target>
-    <guide></guide>
-    <background></background>
-    <typing-study></typing-study>
-    <follow></follow>
-  </div>
+<template lang="pug">
+  div
+    introduction
+    navigation
+    target
+    guide
+    background
+    typing-study
+    follow
 </template>
 
 <script>

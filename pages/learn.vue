@@ -1,7 +1,6 @@
-<template>
-  <div>
-    <learn/>
-  </div>
+<template lang="pug">
+  div
+    learn
 </template>
 <script>
 import Learn from '../components/content/Learn'

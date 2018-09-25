@@ -159,5 +159,10 @@ module.exports = {
       description3: 'Eyes always have to glance the keyboard will create a bad posture. Practice typing 10 fingers you do not need to glance at your keyboard anymore. This helps you to sit upright and in a good position.',
       description4: 'The goal is to manipulate the typing keyboard in your subconscious. Our subconscious mind helps us deal with more complex actions in seconds, almost automatically.'
     }
+  },
+  learn: {
+    listLessons: 'List Lessons',
+    lesson: 'Lesson',
+    readmore: 'Readmore'
   }
 }

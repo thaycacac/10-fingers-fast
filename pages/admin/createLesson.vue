@@ -1,13 +1,12 @@
-<template>
-  <div class="box">  
-    <p>Lesson: </p>
-    <input type="text" v-model="lesson">
-    <p>Type: </p>
-    <input type="text" v-model="type">
-    <p>Content</p>
-    <input type="text" v-model="content">
-    <input type="button" value="Submit" @click="createLesson">
-  </div>
+<template lang="pug">
+  div.box
+    p Lesson:
+    input(type='text' v-model='lesson')
+    p Type:
+    input(type='text' v-model='type') 
+    p Content:
+    input(type='text' v-model='content')
+    input(type='submit' value='Submit' @click='createLesson')
 </template>
 <script>
 export default {

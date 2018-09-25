@@ -1,9 +1,8 @@
-<template>
-    <div class="is-one-component">
-       <i :class="icon"></i>
-       <p class="is-number">{{ content }}</p>
-       <p class="is-description">{{ description }}</p>
-    </div>
+<template lang="pug">
+  div.is-one-component
+    i(:class='icon')
+      p.is-number {{ content }}
+      p.is-description {{ description }}
 </template>
 
 <script>
