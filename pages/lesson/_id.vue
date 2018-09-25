@@ -59,7 +59,6 @@
               <div class="position-finger --is-10" style="visibility: hidden;"></div>
             </div>
           </div>
-          
           <div class="keyboard">
             <!-- 1nd row -->
             <div class="row">
@@ -153,17 +152,18 @@
     </div>
     <!-- audio -->
     <audio id="keyAudio">
+      <!-- TODO: change -->
       <source src="http://www.freesfx.co.uk/rx2/mp3s/5/16952_1461335341.mp3" type="audio/mpeg">
     </audio>
   </div>
 </template>
 
 <script>
-import keyboard from '../../assets/javascript/keyboard'
-import handleKeyboard from '../../assets/javascript/handleKeyboard'
+import keyboard from '~/assets/javascript/keyboard'
+import handleKeyboard from '~/assets/javascript/handleKeyboard'
 import axios from 'axios'
-import SvgHandLeft from '../../assets/svg/HandLeft.svg'
-import SvgHandRight from '../../assets/svg/HandRight.svg'
+import SvgHandLeft from '~/assets/svg/HandLeft.svg'
+import SvgHandRight from '~/assets/svg/HandRight.svg'
 export default {
   data () {
     return {
@@ -225,7 +225,7 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-@import '../../assets/sass/main.sass';
-@import '../../assets/sass/learn/keyboard.scss';
+@import '~/assets/sass/main.sass';
+@import '~/assets/sass/learn/keyboard.scss';
 @include setupBackgroundNav();
 </style>

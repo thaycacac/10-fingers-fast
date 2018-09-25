@@ -19,7 +19,7 @@
   </footer>
 </template>
 <style lang="sass" scoped>
-@import '../../assets/sass/main.sass'
+@import '~/assets/sass/main.sass'
 ul
   list-style-type: none
   li

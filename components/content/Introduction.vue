@@ -5,7 +5,7 @@
     p(data-aos='flip-right') {{ $t('introduction.description') }}
 </template>
 <style lang="scss" scoped>
-@import '../../assets/sass/main.sass';
+@import '~/assets/sass/main.sass';
 .container-intro{
   @include setupTitle();
   p{

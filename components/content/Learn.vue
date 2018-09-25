@@ -32,8 +32,8 @@
 </template>
 
 <style lang="scss" scoped>
-@import '../../assets/sass/main.sass';
-@import '../../assets/sass/learn/_lession.scss';
+@import '~/assets/sass/main.sass';
+@import '~/assets/sass/learn/_lession.scss';
 </style>
 
 <script>
