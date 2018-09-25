@@ -3,7 +3,7 @@
     learn
 </template>
 <script>
-import Learn from '../components/content/Learn'
+import Learn from '~/components/content/Learn'
 export default {
   components: {
     Learn

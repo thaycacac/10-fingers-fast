@@ -47,7 +47,7 @@
 </template>
 
 <script>
-import { signup } from '../axios/user/usersController'
+import { signup } from '~/axios/user/usersController'
 export default {
   data () {
     return {
@@ -112,7 +112,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../assets/sass/user/signup.sass';
-@import '../assets/sass/main.sass';
-@import '../assets/sass/main.sass';
+@import '~/assets/sass/user/signup.sass';
+@import '~/assets/sass/main.sass';
+@import '~/assets/sass/main.sass';
 </style>

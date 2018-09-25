@@ -3,7 +3,7 @@
     div.container
       div.navbar-brand
         a.navbar-item(href='/')
-          img(src='../../assets/img/logo2.png' alt='logo')
+          img(src='~/assets/img/logo2.png' alt='logo')
         div.navbar-burger.burger(data-target='navbarExampleTransparentExample')
           span
           span
@@ -33,7 +33,7 @@
               ) {{ locale.name }}
 </template>
 <style lang="scss" scoped>
-@import '../../assets/sass/main.sass';
+@import '~/assets/sass/main.sass';
 .navbar-scroll {
   background-color: #fff;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);

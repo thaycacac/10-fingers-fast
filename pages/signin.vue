@@ -91,8 +91,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../assets/sass/user/signin.sass';
-@import '../assets/sass/main.sass';
-@import '../assets/sass/animation.scss';
+@import '~/assets/sass/user/signin.sass';
+@import '~/assets/sass/main.sass';
+@import '~/assets/sass/animation.scss';
 @include setupAnimationError();
 </style>
