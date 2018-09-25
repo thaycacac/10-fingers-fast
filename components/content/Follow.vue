@@ -1,26 +1,26 @@
-<template>
-  <div class="container-follow">
-    <p class="is-title-follow">Cập nhật bài học mới nhất</p>
-    <form>
-      <input 
-        type="email" 
-        placeholder="Nhập Email..." 
-        class="is-email"
-        v-model="email">
-      <input 
-        type="submit" 
-        value="Đăng ký" 
-        class="is-button"
-        @click.prevent = "registerEmail">
-    </form>
-  </div>
+<template lang="pug">
+  div.container-follow
+    p.is-title-follow {{ $t('follow.title') }}
+    form
+      input.is-email(
+        type='email'
+        :placeholder='placeholderEmail'
+        v-model='email'
+      )
+      input.is-button(
+        type='submit'
+        :value='valueButton'
+        @click.prevent='registerEmail'
+      )
 </template>
 
 <script>
 export default {
   data () {
     return {
-      email: ''
+      email: '',
+      placeholderEmail: this.$i18n.t('follow.placeholder'),
+      valueButton: this.$i18n.t('follow.button'),
     }
   },
   methods: {

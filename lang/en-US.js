@@ -133,5 +133,31 @@ module.exports = {
       four: '- The wrist touches the edge of the computer in front of the keyboard.',
       five: 'The last step is a very important step, it is your efforts, the instrument still have the sentence "hundred or not by hand familiar" but not if you memorize the theory above but if not training Regular exercise is still only at the threshold "Stomach" only.'
     }
+  },
+  background: {
+    one: 'Lessons',
+    two: 'Users',
+    three: 'Finish Lessons',
+    four: 'Lesson Test'
+  },
+  follow: {
+    title: 'Update the latest lesson',
+    placeholder: 'Input Email...',
+    button: 'Register'
+  },
+  typingStudy: {
+    titleBig: 'Practice typing 10 fingers',
+    title: {
+      title1: 'Speed',
+      title2: 'Effective',
+      title3: '',
+      title4: 'Eye-catching'
+    },
+    description: {
+      description1: 'By using the 10-finger method unconsciously, you can speed up your typing significantly, in other words you\'ll save precious time.',
+      description2: 'Since you do not have to focus on single-clicking, you can focus on the text you are writing. You do not need to switch back and forth, your brain will work better.',
+      description3: 'Eyes always have to glance the keyboard will create a bad posture. Practice typing 10 fingers you do not need to glance at your keyboard anymore. This helps you to sit upright and in a good position.',
+      description4: 'The goal is to manipulate the typing keyboard in your subconscious. Our subconscious mind helps us deal with more complex actions in seconds, almost automatically.'
+    }
   }
 }

@@ -130,5 +130,31 @@ module.exports = {
       four: '- Cổ tay chạm vào ngay mép của máy tính ở phía trước bàn phím.',
       five: 'Bước cuối cùng cũng là bước rất quan trọng, đó chính là nỗ lực của bạn, các cụ vẫn có câu “trăm hay không bằng tay quen” mà đúng không, dù bạn có học thuộc lòng những lý thuyết bên trên nhưng nếu không luyện tập thường xuyên thì vẫn chỉ dừng lại ở ngưỡng “mổ cò” mà thôi.'
     }
+  },
+  background: {
+    one: 'Bài luyện tập',
+    two: 'Người dùng',
+    three: 'Hoàn thành',
+    four: 'Bài kiểm tra'
+  },
+  follow: {
+    title: 'Cập nhật bài học mới nhất',
+    placeholder: 'Nhập Email...',
+    button: 'Đăng ký'
+  },
+  typingStudy: {
+    titleBig: 'Luyện gõ 10 ngón',
+    title: {
+      title1: 'Tốc độ',
+      title2: 'Hiệu quả',
+      title3: 'Thái học',
+      title4: 'Mãn nhãn'
+    },
+    description: {
+      description1: 'Bằng cách sử dụng phương pháp 10 ngón tay một cách vô thức, bạn có thể tăng tốc độ nhập của bạn một cách đáng kể, nói cách khác bạn sẽ tiết kiệm được thời gian quý báu.',
+      description2: 'Vì bạn không phải tập trung vào nhấn phím đơn nữa, bạn có thể tập trung vào các văn bản bạn đang viết. Bạn không cần phải chuyển đổi qua lại nữa, bộ não của bạn sẽ làm việc hiệu quả hơn.',
+      description3: 'Mắt luôn phải liếc bàn phím sẽ tạo một tư thế không tốt. Luyện gõ 10 ngón tay bạn không cần phải thoáng nhìn vào bàn phím của bạn nữa. Điều này giúp bạn ngồi thẳng đứng và ở một vị trí tốt.',
+      description4: 'Mục tiêu là để việc xử lý gõ bàn phím trong tiềm thức của bạn. Tiềm thức của chúng tôi giúp chúng ta đối phó với nhiều hành động phức tạp hơn trong vài giây, gần như tự động.'
+    }
   }
 }
