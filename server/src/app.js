@@ -1,4 +1,4 @@
-const DBConfig = require('./database/config')
+const DBConfig = require('./configuration/config')
 const express = require('express')
 const app = express()
 const bodyParser = require('body-parser')

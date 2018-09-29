@@ -44,7 +44,7 @@ import { mapGetters } from 'vuex'
 export default {
   layout: 'user',
   computed: mapGetters([
-    'user'
+    'GET_USER'
   ]),
   methods: {
     // TODO: update
