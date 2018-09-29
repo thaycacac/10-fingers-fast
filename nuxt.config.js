@@ -67,7 +67,6 @@ module.exports = {
   build: {
     vendor: [
       'axios',
-      '~/plugins/vue-session.js',
       'aos'
     ],
     /*

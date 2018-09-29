@@ -3,6 +3,16 @@ const router = express.Router()
 const mongoose = require('mongoose')
 const Lesson = mongoose.model('Lesson')
 
+// So we can use res.status() & res.json()
+const app = express()
+router.use((req, res, next) => {
+  Object.setPrototypeOf(req, app.request)
+  Object.setPrototypeOf(res, app.response)
+  req.res = res
+  res.req = req
+  next()
+})
+
 router.post('/', (req, res) => {
   const lesson = new Lesson(req.body)
   lesson.save()
