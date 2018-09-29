@@ -1,4 +1,7 @@
-export default function ({ store }) {
-  // TODO: change vue-session by express session
-  console.log('authentication')
+export default function ({ store, redirect }) {
+  if (store.state.user) {
+    return redirect('/signin')
+  } else {
+    return redirect('/')
+  }
 }
