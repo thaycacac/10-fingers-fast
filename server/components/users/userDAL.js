@@ -17,10 +17,8 @@ router.use((req, res, next) => {
 router.post('/signup', (req, res) => {
   const user = new User(req.body)
   user.save()
-    .then(() => {
-      res.status(201).json({
-        error: 'Register success'
-      })
+    .then((result) => {
+      console.log(result)
     })
     .catch(err => {
       console.log(err)

@@ -1,21 +1,49 @@
 import axios from 'axios'
 
-const signup = (username, firstname, lastname, dob, email, password) => {
-  axios.post('/api/user/signup', {
-    username: username,
-    firstname: firstname,
-    lastname: lastname,
-    dob: dob,
-    email: email,
-    password: password
-  })
-    .then(function (response) {
-      console.log(response.data.error)
-      console.log(response.data.message)
+const USER_SIGNUP = function (username, firstname, lastname, dob, email, password, repassword) {
+  this.$store.dispatch('SET_ERROR', '')
+  const regexEmail = /^(([^<>()\\[\]\\.,;:\s@"]+(\.[^<>()\\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+  window.scrollTo(0, top)
+  if (!username.trim() || username === undefined) {
+    this.$store.dispatch('SET_ERROR', '· You must be input username')
+  } else if (!firstname.trim() || firstname === undefined) {
+    this.$store.dispatch('SET_ERROR', '· You must be input firstname')
+  } else if (!lastname.trim() || lastname === undefined) {
+    this.$store.dispatch('SET_ERROR', '· You must be input lastname')
+  } else if (!dob.trim() || dob === undefined) {
+    this.$store.dispatch('SET_ERROR', '· You must be input date of birth')
+  } else if (!email.trim() || email === undefined) {
+    this.$store.dispatch('SET_ERROR', '· You must be input email')
+  } else if (!password.trim() || password === undefined) {
+    this.$store.dispatch('SET_ERROR', '· You must be input password')
+  } else if (!repassword.trim() || repassword === undefined) {
+    this.$store.dispatch('SET_ERROR', '· You must be input repassword')
+  } else if (!regexEmail.test(email)) {
+    this.$store.dispatch('SET_ERROR', '· Incorrect email format')
+  } else if (password.length < 8) {
+    this.$store.dispatch('SET_ERROR', '· Password should contain at least 8 from the mentioned characters')
+  } else if (!(password === repassword)) {
+    this.$store.dispatch('SET_ERROR', '· Password and Repassword not the same')
+  } else {
+    this.$nextTick(() => {
+      this.$nuxt.$loading.start()
     })
-    .catch(function (error) {
-      console.log(error)
+    axios.post('/api/user/signup', {
+      username: username,
+      firstname: firstname,
+      lastname: lastname,
+      dob: dob,
+      email: email,
+      password: password
     })
+      .then(response => {
+        this.$router.go(-1)
+        this.$nuxt.$loading.finish()
+      })
+      .catch(function (error) {
+        console.log(error)
+      })
+  }
 }
 
 const USER_SIGNIN = function (username, password) {
@@ -39,7 +67,6 @@ const USER_SIGNIN = function (username, password) {
       if (response.data.error) {
         this.$store.dispatch('SET_ERROR', response.data.error)
       } else {
-        this.$store.dispatch('SET_USER', response.data.message)
         this.$store.dispatch('SET_ERROR', '')
         // set session
         this.$session.start()
@@ -57,6 +84,6 @@ const USER_SIGNIN = function (username, password) {
 }
 
 export {
-  signup,
+  USER_SIGNUP,
   USER_SIGNIN
 }
