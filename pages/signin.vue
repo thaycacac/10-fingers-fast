@@ -49,6 +49,7 @@ export default {
   computed: mapGetters([
     'GET_ERROR'
   ]),
+  // middleware: 'authentication',
   beforeMount () {
     if (this.$session.exists()) {
       this.$router.push('/')

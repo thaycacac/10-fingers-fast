@@ -1,3 +1,7 @@
+const bodyParser = require('body-parser')
+const session = require('express-session')
+const mongoose = require('mongoose')
+const DBConfig = require('./server/configuration/config')
 const { I18N } = require('./config')
 module.exports = {
   /*
@@ -46,7 +50,6 @@ module.exports = {
     '@nuxtjs/axios',
     'nuxt-buefy',
     [ 'nuxt-i18n', I18N ]
-    // ['nuxt-buefy', { css: false, materialDesignIcons: false }]
   ],
   plugins: [
     { src: '~/plugins/aos.js', ssr: false }
@@ -54,12 +57,12 @@ module.exports = {
   axios: {
     proxy: true
   },
-  proxy: {
-    '/api': {
-      target: 'http://localhost:5000/api',
-      pathRewrite: { '^/api': '' }
-    }
-  },
+  // proxy: {
+  //   '/api': {
+  //     target: 'http://localhost:5000/api',
+  //     pathRewrite: { '^/api': '' }
+  //   }
+  // },
   loading: '~/components/share/loading.vue',
   build: {
     vendor: [
@@ -90,7 +93,26 @@ module.exports = {
     }
   },
   serverMiddleware: [
+    // body-parser middleware
+    bodyParser.json(),
+    // session middleware
+    session({
+      secret: 'thaycacac',
+      resave: false,
+      saveUninitialized: false,
+      cookie: { maxAge: 60000 }
+    }),
+    // set moongoose
+    mongoose.connect(DBConfig.dbconfig.nameDB, {
+      useNewUrlParser: true
+    })
+      .then(() => {
+        console.log('Database connected')
+      }),
     // API middleware
-    '~/server/src/app.js'
+    '~/server/users.js',
+    '~/server/lessons.js',
+    '~/server/listlessons.js',
+    '~/server/emails.js'
   ]
 }
