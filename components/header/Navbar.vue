@@ -63,13 +63,13 @@ export default {
     // check login or not
     if (this.$session.get('username')) {
       this.navigator = [
-        { link: '/profile', name: 'Trang cá nhân' },
-        { link: '/logout', name: 'Đăng xuất' }
+        { link: '/profile', name: this.$i18n.t('navbar.signed.one') },
+        { link: '/logout', name: this.$i18n.t('navbar.signed.two') }
       ]
     } else {
       this.navigator = [
-        { link: '/signup', name: 'Đăng ký' },
-        { link: '/signin', name: 'Đăng nhập' }
+        { link: '/signup', name: this.$i18n.t('navbar.notSigned.one') },
+        { link: '/signin', name: this.$i18n.t('navbar.notSigned.two') }
       ]
     }
     window.addEventListener('scroll', this.handleScroll)

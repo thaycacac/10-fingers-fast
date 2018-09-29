@@ -31,7 +31,15 @@ module.exports = {
     home: 'Trang chủ',
     practice: 'Luyện gõ 10 ngón',
     account: 'Tài khoản',
-    language: 'Ngôn ngữ'
+    language: 'Ngôn ngữ',
+    signed: {
+      one: 'Trang cá nhân',
+      two: 'Đăng xuất'
+    },
+    notSigned: {
+      one: 'Đăng ký',
+      two: 'Đăng nhập'
+    }
   },
   slider: {
     title: 'Bàn Tay Ta Làm Nên Tất Cả',
