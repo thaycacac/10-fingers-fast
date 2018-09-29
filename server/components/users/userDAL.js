@@ -35,6 +35,7 @@ router.post('/signin', (req, res) => {
   User.findOne({username: user.username})
     .then(result => {
       if (result.password === user.password) {
+        req.session.user = user
         res.status(200).json({
           mesage: 'Login success',
           error: ''
