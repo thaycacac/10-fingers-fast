@@ -67,4 +67,11 @@ router.post('/getProfile', (req, res) => {
     })
 })
 
+router.post('/logout', (req, res) => {
+  req.session.regenerate(error => {
+    console.log(error)
+  })
+  res.redirect('/')
+})
+
 module.exports = router

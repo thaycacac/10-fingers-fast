@@ -1,5 +1,3 @@
-import axios from 'axios'
-
 const USER_SIGNUP = function (username, firstname, lastname, dob, email, password, repassword) {
   this.$store.dispatch('SET_ERROR', '')
   const regexEmail = /^(([^<>()\\[\]\\.,;:\s@"]+(\.[^<>()\\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
@@ -28,7 +26,7 @@ const USER_SIGNUP = function (username, firstname, lastname, dob, email, passwor
     this.$nextTick(() => {
       this.$nuxt.$loading.start()
     })
-    axios.post('/api/user/signup', {
+    this.$axios.post('/api/user/signup', {
       username: username,
       firstname: firstname,
       lastname: lastname,
@@ -103,8 +101,22 @@ const USER_PROFILE = (context) => {
     })
 }
 
+const USER_LOGOUT = function () {
+  // show loading page
+  this.$nextTick(() => {
+    this.$nuxt.$loading.start()
+  })
+  this.$axios.post('/api/user/logout')
+    .then(() => {
+      // FIXME: push error
+      this.$router.push('/')
+      this.$nuxt.$loading.finish()
+    })
+}
+
 export {
   USER_SIGNUP,
   USER_SIGNIN,
-  USER_PROFILE
+  USER_PROFILE,
+  USER_LOGOUT
 }

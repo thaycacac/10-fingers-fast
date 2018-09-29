@@ -19,10 +19,11 @@
             a.navbar-link(href='/') {{ $t('navbar.account') }}
             div.navbar-dropdown.is-boxed
               a.navbar-item(
-                v-for='item in navigator'
-                :href='item.link'
-                :key='item.link'
-              ) {{ item.name }}
+                href='/profile'
+              ) Trang ca nhan
+              a.navbar-item(
+                @click='USER_LOGOUT'
+              ) Logout
           div.navbar-item.has-dropdown.is-hoverable
             a.navbar-link(href='#') {{ $t('navbar.language') }}
             div.navbar-dropdown.is-boxed
@@ -41,6 +42,7 @@
 </style>
 <script>
 import { mapGetters } from 'vuex'
+import { USER_LOGOUT } from '../../axios/user/usersController'
 export default {
   data () {
     return {
@@ -63,19 +65,11 @@ export default {
   computed: mapGetters([
     'GET_USERNAME'
   ]),
+  methods: {
+    USER_LOGOUT
+  },
   beforeMount () {
     // check login or not
-    if (this.$session.get('username')) {
-      this.navigator = [
-        { link: '/profile', name: this.$i18n.t('navbar.signed.one') },
-        { link: '/logout', name: this.$i18n.t('navbar.signed.two') }
-      ]
-    } else {
-      this.navigator = [
-        { link: '/signup', name: this.$i18n.t('navbar.notSigned.one') },
-        { link: '/signin', name: this.$i18n.t('navbar.notSigned.two') }
-      ]
-    }
     window.addEventListener('scroll', this.handleScroll)
   },
   computed: {

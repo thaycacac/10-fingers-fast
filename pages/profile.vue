@@ -53,6 +53,7 @@ export default {
       console.log(this)
     }
   },
+  middleware: 'authenticationSignin',
   beforeMount () {
     USER_PROFILE(this)
   }
