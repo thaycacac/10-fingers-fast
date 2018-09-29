@@ -13,7 +13,8 @@ const store = () => new Vuex.Store({
       email: '',
       password: ''
     },
-    error: ''
+    error: '',
+    account: ''
   },
   getters,
   mutations,

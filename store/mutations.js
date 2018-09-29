@@ -5,5 +5,9 @@ export default {
 
   setError (state, error) {
     state.error = error
+  },
+
+  setAccount (state, account) {
+    state.account = account
   }
 }

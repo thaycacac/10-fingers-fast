@@ -5,5 +5,9 @@ export default {
 
   GET_ERROR: state => {
     return state.error
+  },
+
+  GET_ACCOUNT: state => {
+    return state.account.username
   }
 }

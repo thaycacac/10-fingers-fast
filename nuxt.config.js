@@ -100,7 +100,7 @@ module.exports = {
       secret: 'thaycacac',
       resave: false,
       saveUninitialized: false,
-      cookie: { maxAge: 60000 }
+      cookie: { maxAge: 600000 }
     }),
     // set moongoose
     mongoose.connect(DBConfig.dbconfig.nameDB, {

@@ -56,6 +56,7 @@ router.post('/signin', (req, res) => {
 
 router.post('/getProfile', (req, res) => {
   let username = req.body.username
+  console.log(username)
   User.findOne({username: username})
     .then(result => {
       res.status(200).json(result)

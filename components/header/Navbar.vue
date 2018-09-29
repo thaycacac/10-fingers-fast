@@ -40,6 +40,7 @@
 }
 </style>
 <script>
+import { mapGetters } from 'vuex'
 export default {
   data () {
     return {
@@ -59,6 +60,9 @@ export default {
       }
     }
   },
+  computed: mapGetters([
+    'GET_USERNAME'
+  ]),
   beforeMount () {
     // check login or not
     if (this.$session.get('username')) {

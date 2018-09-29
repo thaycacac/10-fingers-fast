@@ -10,27 +10,27 @@
               div.field
                 label.label {{ $t('profile.username') }}
                 div.control
-                  input.input.is-large(type='text' :value='user.username' disabled)
+                  input.input.is-large(type='text' :value='GET_USER.username' disabled)
               div.field
                 label.label {{ $t('profile.firstname') }}
                 div.control
-                  input.input.is-large(type='text' :value='user.firstname' disabled)
+                  input.input.is-large(type='text' :value='GET_USER.firstname' disabled)
               div.field
                 label.label {{ $t('profile.lastname') }}
                 div.control
-                  input.input.is-large(type='text' :value='user.lastname' disabled)
+                  input.input.is-large(type='text' :value='GET_USER.lastname' disabled)
               div.field
                 label.label {{ $t('profile.dob') }}
                 div.control
-                  input.input.is-large(type='text' :value='user.dob' disabled)
+                  input.input.is-large(type='text' :value='GET_USER.dob' disabled)
               div.field
                 label.label {{ $t('profile.email') }}
                 div.control
-                  input.input.is-large(type='text' :value='user.email' disabled)
+                  input.input.is-large(type='text' :value='GET_USER.email' disabled)
               div.field
                 label.label dsfdsf
                 div.control
-                  input.input.is-large(type='password' :value='user.password' disabled)
+                  input.input.is-large(type='password' :value='GET_USER.password' disabled)
               button.button.is-block.is-warning.is-large.is-fullwidth(
                 @click.prevent=signup
                 disabled
@@ -40,6 +40,7 @@
 </template>
 
 <script>
+import { USER_PROFILE } from '~/axios/user/usersController'
 import { mapGetters } from 'vuex'
 export default {
   layout: 'user',
@@ -48,33 +49,12 @@ export default {
   ]),
   methods: {
     // TODO: update
-    signup () {
+    update () {
       console.log(this)
     }
   },
   beforeMount () {
-    this.$nextTick(() => {
-      this.$nuxt.$loading.start()
-    })
-    // check login or not
-    if (!this.$session.exists()) {
-      this.$router.push('/')
-      return
-    }
-    // get information user by session username
-    this.$axios.post('/api/user/getProfile', {username: this.$session.get('username')})
-      .then(result => {
-        const userCurrent = result.data
-        this.$store.dispatch('setUser', {
-          username: userCurrent.username,
-          firstname: userCurrent.firstname,
-          lastname: userCurrent.lastname,
-          dob: userCurrent.dob.toString().split('T')[0],
-          email: userCurrent.email,
-          password: userCurrent.password
-        })
-        this.$nuxt.$loading.finish()
-      })
+    USER_PROFILE(this)
   }
 }
 </script>

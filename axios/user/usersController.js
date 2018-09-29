@@ -83,7 +83,28 @@ const USER_SIGNIN = function (username, password) {
     })
 }
 
+const USER_PROFILE = (context) => {
+  context.$nextTick(() => {
+    context.$nuxt.$loading.start()
+  })
+  // get information user by session username
+  context.$axios.post('/api/user/getProfile', {username: context.$store.getters.GET_ACCOUNT})
+    .then(result => {
+      const userCurrent = result.data
+      context.$store.dispatch('SET_USER', {
+        username: userCurrent.username,
+        firstname: userCurrent.firstname,
+        lastname: userCurrent.lastname,
+        dob: userCurrent.dob.toString().split('T')[0],
+        email: userCurrent.email,
+        password: userCurrent.password
+      })
+      context.$nuxt.$loading.finish()
+    })
+}
+
 export {
   USER_SIGNUP,
-  USER_SIGNIN
+  USER_SIGNIN,
+  USER_PROFILE
 }
