@@ -16,14 +16,17 @@
             a.navbar-item.is-navbar-text(href='/learn') {{ $t('navbar.practice') }}
         div.navbar-item
           div.navbar-item.has-dropdown.is-hoverable
-            a.navbar-link(href='/') {{ $t('navbar.account') }}
-            div.navbar-dropdown.is-boxed
-              a.navbar-item(
-                href='/profile'
-              ) Trang ca nhan
-              a.navbar-item(
-                @click='USER_LOGOUT'
-              ) Logout
+            a.navbar-link(
+              v-if="account !== undefined"
+              href='/profile') {{ account.toUpperCase() }}
+              div.navbar-dropdown.is-boxed
+                a.navbar-item(
+                  @click='USER_LOGOUT'
+                ) {{ $t('navbar.sign.logout') }}
+            a.navbar-link(href='/' v-else) {{ $t('navbar.account') }}
+              div.navbar-dropdown.is-boxed
+                a.navbar-item(href='/signin') {{ $t('navbar.sign.signin') }}
+                a.navbar-item(href='/signup') {{ $t('navbar.sign.signup') }}
           div.navbar-item.has-dropdown.is-hoverable
             a.navbar-link(href='#') {{ $t('navbar.language') }}
             div.navbar-dropdown.is-boxed
@@ -41,15 +44,16 @@
 }
 </style>
 <script>
+import { USER_LOGOUT } from '~/axios/user/usersController'
 import { mapGetters } from 'vuex'
-import { USER_LOGOUT } from '../../axios/user/usersController'
 export default {
   data () {
     return {
-      navigator: ''
+      account: ''
     }
   },
   methods: {
+    USER_LOGOUT,
     getOffsetTop () {
       return window.scrollY
     },
@@ -62,13 +66,9 @@ export default {
       }
     }
   },
-  computed: mapGetters([
-    'GET_USERNAME'
-  ]),
-  methods: {
-    USER_LOGOUT
-  },
   beforeMount () {
+    // FIXME: show error, mapGetters not work
+    this.account = this.$store.getters.GET_ACCOUNT
     // check login or not
     window.addEventListener('scroll', this.handleScroll)
   },

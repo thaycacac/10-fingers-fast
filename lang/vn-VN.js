@@ -32,13 +32,10 @@ module.exports = {
     practice: 'Luyện gõ 10 ngón',
     account: 'Tài khoản',
     language: 'Ngôn ngữ',
-    signed: {
-      one: 'Trang cá nhân',
-      two: 'Đăng xuất'
-    },
-    notSigned: {
-      one: 'Đăng ký',
-      two: 'Đăng nhập'
+    sign: {
+      signup: 'Đăng ký',
+      signin: 'Đăng nhập',
+      logout: 'Đăng xuất'
     }
   },
   slider: {

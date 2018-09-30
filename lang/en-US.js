@@ -32,13 +32,10 @@ module.exports = {
     practice: 'Practice learn 10 fingers',
     account: 'Account',
     language: 'Language',
-    signed: {
-      one: 'My profile',
-      two: 'Logout'
-    },
-    notSigned: {
-      one: 'Signup',
-      two: 'Signin'
+    sign: {
+      signup: 'Signup',
+      signin: 'Signin',
+      logout: 'Logout'
     }
   },
   slider: {
