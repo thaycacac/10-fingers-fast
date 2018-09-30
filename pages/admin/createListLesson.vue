@@ -6,7 +6,7 @@
     input(type='text' v-model='lessonTitle')
     p Lesson Description
     input(type='text' v-model='lessonDescription')
-    input(type='submit' value='Submit' @click='createListLesson')
+    input(type='submit' value='Submit' @click='ADMIN_CREATE_LIST_LESSON(lessonID, lessonTitle, lessonDescription)')
 </template>
 <script>
 export default {
@@ -19,25 +19,9 @@ export default {
   },
   layout: 'admin',
   methods: {
-    createListLesson () {
-      this.$axios.post('/api/listLesson', {
-        lessonID: this.lessonID,
-        lessonTitle: this.lessonTitle,
-        lessonDescription: this.lessonDescription
-      })
-        .then(() => {
-          console.log('create success')
-        })
-        .catch(err => {
-          console.log(err)
-        })
-    }
+    ADMIN_CREATE_LIST_LESSON
   },
-  beforeMount() {
-    if (this.$session.get('username') !== 'admin') {
-      this.$router.push('/')
-    }
-  }
+  middleware: 'authenticationAdmin'
 }
 </script>
 

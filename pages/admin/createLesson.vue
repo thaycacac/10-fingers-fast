@@ -6,9 +6,10 @@
     input(type='text' v-model='type') 
     p Content:
     input(type='text' v-model='content')
-    input(type='submit' value='Submit' @click='createLesson')
+    input(type='submit' value='Submit' @click='ADMIN_CREATE_LESSON(lesson, type, content)')
 </template>
 <script>
+import { ADMIN_CREATE_LESSON } from '~/axios/admin/adminController'
 export default {
   data () {
     return {
@@ -18,26 +19,9 @@ export default {
     }
   },
   layout: 'admin',
-  middleware: 'authentication',
+  middleware: 'authenticationAdmin',
   methods: {
-    createLesson () {
-      this.$axios.post('/api/lesson', {
-        lesson: this.lesson,
-        type: this.type,
-        content: this.content
-      })
-        .then(() => {
-          console.log('create success')
-        })
-        .catch(err => {
-          console.log(err)
-        })
-    }
-  },
-  beforeMount() {
-    if (this.$session.get('username') !== 'admin') {
-      this.$router.push('/')
-    }
+    ADMIN_CREATE_LESSON
   }
 }
 </script>

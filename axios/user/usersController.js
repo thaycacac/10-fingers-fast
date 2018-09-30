@@ -26,7 +26,7 @@ const USER_SIGNUP = function (username, firstname, lastname, dob, email, passwor
     this.$nextTick(() => {
       this.$nuxt.$loading.start()
     })
-    this.$axios.post('/api/user/signup', {
+    this.$axios.post(`/api/user/signup`, {
       username: username,
       firstname: firstname,
       lastname: lastname,
@@ -55,7 +55,7 @@ const USER_SIGNIN = function (username, password) {
     this.$nuxt.$loading.start()
   })
   // get api
-  this.$axios.post('/api/user/signin', {
+  this.$axios.post(`/api/user/signin`, {
     username: username,
     password: password
   })
@@ -86,7 +86,7 @@ const USER_PROFILE = (context) => {
     context.$nuxt.$loading.start()
   })
   // get information user by session username
-  context.$axios.post('/api/user/getProfile', {username: context.$store.getters.GET_ACCOUNT})
+  context.$axios.post(`/api/user/getProfile`, {username: context.$store.getters.GET_ACCOUNT})
     .then(result => {
       const userCurrent = result.data
       context.$store.dispatch('SET_USER', {
@@ -106,7 +106,7 @@ const USER_LOGOUT = function () {
   this.$nextTick(() => {
     this.$nuxt.$loading.start()
   })
-  this.$axios.post('/api/user/logout')
+  this.$axios.post(`/api/user/logout`)
     .then(() => {
       // FIXME: push error
       this.$router.push('/')
