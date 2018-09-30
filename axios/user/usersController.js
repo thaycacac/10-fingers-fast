@@ -66,13 +66,10 @@ const USER_SIGNIN = function (username, password) {
         this.$store.dispatch('SET_ERROR', response.data.error)
       } else {
         this.$store.dispatch('SET_ERROR', '')
-        // set session
-        this.$session.start()
-        this.$session.set('username', username)
         if (username === 'admin') {
           this.$router.push('/admin')
         } else {
-          this.$router.go(-1)
+          this.$router.go(0)
         }
       }
     })
@@ -109,7 +106,7 @@ const USER_LOGOUT = function () {
   this.$axios.post(`/api/user/logout`)
     .then(() => {
       // FIXME: push error
-      this.$router.push('/')
+      this.$router.go(0)
       this.$nuxt.$loading.finish()
     })
 }

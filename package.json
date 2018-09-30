@@ -1,9 +1,9 @@
 {
   "name": "typing-study",
   "version": "1.0.0",
-  "description": "single page application nuxtjs + vuejs + nodejs",
+  "description": "Application of typing 10 fingers for everyone",
   "author": "thaycacac <thaycacac@gmail.com>",
-  "private": true,
+  "private": false,
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",

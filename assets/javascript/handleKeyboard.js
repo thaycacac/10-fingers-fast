@@ -23,6 +23,7 @@ export default text => {
   window.addEventListener('keydown', function (e) {
     // check done string
     if (countNumberInput === text.length) {
+      document.getElementById('text').innerHTML = 'DONE!!!'
       return
     }
 
@@ -34,7 +35,11 @@ export default text => {
     if (checkStart) {
       let countTime = 0
       setInterval(() => {
-        countTime++
+        if (countNumberInput === text.length) {
+          return
+        } else {
+          countTime++
+        }
         let seconds = countTime % 60
         let minute = parseInt(countTime / 60)
         document.getElementById('__number-time').innerHTML = ('0' + minute).slice(-2) + ':' + ('0' + seconds).slice(-2)
