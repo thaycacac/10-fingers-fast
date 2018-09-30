@@ -16,17 +16,12 @@
             a.navbar-item.is-navbar-text(href='/learn') {{ $t('navbar.practice') }}
         div.navbar-item
           div.navbar-item.has-dropdown.is-hoverable
-            a.navbar-link(
-              v-if="account !== undefined"
-              href='/profile') {{ account.toUpperCase() }}
-              div.navbar-dropdown.is-boxed
-                a.navbar-item(
-                  @click='USER_LOGOUT'
-                ) {{ $t('navbar.sign.logout') }}
-            a.navbar-link(href='/' v-else) {{ $t('navbar.account') }}
-              div.navbar-dropdown.is-boxed
-                a.navbar-item(href='/signin') {{ $t('navbar.sign.signin') }}
-                a.navbar-item(href='/signup') {{ $t('navbar.sign.signup') }}
+            a.navbar-link(href='/') {{ $t('navbar.account') }}
+            div.navbar-dropdown.is-boxed
+              a.navbar-item(href='/profile' v-show="account") {{ account }}
+              a.navbar-item(@click='USER_LOGOUT' v-show="account") {{ $t('navbar.sign.logout') }}
+              a.navbar-item(href='/signin' v-show="!account") {{ $t('navbar.sign.signin') }}
+              a.navbar-item(href='/signup' v-show="!account") {{ $t('navbar.sign.signup') }}
           div.navbar-item.has-dropdown.is-hoverable
             a.navbar-link(href='#') {{ $t('navbar.language') }}
             div.navbar-dropdown.is-boxed
@@ -45,7 +40,6 @@
 </style>
 <script>
 import { USER_LOGOUT } from '~/axios/user/usersController'
-import { mapGetters } from 'vuex'
 export default {
   data () {
     return {
@@ -67,9 +61,7 @@ export default {
     }
   },
   beforeMount () {
-    // FIXME: show error, mapGetters not work
     this.account = this.$store.getters.GET_ACCOUNT
-    // check login or not
     window.addEventListener('scroll', this.handleScroll)
   },
   computed: {

@@ -1,6 +1,5 @@
 export default {
   nuxtServerInit ({ commit }, { req }) {
-    console.log(req.session)
     if (req.session && req.session.user) {
       commit('setAccount', req.session.user)
     }
