@@ -1,4 +1,7 @@
+const bodyParser = require('body-parser')
+const session = require('express-session')
 const { I18N } = require('./config')
+
 module.exports = {
   /*
   ** Headers of the page
@@ -90,7 +93,16 @@ module.exports = {
     }
   },
   serverMiddleware: [
+    // body-parser middleware
+    bodyParser.json(),
+    // session middleware
+    session({
+      secret: 'thaycacac',
+      resave: false,
+      saveUninitialized: false,
+      cookie: { maxAge: 60000 }
+    }),
     // API middleware
-    '~/server/src/app.js'
+    '~/server/app.js'
   ]
 }
