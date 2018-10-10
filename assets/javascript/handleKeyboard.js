@@ -60,8 +60,8 @@ export default text => {
     }
 
     // show position next and remove position enter
-    hiddenPositionFinger(listText[positionCurrent].innerHTML.toUpperCase(), listPositionFinger)
-    showPositionFinger(listText[positionCurrent + 1].innerHTML.toUpperCase(), listPositionFinger)
+    // hiddenPositionFinger(listText[positionCurrent].innerHTML.toUpperCase(), listPositionFinger)
+    // showPositionFinger(listText[positionCurrent + 1].innerHTML.toUpperCase(), listPositionFinger)
 
     // check code space then prevent scrolling
     if (e.keyCode === 32) {
@@ -92,21 +92,23 @@ function splitText (textOrigin) {
 }
 
 // hidden position finger in hand when enter new keyboard
-function hiddenPositionFinger (textCheck, listPositionFinger) {
-  let positionFinger
-  // get index of list include character have key input
-  const map = listPositionFinger.map(text => text.indexOf(textCheck))
-  const indexInList = map.findIndex(number => {
-    return number !== -1
-  })
-  if (indexInList === 4) {
-    const positionFingerSpace = document.getElementsByClassName('position-finger')[5]
-    positionFingerSpace.setAttribute('style', 'visibility: hidden;')
-  }
-  // check user input keyboard then show position finger
-  positionFinger = document.getElementsByClassName('position-finger')[indexInList]
-  positionFinger.setAttribute('style', 'visibility: hidden;')
-}
+
+// function hiddenPositionFinger (textCheck, listPositionFinger) {
+//   let positionFinger
+//   // get index of list include character have key input
+//   const map = listPositionFinger.map(text => text.indexOf(textCheck))
+//   const indexInList = map.findIndex(number => {
+//     return number !== -1
+//   })
+//   if (indexInList === 4) {
+//     const positionFingerSpace = document.getElementsByClassName('position-finger')[5]
+//     positionFingerSpace.setAttribute('style', 'visibility: hidden;')
+//   }
+//   // check user input keyboard then show position finger
+//   positionFinger = document.getElementsByClassName('position-finger')[indexInList]
+//   console.log(positionFinger)
+//   positionFinger.setAttribute('style', 'visibility: hidden;')
+// }
 
 // show position finger in hand
 function showPositionFinger (textCheck, listPositionFinger) {
