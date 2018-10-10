@@ -67,7 +67,7 @@ const USER_SIGNIN = function (username, password) {
       } else {
         this.$store.dispatch('SET_ERROR', '')
         if (username === 'admin') {
-          this.$router.push('/admin')
+          this.$router.go(0)
         } else {
           this.$router.go(0)
         }

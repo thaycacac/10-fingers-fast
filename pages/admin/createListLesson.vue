@@ -9,6 +9,7 @@
     input(type='submit' value='Submit' @click='ADMIN_CREATE_LIST_LESSON(lessonID, lessonTitle, lessonDescription)')
 </template>
 <script>
+import { ADMIN_CREATE_LIST_LESSON } from '~/axios/admin/adminController'
 export default {
   data () {
     return {
