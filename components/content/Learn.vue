@@ -4,11 +4,10 @@
       div.__container
         div.__block(v-for='record in records' :key='record.lessonID')
           div.__img(
-            data-aos='fade-down'
             :class=`{'--success': record.lessonID % 3 == 0, '--danger': record.lessonID % 3 == 1, '--warning': record.lessonID % 3 == 2}`
           )
             i.fas.fa-medal.__icon
-          div.__content(data-aos='zoom-out-right')
+          div.__content
             h2 {{ record.lessonTitle }}
             p {{ record.lessonDescription }}
             button.__read-more(@click="isShowLesson = true, getListLesson(record.lessonID)") {{ $t('learn.readmore') }}

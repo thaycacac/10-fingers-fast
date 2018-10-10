@@ -13,7 +13,7 @@
           p.is-typing-description {{ $t('typingStudy.description.description2') }}
         div.is-typing-icon#is-first-icon
           i.fab.fa-linode.is-icon
-      div.column.is-typing-center(data-aos='zoom-out-down')
+      div.column.is-typing-center
       div.column.is-typing-right
         div.is-typing-content
           p.is-typing-title {{ $t('typingStudy.title.title3') }}

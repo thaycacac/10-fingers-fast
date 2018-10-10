@@ -1,23 +1,23 @@
 <template lang="pug">
   div.my-target#target
     div.container-intro
-      h1.title(data-aos='zoom-in-up') {{ $t('target.titleBig') }}
-      h5.title.is-5.my-descrip(data-aos='zoom-in-up') {{ $t('target.titleSmall') }}
+      h1.title {{ $t('target.titleBig') }}
+      h5.title.is-5.my-descrip {{ $t('target.titleSmall') }}
     div.container
       div.columns.is-all
-        div.column.is-one(data-aos='fade-right')
+        div.column.is-one
           one-view(
             :icon='icon.icon1'
             :title='title.title1'
             :content='content.content1'
           )
-        div.column.is-one(data-aos='fade-up')
+        div.column.is-one
           one-view(
             :icon='icon.icon2'
             :title='title.title2'
             :content='content.content2'
           )
-        div.column.is-one(data-aos='fade-left')
+        div.column.is-one
           one-view(
             :icon='icon.icon3'
             :title='title.title3'
