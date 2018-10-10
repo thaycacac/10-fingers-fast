@@ -18,7 +18,7 @@ router.post('/signup', (req, res) => {
   const user = new User(req.body)
   user.save()
     .then((result) => {
-      console.log(result)
+      res.redirect('/')
     })
     .catch(err => {
       console.log(err)

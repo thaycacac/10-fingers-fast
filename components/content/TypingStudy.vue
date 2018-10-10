@@ -26,8 +26,8 @@
         div.is-typing-icon
           i.fab.fa-codepen.is-icon
     div
-      nuxt-link(to='/learn')
-        button.is-begin Bắt Đầu
+      button.is-begin 
+       a(href="/learn") Bắt Đầu
 </template>
 <style lang="scss" scoped>
 @import '~/assets/sass/main.sass';
