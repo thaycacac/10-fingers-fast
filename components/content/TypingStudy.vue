@@ -2,7 +2,7 @@
   div.container.is-hidden-mobile#typing-study
     h1.is-title-typing {{ $t('typingStudy.titleBig') }}
     div.columns
-      div.column.is-typing-left
+      div.column.is-typing-left(data-aos="zoom-in-left")
         div.is-typing-content
           p.is-typing-title {{ $t('typingStudy.title.title1') }}
           p.is-typing-description {{ $t('typingStudy.description.description1') }}
@@ -13,8 +13,8 @@
           p.is-typing-description {{ $t('typingStudy.description.description2') }}
         div.is-typing-icon#is-first-icon
           i.fab.fa-linode.is-icon
-      div.column.is-typing-center
-      div.column.is-typing-right
+      div.column.is-typing-center(data-aos="zoom-in-down")
+      div.column.is-typing-right(data-aos="zoom-in-right")
         div.is-typing-content
           p.is-typing-title {{ $t('typingStudy.title.title3') }}
           p.is-typing-description {{ $t('typingStudy.description.description3') }}
