@@ -1,6 +1,6 @@
 <template lang="pug">
   div.is-navigation-map.is-hidden-mobile
-    div.container.is-container-navigation
+    div.container.is-container-navigation(data-aos="fade-right")
       p.has-text
         a(href='/#target') {{ $t('navigation.target') }}
       p /

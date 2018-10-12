@@ -43,17 +43,17 @@ module.exports = {
   css: [
     '~/assets/css/main.css',
     './assets/sass/main.sass',
-    './assets/css/transition.css'
-    // 'aos/dist/aos.css'
+    './assets/css/transition.css',
+    'aos/dist/aos.css'
   ],
   modules: [
     '@nuxtjs/axios',
     'nuxt-buefy',
     [ 'nuxt-i18n', I18N ]
   ],
-  // plugins: [
-  //   { src: '~/plugins/aos.js', ssr: false }
-  // ],
+  plugins: [
+    { src: '~/plugins/aos.js', ssr: false }
+  ],
   axios: {
     proxy: true
   },
@@ -66,8 +66,8 @@ module.exports = {
   loading: '~/components/share/loading.vue',
   build: {
     vendor: [
-      'axios'
-      // 'aos'
+      'axios',
+      'aos'
     ],
     /*
     ** Run ESLINT on save

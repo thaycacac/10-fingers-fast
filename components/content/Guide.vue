@@ -1,8 +1,8 @@
 <template lang="pug">
   div#guide
     div.is-container-guide
-      h1.is-title {{ $t('guide.titleBig') }}
-      p.is-description {{ $t('guide.titleSmall') }}
+      h1.is-title(data-aos="flip-right") {{ $t('guide.titleBig') }}
+      p.is-description(data-aos="flip-down") {{ $t('guide.titleSmall') }}
       div.columns
         div.column.is-4
           cover-guide(
