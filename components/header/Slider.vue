@@ -18,16 +18,16 @@
 </template>
 <script>
   import SvgSlider from '~/assets/svg/Slider.svg'
-  import animationSlider from '~/assets/javascript/animationSlider.js'
-  import animationSVG from '~/assets/javascript/animationSVG.js'
+  // import animationSlider from '~/assets/javascript/animationSlider.js'
+  // import animationSVG from '~/assets/javascript/animationSVG.js'
   export default {
     components: {
       SvgSlider
     },
-    mounted () {
-      animationSlider()
-      animationSVG()
-    }
+    // mounted () {
+    //   animationSlider()
+    //   animationSVG()
+    // }
   }
 </script>
 <style lang="scss" scoped>
