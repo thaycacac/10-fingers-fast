@@ -19,6 +19,7 @@
   "dependencies": {
     "@nuxtjs/axios": "^5.3.1",
     "animejs": "^2.2.0",
+    "aos": "^2.3.4",
     "axios": "^0.18.0",
     "body-passer": "^1.0.0",
     "charming": "^2.2.4",

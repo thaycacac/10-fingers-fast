@@ -795,6 +795,14 @@ anymatch@^2.0.0:
     micromatch "^3.1.4"
     normalize-path "^2.1.1"
 
+aos@^2.3.4:
+  version "2.3.4"
+  resolved "https://registry.yarnpkg.com/aos/-/aos-2.3.4.tgz#eb1c29f5c1806a197cf6323080747547edd3db8e"
+  dependencies:
+    classlist-polyfill "^1.0.3"
+    lodash.debounce "^4.0.6"
+    lodash.throttle "^4.0.1"
+
 app-path@^2.1.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/app-path/-/app-path-2.2.0.tgz#2af5c2b544a40e15fc1ac55548314397460845d0"
@@ -2224,6 +2232,10 @@ class-utils@^0.3.5:
     define-property "^0.2.5"
     isobject "^3.0.0"
     static-extend "^0.1.1"
+
+classlist-polyfill@^1.0.3:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/classlist-polyfill/-/classlist-polyfill-1.2.0.tgz#935bc2dfd9458a876b279617514638bcaa964a2e"
 
 clean-css@4.1.x:
   version "4.1.7"
@@ -5643,7 +5655,7 @@ lodash.cond@^4.3.0:
   version "4.5.2"
   resolved "https://registry.yarnpkg.com/lodash.cond/-/lodash.cond-4.5.2.tgz#f471a1da486be60f6ab955d17115523dd1d255d5"
 
-lodash.debounce@^4.0.8:
+lodash.debounce@^4.0.6, lodash.debounce@^4.0.8:
   version "4.0.8"
   resolved "https://registry.yarnpkg.com/lodash.debounce/-/lodash.debounce-4.0.8.tgz#82d79bff30a67c4005ffd5e2515300ad9ca4d7af"
 
@@ -5711,6 +5723,10 @@ lodash.templatesettings@^4.0.0:
   resolved "https://registry.yarnpkg.com/lodash.templatesettings/-/lodash.templatesettings-4.1.0.tgz#2b4d4e95ba440d915ff08bc899e4553666713316"
   dependencies:
     lodash._reinterpolate "~3.0.0"
+
+lodash.throttle@^4.0.1:
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/lodash.throttle/-/lodash.throttle-4.1.1.tgz#c23e91b710242ac70c37f1e1cda9274cc39bf2f4"
 
 lodash.uniq@^4.5.0:
   version "4.5.0"
