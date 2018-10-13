@@ -28,6 +28,28 @@ router.post('/signup', (req, res) => {
     })
 })
 
+router.post('/update', (req, res) => {
+  const user = req.body
+  User.updateOne({username: user.username},
+    { firstname: user.firstname,
+      lastname: user.lastname,
+      dob: user.dob,
+      email: user.email,
+      password: user.password })
+    .then(result => {
+      res.status(200).json({
+        mesage: result,
+        error: null
+      })
+    })
+    .catch(err => {
+      res.status(200).json({
+        mesage: null,
+        error: err
+      })
+    })
+})
+
 router.post('/signin', (req, res) => {
   let user = req.body
   User.findOne({username: user.username})

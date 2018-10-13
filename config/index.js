@@ -14,22 +14,22 @@ const I18N = {
       name: 'Vietnamese'
     }
   ],
-  defaultLocale: 'vn',
+  defaultLocale: 'en',
   routes: {
     'index': {
-      en: '/en'
+      en: '/'
     },
     'learn': {
-      en: '/en'
+      en: '/'
     },
     'profile': {
-      en: '/en'
+      en: '/'
     },
     'signin': {
-      en: '/en'
+      en: '/'
     },
     'signup': {
-      en: '/en'
+      en: '/'
     },
     'lesson/_id': {
       en: '/lesson/:id?',

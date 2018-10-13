@@ -25,7 +25,8 @@ module.exports = {
     dob: 'Date of birth',
     lastname: 'Last name',
     email: 'Email',
-    password: 'Password'
+    password: 'Password',
+    repassword: 'Repassword'
   },
   navbar: {
     home: 'Home',

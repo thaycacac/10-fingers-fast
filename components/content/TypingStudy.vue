@@ -1,6 +1,6 @@
 <template lang="pug">
   div.container.is-hidden-mobile#typing-study
-    h1.is-title-typing {{ $t('typingStudy.titleBig') }}
+    h1.is-title-typing(data-aos="flip-right") {{ $t('typingStudy.titleBig') }}
     div.columns
       div.column.is-typing-left(data-aos="zoom-in-left")
         div.is-typing-content
