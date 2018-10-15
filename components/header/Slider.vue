@@ -10,7 +10,7 @@
                   strong.title.is-1 {{ $t('slider.title') }}
                 hr.my-break
                 p.text-description {{ $t('slider.description') }}
-                a.button.is-white.my-button(href#) {{ $t('slider.readmore') }}
+                a.button.is-white.my-button(href="/readmore") {{ $t('slider.readmore') }}
           div.column.is-hidden-mobile
             svg-slider.svg-slider
       div.--canvas
