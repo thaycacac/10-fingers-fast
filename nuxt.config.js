@@ -1,7 +1,7 @@
 const bodyParser = require('body-parser')
 const session = require('express-session')
 const mongoose = require('mongoose')
-const DBConfig = require('./server/configuration/config')
+const DBConfig = require('./server/configuration/mongoDB')
 const { I18N } = require('./config')
 module.exports = {
   /*

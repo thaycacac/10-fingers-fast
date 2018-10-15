@@ -1,14 +1,12 @@
-<template>
-  <div>
-    <navbar></navbar>
-    <slider></slider>
-    <nuxt/>
-    <my-footer></my-footer>
-  </div>
+<template lang="pug">
+  div
+    navbar
+    slider
+    nuxt
+    my-footer
 </template>
 
 <script>
-// import axios from '~/plugins/axios'
 import Navbar from '../components/header/Navbar'
 import Slider from '../components/header/Slider'
 import MyFooter from '../components/footer/Footer'
