@@ -3,7 +3,7 @@
     div.container
       div.navbar-brand
         a.navbar-item(href='/')
-          img(src='~/assets/img/logo2.png' alt='logo')
+          img(src='~/assets/img/logo/logo02.png' alt='logo')
         div.navbar-burger.burger(data-target='navbarExampleTransparentExample')
           span
           span
