@@ -27,7 +27,7 @@
           i.fab.fa-codepen.is-icon
     div
       button.is-begin 
-       a(href="/learn") Bắt Đầu
+        a(href="/learn") Bắt Đầu
 </template>
 <style lang="scss" scoped>
 @import '~/assets/sass/main.sass';

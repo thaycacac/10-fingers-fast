@@ -4,6 +4,7 @@
       div.__container
         div.__block(v-for='record in records' :key='record.lessonID')
           div.__img(
+            alt='start for lesson'
             :class=`{'--success': record.lessonID % 3 == 0, '--danger': record.lessonID % 3 == 1, '--warning': record.lessonID % 3 == 2}`
           )
             i.fas.fa-medal.__icon

@@ -5,7 +5,7 @@
       div.moon
       img.hero-image(
         src='/svg/slider-small.svg'
-        alt='slier small')
+        alt='slider small')
       div.screen-container
       div.notification
 </template>

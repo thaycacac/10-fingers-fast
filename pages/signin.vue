@@ -6,7 +6,7 @@
           h3.title.has-text-black {{ $t('signin.title') }}
           div.box
             figure.avatar
-              img(src='../assets/img/user/logo-login.png')
+              img(src='../assets/img/user/logo-login.png' alt='logo login')
             transition.bounce
               p(style='color: red') {{ GET_ERROR }}
             form
