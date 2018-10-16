@@ -152,8 +152,7 @@
     </div>
     <!-- audio -->
     <audio id="keyAudio">
-      <!-- TODO: change -->
-      <source src="http://www.freesfx.co.uk/rx2/mp3s/5/16952_1461335341.mp3" type="audio/mpeg">
+      <source src="/audio/keyboard.mp3" type="audio/mpeg">
     </audio>
   </div>
 </template>
