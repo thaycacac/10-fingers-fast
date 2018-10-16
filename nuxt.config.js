@@ -22,18 +22,6 @@ module.exports = {
         href: 'https://use.fontawesome.com/releases/v5.2.0/css/all.css',
         integrity: 'sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ',
         crossorigin: 'anonymous'
-      },
-      {
-        href: 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=vietnamese',
-        rel: 'stylesheet'
-      },
-      {
-        href: 'https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i',
-        rel: 'stylesheet'
-      },
-      {
-        href: 'https://fonts.googleapis.com/css?family=Montserrat:400,700',
-        rel: 'stylesheet'
       }
     ],
     script: [
@@ -44,6 +32,7 @@ module.exports = {
     '~/assets/css/main.css',
     './assets/sass/main.sass',
     './assets/css/transition.css',
+    './assets/css/fonts.css',
     'aos/dist/aos.css'
   ],
   modules: [
