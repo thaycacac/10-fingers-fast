@@ -15,18 +15,20 @@
                   input.input.is-large(
                     type='text'
                     placeholder='Input username'
-                    v-model='username')
+                    v-model='username'
+                    :autocomplete="rememberPassword !== '' ? 'on' : 'off'")
               div.field
                 div.control
                   input.input.is-large(
                     type='password' 
                     placeholder='Input password'
-                    v-model='password')
+                    v-model='password'
+                    :autocomplete="rememberPassword !== '' ? 'on' : 'off'")
                 button.button.is-block.is-warning.is-large.is-fullwidth.--is-button-signin(
                   @click.prevent='USER_SIGNIN(username, password)'
                 ) {{ $t('signin.title') }}
               div.field
-                label.checkbox #[input.checkbox(type='checkbox')] {{ $t('signin.remember') }}
+                label.checkbox #[input.checkbox(type='checkbox' v-model='rememberPassword')] {{ $t('signin.remember') }}
           p.has-choose-more
             a(href='/signup') {{ $t('signin.signup') }} &nbsp·&nbsp
             a(href='#') {{ $t('signin.forgot') }} &nbsp·&nbsp
@@ -39,7 +41,8 @@ export default {
   data () {
     return {
       username: '',
-      password: ''
+      password: '',
+      rememberPassword: ''
     }
   },
   layout: 'user',
