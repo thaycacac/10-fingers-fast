@@ -14,8 +14,7 @@ module.exports = {
     title: 'Signin',
     remember: 'Remember password',
     signup: 'Signup',
-    forgot: 'Forgot password',
-    help: 'Help?'
+    forgot: 'Forgot password'
   },
   profile: {
     title: 'Profile',

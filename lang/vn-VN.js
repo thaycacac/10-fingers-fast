@@ -14,8 +14,7 @@ module.exports = {
     title: 'Đăng nhập',
     remember: 'Nhớ mật khẩu',
     signup: 'Đăng ký',
-    forgot: 'Quên mật khẩu',
-    help: 'Giúp?'
+    forgot: 'Quên mật khẩu'
   },
   profile: {
     title: 'Thông tin cá nhân',
