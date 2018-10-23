@@ -1,7 +1,7 @@
 <template lang="pug">
   div.is-fixed-bg.is-fixed-bg-image.is-hidden-mobile
     div.container
-      div.columns
+      div.columns(data-aos="fade-right")
         div.column
           one-view(
             :icon='icon.icon1'

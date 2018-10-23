@@ -156,7 +156,7 @@ module.exports = {
     title: {
       title1: 'Speed',
       title2: 'Effective',
-      title3: '',
+      title3: 'Learn More',
       title4: 'Eye-catching'
     },
     description: {

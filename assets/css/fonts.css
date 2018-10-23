@@ -30,6 +30,11 @@
 }
 @font-face {
   font-family: 'OpenSans';
+  src: url('../fonts/OpenSans-Italic.ttf');
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'OpenSans';
   font-style: normal;
   src: url('../fonts/OpenSans-Regular.ttf');
 }
