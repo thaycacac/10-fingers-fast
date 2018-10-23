@@ -29,7 +29,8 @@ module.exports = {
   },
   navbar: {
     home: 'Trang chủ',
-    practice: 'Luyện gõ 10 ngón',
+    practice: 'Luyện tập',
+    test: 'Kiểm tra tốc độ',
     account: 'Tài khoản',
     language: 'Ngôn ngữ',
     sign: {
@@ -165,6 +166,7 @@ module.exports = {
   learn: {
     listLessons: 'Danh Sách Bài Học',
     lesson: 'Bài',
-    readmore: 'Đọc thêm'
+    readmore: 'Đọc thêm',
+    zoom: 'Phóng to'
   }
 }

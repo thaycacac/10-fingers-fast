@@ -13,12 +13,12 @@
                     :key="lesson._id">
                     <a 
                     :href="'/lesson/' + lesson._id"
-                    :class="lesson._id == idCurrent ? 'is-active' : ''"> Bài {{ listLesson.indexOf(lesson) + 1 }}<br/></a>
+                    :class="lesson._id == idCurrent ? 'is-active' : ''"> {{ $t('learn.lesson') }} {{ listLesson.indexOf(lesson) + 1 }}<br/></a>
                   </li>
                 </ul>
               </li>
             </ul>
-            <a class="button is-large is-fullwidth is-primary is-outlined" @click="fullScreen">Phóng to</a>
+            <a class="button is-large is-fullwidth is-primary is-outlined" @click="fullScreen">{{ $t('learn.zoom') }}</a>
           </aside>
         </div>
         <div class="column" id="full-screen">

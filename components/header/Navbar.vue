@@ -14,6 +14,7 @@
           div.navbar-start
             a.navbar-item.is-navbar-text(href='/') {{ $t('navbar.home') }}
             a.navbar-item.is-navbar-text(href='/learn') {{ $t('navbar.practice') }}
+            a.navbar-item.is-navbar-text(href='https://test-typing-speed.netlify.com/#/' target="_blank") {{ $t('navbar.test') }}
         div.navbar-item
           div.navbar-item.has-dropdown.is-hoverable
             a.navbar-link(href='/') {{ $t('navbar.account') }}

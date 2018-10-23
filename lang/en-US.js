@@ -29,7 +29,8 @@ module.exports = {
   },
   navbar: {
     home: 'Home',
-    practice: 'Practice learn 10 fingers',
+    practice: 'Learn',
+    test: 'Test Speed',
     account: 'Account',
     language: 'Language',
     sign: {
@@ -168,6 +169,7 @@ module.exports = {
   learn: {
     listLessons: 'List Lessons',
     lesson: 'Lesson',
-    readmore: 'Readmore'
+    readmore: 'Readmore',
+    zoom: 'Zoom'
   }
 }
