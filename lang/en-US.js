@@ -40,7 +40,7 @@ module.exports = {
     }
   },
   slider: {
-    title: 'Our hands make it all',
+    title: 'Practice like you\'ve never won',
     description: 'Learn the basics, concepts to the advanced of the 10 finger method in a short time!',
     readmore: 'Readmore'
   },
@@ -171,5 +171,17 @@ module.exports = {
     lesson: 'Lesson',
     readmore: 'Readmore',
     zoom: 'Zoom'
+  },
+  pageReadmore: {
+    title: 'Introduce typing 10 fingers fast and standard',
+    intro: 'Typing 10 fingers is an indispensable skill for any computer user in general or office worker in particular',
+    firstTitle: 'Standard posture for 10 quick fingers',
+    firstContent: 'Sitting not standard, not only do not knock ten fingers but also damage the spine and cause other diseases, ... You have to sit straight back, eyes look slightly down to the computer screen, the eye distance to Screen size 50 - 60 cm. The right hand to rest comfortably on the two keys asdf and jkl; Sit straight back, legs straight, do not hang around, sluggish, stretching, sit up for a long time, then sit back and sit ...',
+    secondTitle: 'Remember the location of the keys on the keyboard and the way to finger',
+    secondContent: 'You have to learn how to position the fingers on the keyboard in the tutorial section of the home page and practice the memory by doing the exercises on the 10FingersFast page.',
+    thirdTitle: 'Note on typing skills 10 fingers',
+    thirdContent: 'You know that people who are good at office computing skills, typing 10 finger skills, in addition to not looking at the keyboard when typing text, they can also determine where to put finger even how. in the dark? So the question is, if you do not see anything, how can they determine how to put your finger on the keyboard, how do you know what is the default 10 keys? Asdf, jkl; and the way keys? The answer lies on your keyboard, you try to close your eyes, 10 fingers through the keyboard to see whether two points raised? That\'s the F key and the J key, which is to help you locate your finger even without looking at the keyboard.',
+    conclusion: 'Wish you soon become the typing typing 10 fingers, causing everyone around the eyes!',
+    comeback: 'Back Home'
   }
 }
