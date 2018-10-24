@@ -57,7 +57,7 @@
 
 <style lang="scss" scoped>
 @import '~/assets/sass/main.sass';
-.container-intro{
+.container-intro {
   @include setupTitle();
 }
 .my-target {

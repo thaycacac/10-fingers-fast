@@ -14,7 +14,7 @@
         div.one-page-guide {{ $t('guideFinger.description.one') }}
           br
           br
-          table.table.is-striped(style='margin: 0 auto; width: 700px;')
+          table.table.is-striped.is-hidden-touch(style='margin: 0 auto; width: 700px;')
             thead
               tr
                 th.has-text-centered(colspan='2') {{ $t('guideFinger.left') }}

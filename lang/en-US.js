@@ -90,7 +90,7 @@ module.exports = {
   },
   guideFinger: {
     description: {
-      one: 'This is the most important step and it will determine the speed of typing your text later. If you do not put your fingers in the right direction and follow the instructions, you will not be able to type as fast as the standard ones, even if you do not need to look at the keyboard. Each of your fingers will handle a certain area, which will help you type the text without looking at the keyboard. The finger restriction will be as follows: <br>',
+      one: 'This is the most important step and it will determine the speed of typing your text later. If you do not put your fingers in the right direction and follow the instructions, you will not be able to type as fast as the standard ones, even if you do not need to look at the keyboard. Each of your fingers will handle a certain area, which will help you type the text without looking at the keyboard. The finger restriction will be as follows: ',
       two: 'Essentially, the fingers will handle the key as in the table below. But the numbers 1 to 9, F1 to F12 or =, -, backspace ... then we will be less used so that you can type the appropriate and you feel comfortable. Most importantly, your fingers perform the following tasks:',
       three: 'Another important thing to help you type 10 fingers quickly is sitting posture. Many people have very bad habits that sit sideways, leaning on chairs, sitting crooked or sitting too high or too low .. This affects quite a lot of typing. How is the posture the best, most comfortable and not restrained? You can learn how to sit as follows:'
     },
