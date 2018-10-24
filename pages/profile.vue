@@ -39,13 +39,13 @@
               button.button.is-block.is-warning.is-large.is-fullwidth(
                 @click.prevent="enableUpdate"
                 v-if="!checkUpdate"
-              ) Edit Profile
+              ) {{ $t('profile.edit') }}
               button.button.is-block.is-warning.is-large.is-fullwidth(
                 @click.prevent='USER_UPDATE(username, firstname, lastname, dob, email, password, repassword)'
                 v-else
-              ) Updates
+              ) {{ $t('profile.update') }}
           p.has-choose-more(v-if="checkUpdate")
-            button.button.is-warning.is-outlined(@click.prevent="enableUpdate") Cancel
+            button.button.is-warning.is-outlined(@click.prevent="enableUpdate") {{ $t('profile.cancel') }}
 </template>
 
 <script>

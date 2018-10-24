@@ -25,7 +25,9 @@ module.exports = {
     lastname: 'Tên',
     email: 'Email',
     password: 'Mật khẩu',
-    repassword: 'Nhập lại mật khẩu'
+    repassword: 'Nhập lại mật khẩu',
+    edit: 'Cập nhật thông tin',
+    cancel: 'Hủy'
   },
   navbar: {
     home: 'Trang chủ',
