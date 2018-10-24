@@ -13,7 +13,6 @@ router.use((req, res, next) => {
   next()
 })
 
-// TODO: handel when duplicate username or email
 router.post('/signup', (req, res) => {
   const user = new User(req.body)
   user.save()
@@ -22,7 +21,7 @@ router.post('/signup', (req, res) => {
     })
     .catch(err => {
       console.log(err)
-      res.status(200).json({
+      res.status(500).json({
         error: 'Account already exists'
       })
     })
