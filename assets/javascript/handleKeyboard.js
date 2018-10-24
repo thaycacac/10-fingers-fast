@@ -6,7 +6,7 @@ export default text => {
   let countNumberCorrect = 0
   let countNumberIncorrect = 0
   let checkStart = false
-  const listPositionFinger = ['AQZ', 'WSX', 'EDC', 'RTFVB', ' ', ' ', 'YUJMN', 'IK', 'OL', 'P;']
+  const listPositionFinger = ['AQZ', 'WSX', 'EDC', 'RTFVGB', ' ', ' ', 'YUHJMN', 'IK', 'OL', 'P;']
 
   // setup number total leng
   setNumberTotal(text)
@@ -60,8 +60,8 @@ export default text => {
     }
 
     // show position next and remove position enter
-    // hiddenPositionFinger(listText[positionCurrent].innerHTML.toUpperCase(), listPositionFinger)
-    // showPositionFinger(listText[positionCurrent + 1].innerHTML.toUpperCase(), listPositionFinger)
+    hiddenPositionFinger(listText[positionCurrent].innerHTML.toUpperCase(), listPositionFinger)
+    showPositionFinger(listText[positionCurrent + 1].innerHTML.toUpperCase(), listPositionFinger)
 
     // check code space then prevent scrolling
     if (e.keyCode === 32) {
@@ -93,29 +93,32 @@ function splitText (textOrigin) {
 
 // hidden position finger in hand when enter new keyboard
 
-// function hiddenPositionFinger (textCheck, listPositionFinger) {
-//   let positionFinger
-//   // get index of list include character have key input
-//   const map = listPositionFinger.map(text => text.indexOf(textCheck))
-//   const indexInList = map.findIndex(number => {
-//     return number !== -1
-//   })
-//   if (indexInList === 4) {
-//     const positionFingerSpace = document.getElementsByClassName('position-finger')[5]
-//     positionFingerSpace.setAttribute('style', 'visibility: hidden;')
-//   }
-//   // check user input keyboard then show position finger
-//   positionFinger = document.getElementsByClassName('position-finger')[indexInList]
-//   console.log(positionFinger)
-//   positionFinger.setAttribute('style', 'visibility: hidden;')
-// }
+function hiddenPositionFinger (textCheck, listPositionFinger) {
+  let positionFinger
+  // get index of list include character have key input
+  const map = listPositionFinger.map(text => text.indexOf(textCheck))
+  let indexInList = map.findIndex(number => {
+    return number !== -1
+  })
+  if (indexInList === 4) {
+    const positionFingerSpace = document.getElementsByClassName('position-finger')[5]
+    positionFingerSpace.setAttribute('style', 'visibility: hidden;')
+  }
+  // check user input keyboard then show position finger
+  positionFinger = document.getElementsByClassName('position-finger')[indexInList]
+  if (positionFinger) {
+    positionFinger.setAttribute('style', 'visibility: hidden;')
+  } else {
+    console.log('thaycacac')
+  }
+}
 
 // show position finger in hand
 function showPositionFinger (textCheck, listPositionFinger) {
   let positionFinger
   // get index of list include character have key input
   const map = listPositionFinger.map(text => text.indexOf(textCheck))
-  const indexInList = map.findIndex(number => {
+  let indexInList = map.findIndex(number => {
     return number !== -1
   })
   // check user input keyboard then show position finger
@@ -124,7 +127,12 @@ function showPositionFinger (textCheck, listPositionFinger) {
     const positionFingerSpace = document.getElementsByClassName('position-finger')[5]
     positionFingerSpace.setAttribute('style', 'visibility: visible;')
   }
-  positionFinger.setAttribute('style', 'visibility: visible;')
+  positionFinger = document.getElementsByClassName('position-finger')[indexInList]
+  if (positionFinger) {
+    positionFinger.setAttribute('style', 'visibility: visible;')
+  } else {
+    console.log('thaycacac')
+  }
 }
 
 // set up number total leng
@@ -142,7 +150,7 @@ function updateTextAfter (positionCurrent, listText) {
 // update when user input correct
 function updateInputCorrect (listText, positionCurrent, countNumberCorrect, countNumberInput) {
   // update color text
-  listText[positionCurrent].style.color = '#27ff1b'
+  listText[positionCurrent].style.color = '#0abf00'
   listText[positionCurrent].style.textDecoration = ''
   // update percent
   const percent = countNumberCorrect / countNumberInput * 100
