@@ -166,7 +166,8 @@ module.exports = {
       description2: 'Since you do not have to focus on single-clicking, you can focus on the text you are writing. You do not need to switch back and forth, your brain will work better.',
       description3: 'Eyes always have to glance the keyboard will create a bad posture. Practice typing 10 fingers you do not need to glance at your keyboard anymore. This helps you to sit upright and in a good position.',
       description4: 'The goal is to manipulate the typing keyboard in your subconscious. Our subconscious mind helps us deal with more complex actions in seconds, almost automatically.'
-    }
+    },
+    start: 'Start'
   },
   learn: {
     listLessons: 'List Lessons',

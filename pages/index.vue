@@ -20,7 +20,6 @@ import TypingStudy from '~/components/content/TypingStudy'
 
 export default {
   layout: 'homepage',
-  transition: 'test',
   components: {
     Introduction,
     Navigation,
@@ -30,6 +29,7 @@ export default {
     Follow,
     TypingStudy
   },
+  transition: 'perfect',
   head: {
     title: 'Home Page',
     meta: [
@@ -39,6 +39,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-</style>

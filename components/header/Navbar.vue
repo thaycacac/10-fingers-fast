@@ -2,7 +2,7 @@
   nav.navbar.is-transparent.is-fixed-top
     div.container
       div.navbar-brand
-        a.navbar-item(href='/')
+        nuxt-link.navbar-item(to='/')
           img(src='~/assets/img/logo/logo02.png' alt='logo')
         div.navbar-burger.burger(data-target='navbarExampleTransparentExample')
           span
@@ -12,17 +12,17 @@
         div.navbar-end
         div.group-navbar
           div.navbar-start
-            a.navbar-item.is-navbar-text(href='/') {{ $t('navbar.home') }}
-            a.navbar-item.is-navbar-text(href='/learn') {{ $t('navbar.practice') }}
+            nuxt-link.navbar-item.is-navbar-text(to='/') {{ $t('navbar.home') }}
+            nuxt-link.navbar-item.is-navbar-text(to='/learn') {{ $t('navbar.practice') }}
             a.navbar-item.is-navbar-text(href='https://test-typing-speed.netlify.com/#/' target="_blank") {{ $t('navbar.test') }}
         div.navbar-item
           div.navbar-item.has-dropdown.is-hoverable
-            a.navbar-link(href='/') {{ $t('navbar.account') }}
+            nuxt-link.navbar-link(to='/') {{ $t('navbar.account') }}
             div.navbar-dropdown.is-boxed
-              a.navbar-item(href='/profile' v-show="account") {{ account }}
+              nuxt-link.navbar-item(to='/profile' v-show="account") {{ account }}
               a.navbar-item(@click='USER_LOGOUT' v-show="account") {{ $t('navbar.sign.logout') }}
-              a.navbar-item(href='/signin' v-show="!account") {{ $t('navbar.sign.signin') }}
-              a.navbar-item(href='/signup' v-show="!account") {{ $t('navbar.sign.signup') }}
+              nuxt-link.navbar-item(to='/signin' v-show="!account") {{ $t('navbar.sign.signin') }}
+              nuxt-link.navbar-item(to='/signup' v-show="!account") {{ $t('navbar.sign.signup') }}
           div.navbar-item.has-dropdown.is-hoverable
             a.navbar-link(href='#') {{ $t('navbar.language') }}
             div.navbar-dropdown.is-boxed

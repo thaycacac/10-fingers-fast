@@ -65,6 +65,7 @@ export default {
       repassword: ''
     }
   },
+  transition: 'perfect',
   layout: 'user',
   computed: {
     ...mapGetters([
@@ -81,7 +82,7 @@ export default {
     },
     USER_UPDATE
   },
-  middleware: 'authenticationSignin',
+  // middleware: 'authenticationSignin',
   beforeMount () {
     USER_PROFILE(this)
   },

@@ -17,6 +17,7 @@
 </template>
 <script>
 export default {
+  transition: 'perfect',
   layout: 'typing' 
 }
 </script>

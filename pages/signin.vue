@@ -44,14 +44,15 @@ export default {
       rememberPassword: ''
     }
   },
+  transition: 'perfect',
   layout: 'user',
   methods: {
     USER_SIGNIN
   },
   computed: mapGetters([
     'GET_ERROR'
-  ]),
-  middleware: 'authentication',
+  ])
+  // middleware: 'authentication',
 }
 </script>
 

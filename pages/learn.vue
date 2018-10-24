@@ -9,7 +9,8 @@ export default {
     Learn
   },
   layout: 'typing',
-  middleware: 'authenticationSignin',
+  transition: 'perfect',
+  // middleware: 'authenticationSignin',
   head: {
     title: 'Luyện gõ 10 ngón',
     meta: [

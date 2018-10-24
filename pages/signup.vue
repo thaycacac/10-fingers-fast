@@ -8,7 +8,7 @@
             p(class='has-error') {{ GET_ERROR }}
             form
               div.field
-                label.label {{ $t('signup.title') }}
+                label.label {{ $t('signup.username') }}
                 div.control
                   input.input.is-large(type='text' placeholder='Input username' v-model='username')
               div.field
@@ -58,14 +58,15 @@ export default {
       error: ''
     }
   },
+  transition: 'perfect',
   layout: 'user',
   methods: {
     USER_SIGNUP
   },
   computed: mapGetters([
     'GET_ERROR'
-  ]),
-  middleware: 'authentication'
+  ])
+  // middleware: 'authentication'
 }
 </script>
 

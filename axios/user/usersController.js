@@ -35,7 +35,7 @@ const USER_SIGNUP = function (username, firstname, lastname, dob, email, passwor
       password: password
     })
       .then(response => {
-        this.$router.go(-1)
+        this.$router.push('/signin')
         this.$nuxt.$loading.finish()
       })
       .catch(function (error) {
@@ -67,9 +67,9 @@ const USER_SIGNIN = function (username, password) {
       } else {
         this.$store.dispatch('SET_ERROR', '')
         if (username === 'admin') {
-          this.$router.go(0)
+          this.$router.push('/admin')
         } else {
-          this.$router.go(0)
+          this.$route.push('/')
         }
       }
     })
@@ -135,7 +135,7 @@ const USER_UPDATE = function (username, firstname, lastname, dob, email, passwor
       password: password
     })
       .then(response => {
-        this.$router.go(-1)
+        this.$router.push('/profile')
         this.$nuxt.$loading.finish()
       })
       .catch(function (error) {
@@ -151,8 +151,7 @@ const USER_LOGOUT = function () {
   })
   this.$axios.post(`/api/user/logout`)
     .then(() => {
-      // FIXME: push error
-      this.$router.go(0)
+      this.$route.push('/')
       this.$nuxt.$loading.finish()
     })
 }

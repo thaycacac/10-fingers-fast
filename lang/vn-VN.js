@@ -163,7 +163,8 @@ module.exports = {
       description2: 'Vì bạn không phải tập trung vào nhấn phím đơn nữa, bạn có thể tập trung vào các văn bản bạn đang viết. Bạn không cần phải chuyển đổi qua lại nữa, bộ não của bạn sẽ làm việc hiệu quả hơn.',
       description3: 'Mắt luôn phải liếc bàn phím sẽ tạo một tư thế không tốt. Luyện gõ 10 ngón tay bạn không cần phải thoáng nhìn vào bàn phím của bạn nữa. Điều này giúp bạn ngồi thẳng đứng và ở một vị trí tốt.',
       description4: 'Mục tiêu là để việc xử lý gõ bàn phím trong tiềm thức của bạn. Tiềm thức của chúng tôi giúp chúng ta đối phó với nhiều hành động phức tạp hơn trong vài giây, gần như tự động.'
-    }
+    },
+    start: 'Start'
   },
   learn: {
     listLessons: 'Danh Sách Bài Học',
