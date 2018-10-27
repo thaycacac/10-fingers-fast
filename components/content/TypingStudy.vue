@@ -27,7 +27,7 @@
           i.fab.fa-codepen.is-icon
     div
       button.is-begin 
-        nuxt-link(to="/learn") {{ $t('typingStudy.start') }}
+        a(href="/learn") {{ $t('typingStudy.start') }}
 </template>
 <style lang="scss" scoped>
 @import '~/assets/sass/main.sass';

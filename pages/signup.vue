@@ -65,7 +65,13 @@ export default {
   },
   computed: mapGetters([
     'GET_ERROR'
-  ])
+  ]),
+  beforeCreate() {
+    const account = this.$store.getters.GET_ACCOUNT
+    if (account) {
+      this.$router.push('/')
+    }
+  },
   // middleware: 'authentication'
 }
 </script>
