@@ -16,4 +16,3 @@
 <style lang="scss" scoped>
 @import '~/assets/sass/main.sass';
 </style>
-
