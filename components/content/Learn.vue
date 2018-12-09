@@ -28,7 +28,7 @@
             a {{ type.name }}
             ul(v-for='(lesson, index) in listLesson' :key='lesson.id')
               li(v-show='lesson.type.toUpperCase() === type.name.toUpperCase()')
-                a(:href="'lesson/' + lesson._id") {{ $t('learn.lesson') }} {{ index + 1 }}
+                nuxt-link(:to="'lesson/' + lesson._id") {{ $t('learn.lesson') }} {{ index + 1 }}
 </template>
 
 <style lang="scss" scoped>

@@ -11,9 +11,9 @@
                   <li 
                     v-for="lesson in listLesson" 
                     :key="lesson._id">
-                    <a 
-                    :href="'/lesson/' + lesson._id"
-                    :class="lesson._id == idCurrent ? 'is-active' : ''"> {{ $t('learn.lesson') }} {{ listLesson.indexOf(lesson) + 1 }}<br/></a>
+                    <nuxt-link 
+                    :to="'/lesson/' + lesson._id"
+                    :class="lesson._id == idCurrent ? 'is-active' : ''"> {{ $t('learn.lesson') }} {{ listLesson.indexOf(lesson) + 1 }}<br/></nuxt-link>
                   </li>
                 </ul>
               </li>

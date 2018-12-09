@@ -30,8 +30,8 @@
               div.field
                 label.checkbox #[input.checkbox(type='checkbox' v-model='rememberPassword')] {{ $t('signin.remember') }}
           p.has-choose-more
-            a(href='/signup') {{ $t('signin.signup') }} &nbsp·&nbsp
-            a(href='#') {{ $t('signin.forgot') }}
+            nuxt-link(to='/signup') {{ $t('signin.signup') }} &nbsp·&nbsp
+            nuxt-link(to='#') {{ $t('signin.forgot') }}
 </template>
 <script>
 import { USER_SIGNIN } from '~/axios/user/usersController'

@@ -46,12 +46,6 @@ module.exports = {
   axios: {
     proxy: true
   },
-  // proxy: {
-  //   '/api': {
-  //     target: 'http://localhost:5000/api',
-  //     pathRewrite: { '^/api': '' }
-  //   }
-  // },
   loading: '~/components/share/loading.vue',
   build: {
     vendor: [

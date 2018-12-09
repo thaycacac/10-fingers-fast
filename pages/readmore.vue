@@ -13,7 +13,7 @@
     hr
     h5.title.is-5 {{ $t('pageReadmore.conclusion') }}
     button.button.is-warning
-      a(href="/") {{ $t('pageReadmore.comeback') }}
+      nuxt-linkn(to="/") {{ $t('pageReadmore.comeback') }}
 </template>
 <script>
 export default {

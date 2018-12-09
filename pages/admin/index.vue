@@ -14,7 +14,7 @@
                     i.fa.fa-bell-o
                   td Create lesson
                   td
-                    a.button.is-small.is-primary(href='/admin/createLesson') Action
+                    nuxt-link.button.is-small.is-primary(to='/admin/createLesson') Action
                 tr
                   td(width='5%')
                     i.fa.fa-bell-o

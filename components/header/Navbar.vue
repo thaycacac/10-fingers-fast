@@ -24,7 +24,7 @@
               nuxt-link.navbar-item(to='/signin' v-show="!account") {{ $t('navbar.sign.signin') }}
               nuxt-link.navbar-item(to='/signup' v-show="!account") {{ $t('navbar.sign.signup') }}
           div.navbar-item.has-dropdown.is-hoverable
-            a.navbar-link(href='#') {{ $t('navbar.language') }}
+            nuxt-link.navbar-link(to='#') {{ $t('navbar.language') }}
             div.navbar-dropdown.is-boxed
               nuxt-link.navbar-item(
                 v-for='(locale, i) in showLocales'

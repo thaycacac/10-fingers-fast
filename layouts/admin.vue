@@ -3,7 +3,7 @@
     nav.navbar.is-white
       div.container
         div.navbar-brand
-          a.navbar-item.brand-text(href="/admin") Admin
+          nuxt-link.navbar-item.brand-text(to="/admin") Admin
     div.container
       div.columns
         div.column.is-3
@@ -18,9 +18,9 @@
                   a Event
                   ul
                     li
-                      a(href="/admin/createLesson") Create Lesson
+                      nuxt-link(to="/admin/createLesson") Create Lesson
                     li
-                      a(href="/admin/createListLesson") Create List Lesson
+                      nuxt-link(to="/admin/createListLesson") Create List Lesson
         div.column.is-9
           section.hero.is-info.welcome.is-small
             div.hero-body

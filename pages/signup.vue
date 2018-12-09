@@ -39,7 +39,7 @@
                 @click.prevent='USER_SIGNUP(username, firstname, lastname, dob, email, password, repassword)'
               ) {{ $t('signup.title') }}
           p.has-choose-more
-            a(href='/signin') {{ $t('signup.signin') }}
+            nuxt-link(to='/signin') {{ $t('signup.signin') }}
 </template>
 
 <script>
