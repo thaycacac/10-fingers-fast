@@ -8,10 +8,10 @@
               <li>
                 <a>Lesson {{ idLessonCurrent }}</a>
                 <ul>
-                  <li 
-                    v-for="lesson in listLesson" 
+                  <li
+                    v-for="lesson in listLesson"
                     :key="lesson._id">
-                    <nuxt-link 
+                    <nuxt-link
                     :to="'/lesson/' + lesson._id"
                     :class="lesson._id == idCurrent ? 'is-active' : ''"> {{ $t('learn.lesson') }} {{ listLesson.indexOf(lesson) + 1 }}<br/></nuxt-link>
                   </li>
@@ -24,7 +24,10 @@
         <div class="column" id="full-screen">
           <div class="columns">
             <div class="column is-2 hand-left">
-              <svg-hand-left></svg-hand-left>
+              <img
+                src="/svg/HandLeft.svg"
+                alt="is left hand"
+                class="is-left-hand">
               <div class="position-finger --is-1" style="visibility: hidden;"></div>
               <div class="position-finger --is-2" style="visibility: hidden;"></div>
               <div class="position-finger --is-3" style="visibility: hidden;"></div>
@@ -51,7 +54,10 @@
               </div>
             </div>
             <div class="column is-2 hand-right">
-              <svg-hand-right></svg-hand-right>
+              <img
+                src="/svg/HandRight.svg"
+                alt=""
+                class="is-right-hand">
               <div class="position-finger --is-6" style="visibility: hidden;"></div>
               <div class="position-finger --is-7" style="visibility: hidden;"></div>
               <div class="position-finger --is-8" style="visibility: hidden;"></div>
@@ -161,8 +167,6 @@
 import keyboard from '~/assets/javascript/keyboard'
 import handleKeyboard from '~/assets/javascript/handleKeyboard'
 import axios from 'axios'
-import SvgHandLeft from '~/assets/svg/HandLeft.svg'
-import SvgHandRight from '~/assets/svg/HandRight.svg'
 export default {
   data () {
     return {
@@ -170,10 +174,6 @@ export default {
       idCurrent: this.$route.params.id,
       idLessonCurrent: ''
     }
-  },
-  components: {
-    SvgHandLeft,
-    SvgHandRight
   },
   methods: {
     fullScreen () {
@@ -227,4 +227,10 @@ export default {
 @import '~/assets/sass/main.sass';
 @import '~/assets/sass/learn/keyboard.scss';
 @include setupBackgroundNav();
+.is-left-hand {
+  position: absolute;
+}
+.is-right-hand {
+  position: absolute;
+}
 </style>

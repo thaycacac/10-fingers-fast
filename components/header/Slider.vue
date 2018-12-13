@@ -12,24 +12,22 @@
                 p.text-description {{ $t('slider.description') }}
                 nuxt-link.button.is-white.my-button.is-hidden-mobile(to="/readmore") {{ $t('slider.readmore') }}
           div.column.is-hidden-mobile
-            svg-slider.svg-slider
+            img(src="/svg/Slider.svg" alt="slider").svg-slider
       div.--canvas
         canvas#canvas
 </template>
+
 <script>
-  import SvgSlider from '~/assets/svg/Slider.svg'
   import animationSlider from '~/assets/javascript/animationSlider.js'
   import animationSVG from '~/assets/javascript/animationSVG.js'
   export default {
-    components: {
-      SvgSlider
-    },
     mounted () {
       animationSlider()
       animationSVG()
     }
   }
 </script>
+
 <style lang="scss" scoped>
 @import '~/assets/sass/main.sass';
 </style>

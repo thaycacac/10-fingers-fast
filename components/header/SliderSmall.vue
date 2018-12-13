@@ -4,7 +4,7 @@
       div.window-background
       div.moon
       img.hero-image(
-        src='/svg/slider-small.svg'
+        src='/svg/SliderSmall.svg'
         alt='slider small')
       div.screen-container
       div.notification

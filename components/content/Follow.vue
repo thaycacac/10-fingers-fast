@@ -45,9 +45,9 @@ export default {
 
 <style lang="sass" scoped>
 @import '~/assets/sass/main.sass';
-.container-follow 
+.container-follow
   margin: 80px 0px
-  background-image: url('/assets/img/background/background-fix01.jpg')
+  background-image: url('/img/background/background-fix01.jpg')
   background-size: cover
   font-family: $font-opensan
   font-weight: 300
@@ -55,12 +55,12 @@ export default {
   color: #777
   text-align: center
   padding: 100px 0px
-  .is-title-follow 
+  .is-title-follow
     color: $color-follow
     letter-spacing: 8px
     font-size: 1.3em
     text-transform: uppercase
-  .is-email 
+  .is-email
     text-align: center
     display: block
     margin: 90px auto 50px auto
@@ -72,11 +72,11 @@ export default {
     font-size: 2.6em
     font-weight: 400
     color: rgb(204, 203, 203)
-    &:focus 
+    &:focus
       border: none
       border-bottom: 2px solid rgb(199, 199, 199)
       outline-width: 0
-  .is-button 
+  .is-button
     padding: 10px 54px
     font-size: 1.1em
     letter-spacing: 3px
@@ -86,7 +86,7 @@ export default {
     font-family: $font-montserrat
     line-height: 1.8em
     border: none
-    &:hover 
+    &:hover
       background-color: $color-primary
       border: none
       color: white

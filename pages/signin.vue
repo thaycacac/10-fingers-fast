@@ -6,7 +6,7 @@
           h3.title.has-text-black {{ $t('signin.title') }}
           div.box
             figure.avatar
-              img(src='../assets/img/user/logo-login.png' alt='logo login')
+              img(src='/img/user/logo-login.png' alt='logo login')
             transition.bounce
               p(style='color: red') {{ GET_ERROR }}
             form
@@ -20,7 +20,7 @@
               div.field
                 div.control
                   input.input.is-large(
-                    type='password' 
+                    type='password'
                     placeholder='Input password'
                     v-model='password'
                     :autocomplete="rememberPassword !== '' ? 'on' : 'off'")

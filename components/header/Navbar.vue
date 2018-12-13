@@ -3,7 +3,7 @@
     div.container
       div.navbar-brand
         nuxt-link.navbar-item(to='/')
-          img(src='~/assets/img/logo/logo02.png' alt='logo')
+          img(src='/img/logo/logo02.png' alt='logo')
         div.navbar-burger.burger(data-target='navbarExampleTransparentExample')
           span
           span
