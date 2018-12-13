@@ -13,6 +13,6 @@
       p.has-text
         a.has-text-grey-dark(href='/#typing-study') {{ $t('navigation.testSpeed') }}
 </template>
-<style lang="scss" scoped>
+<style lang="sass" scoped>
 @import '~/assets/sass/main.sass';
 </style>

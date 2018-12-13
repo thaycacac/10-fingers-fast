@@ -21,3 +21,11 @@ export default {
   layout: 'typing' 
 }
 </script>
+<style lang="sass" scoped>
+.is-container-readmore
+  padding: 100px 0
+  font-size: 1.5rem
+  font-weight: 300
+  .is-title-small
+    margin-top: 30px
+</style>

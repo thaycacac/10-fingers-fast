@@ -1,7 +1,7 @@
 <template lang="pug">
   footer.footer.is-footer
     div.content.has-text-centered
-      p Copyright © 2018 
+      p Copyright © 2019
         strong
           a.__link-footer(href="https://github.com/thaycacac") THAYCACAC
       div.has-text-centered(align="center")
@@ -29,7 +29,13 @@
             i.fab.fa-linkedin
 </template>
 <style lang="sass" scoped>
-@import '~/assets/sass/main.sass'
+.is-footer
+  background-color: black
+  color: white
+  margin-top: 20px
+  text-align: center
+a.__link-footer
+  color: red
 ul
   list-style-type: none
   li
