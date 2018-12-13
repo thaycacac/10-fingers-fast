@@ -5,7 +5,7 @@
         div.columns
           div.column
             div.my-auto
-              div.row
+              div
                 h1
                   strong.title.is-1 {{ $t('slider.title') }}
                 hr.my-break

@@ -76,8 +76,35 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-@import '~/assets/sass/user/signup.sass';
+<style lang="sass" scoped>
 @import '~/assets/sass/main.sass';
-@import '~/assets/sass/main.sass';
+.hero.is-success
+  background-image: url('/img/user/background-login-register.jpg')
+  background-size: cover
+  background-repeat: no-repeat
+  background-position: center
+.hero .nav, .hero.is-success .nav
+  -webkit-box-shadow: none
+  box-shadow: none
+.avatar
+  margin-top: -70px
+  padding-bottom: 20px
+input
+  font-weight: 300
+p
+  font-weight: 700
+p.subtitle
+  padding-top: 1rem
+form
+  padding: 15px
+.has-choose-more a
+  color: black
+  &:hover
+    color: #e6af2a
+label
+  text-align: left
+.has-error
+  color: red
+  font-size: 20px
+
 </style>

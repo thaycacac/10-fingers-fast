@@ -29,10 +29,9 @@ module.exports = {
     ]
   },
   css: [
-    '~/assets/css/main.css',
     './assets/sass/main.sass',
+    './assets/css/main.css',
     './assets/css/transition.css',
-    './assets/css/fonts.css',
     'aos/dist/aos.css'
   ],
   modules: [
@@ -66,12 +65,6 @@ module.exports = {
       }
       const urlLoader = config.module.rules.find((rule) => rule.loader === 'url-loader')
       urlLoader.test = /\.(png|jpe?g|gif)$/
-
-      config.module.rules.push({
-        test: /\.svg$/,
-        loader: 'vue-svg-loader',
-        exclude: /node_modules/
-      })
     }
   },
   serverMiddleware: [

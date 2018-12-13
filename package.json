@@ -28,7 +28,6 @@
     "cross-env": "^5.0.1",
     "express": "^4.15.3",
     "express-session": "^1.15.6",
-    "heroku": "^7.16.0",
     "mongoose": "^5.2.14",
     "node-sass": "^4.9.3",
     "nodemon": "^1.18.4",
@@ -39,7 +38,6 @@
     "sass-loader": "^7.1.0",
     "source-map-support": "^0.4.15",
     "vue-router": "^3.0.1",
-    "vue-svg-loader": "^0.8.0",
     "vuex": "^3.0.1"
   },
   "devDependencies": {
@@ -51,7 +49,6 @@
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-node": "^5.1.1",
     "eslint-plugin-promise": "^3.5.0",
-    "eslint-plugin-standard": "^3.0.1",
-    "heroku": "^7.16.0"
+    "eslint-plugin-standard": "^3.0.1"
   }
 }

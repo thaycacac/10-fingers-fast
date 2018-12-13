@@ -14,7 +14,7 @@
             button.__read-more(@click="isShowLesson = true, getListLesson(record.lessonID)") {{ $t('learn.readmore') }}
             span.__date {{ $t('learn.lesson') }} {{ record.lessonID }}
     b-modal(
-      :active.sync='isShowLesson' 
+      :active.sync='isShowLesson'
       :width='640'
       scroll='keep'
     )
@@ -33,7 +33,6 @@
 
 <style lang="scss" scoped>
 @import '~/assets/sass/main.sass';
-@import '~/assets/sass/learn/_lession.scss';
 </style>
 
 <script>
