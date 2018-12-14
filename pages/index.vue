@@ -34,7 +34,11 @@ export default {
     title: 'Trang chủ | 10FingersFast',
     meta: [
       { name: 'title', content: '10FingersFast - Trang chủ luyện gõ bàn phím' },
-      { hid: 'description', name: 'description', content: 'Trang luyện gõ bàn phím 10 ngón' },
+      {
+        hid: 'description',
+        name: 'description',
+        content: '10FingersFast là một trang web học tập miễn phí và rất dễ sử dụng, được thiết kế để giúp bạn học, luyện tập và cải thiện tốc độ và độ chính xác khi gõ bàn phím máy tính. Khi đã có thể gõ 10 ngón, bạn sẽ không cần phải nhìn vào bàn phím để tìm chữ cái muốn gõ và bạn có thể gõ với tốc độ nhanh hơn rất nhiều.'
+      },
       { hid: 'keywords', name: 'keywords', content: 'luyện gõ bàn phím, luyen go ban phim, luyện gõ 10 ngón, luyen go 10 ngon, gõ bàn phím nhanh, go ban phim nhanh, 10 fingers fast, học gõ 10 ngón, hoc go 10 ngon, gõ 10 ngón, go 10 ngon' }
     ]
   }

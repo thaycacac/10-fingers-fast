@@ -5,7 +5,7 @@
         div.column.is-10.is-offset-1
           h3.title.has-text-warning {{ $t('profile.title') }}
           div.box
-            h1.title.is-2.has-text-black
+            h2.title.is-2.has-text-black
             p(class='has-error') {{ GET_ERROR }}
             form
               div.field

@@ -1,7 +1,7 @@
 <template lang="pug">
   div#guide
     div.is-container-guide
-      h1.is-title(data-aos="flip-right") {{ $t('guide.titleBig') }}
+      h2.is-title(data-aos="flip-right") {{ $t('guide.titleBig') }}
       p.is-description(data-aos="flip-down") {{ $t('guide.titleSmall') }}
       Guide01
       Guide02

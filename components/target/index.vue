@@ -1,7 +1,7 @@
 <template lang="pug">
   div.my-target#target
     div.container-intro
-      h1.title(data-aos="flip-right") {{ $t('target.titleBig') }}
+      h2.title(data-aos="flip-right") {{ $t('target.titleBig') }}
       h5.title.is-5.my-descrip(data-aos="flip-right") {{ $t('target.titleSmall') }}
     div.container
       div.columns.is-all

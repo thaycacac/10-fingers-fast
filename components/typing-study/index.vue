@@ -1,6 +1,6 @@
 <template lang="pug">
   div.container.is-hidden-mobile#typing-study
-    h1.is-title-typing(data-aos="flip-right") {{ $t('typingStudy.titleBig') }}
+    h2.is-title-typing(data-aos="flip-right") {{ $t('typingStudy.titleBig') }}
     div.columns
       div.column.is-typing-left(data-aos="zoom-in-left")
         div.is-typing-content
@@ -26,7 +26,7 @@
         div.is-typing-icon
           i.fab.fa-codepen.is-icon
     div
-      button.is-begin 
+      button.is-begin
         nuxt-link(to="/learn") {{ $t('typingStudy.start') }}
 </template>
 <style lang="scss" scoped>

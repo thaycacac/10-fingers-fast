@@ -25,7 +25,7 @@
           section.hero.is-info.welcome.is-small
             div.hero-body
               div.container
-                h1.title Hello, Admin.
+                h2.title Hello, Admin.
                 h2.subtitle 10 Fingers Fast!
           section.info-tiles
             div.tile.is-ancestor.has-text-centered
