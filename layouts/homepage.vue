@@ -7,8 +7,8 @@
 </template>
 
 <script>
-import Navbar from '~/components/header/navbar'
-import Slider from '~/components/header/slider'
+import Navbar from '~/components/navbar'
+import Slider from '~/components/slider'
 import MyFooter from '~/components/footer'
 
 export default {
