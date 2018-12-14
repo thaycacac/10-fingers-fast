@@ -1,1 +1,0 @@
-"dev": "nodemon --watch server --exec \"nuxt\"",

@@ -29,11 +29,11 @@ module.exports = {
         crossorigin: 'anonymous'
       },
       {
-        rel='alternate', hreflang='vn-VN'
+        rel: 'alternate', hreflang: 'vn-VN'
       }
     ],
     script: [
-      { src: 'https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js' }
+      { src: '/javascript/tweenmax.min.js' }
     ]
   },
   css: [
