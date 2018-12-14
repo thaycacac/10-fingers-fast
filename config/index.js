@@ -14,7 +14,7 @@ const I18N = {
       name: 'Vietnamese'
     }
   ],
-  defaultLocale: 'en',
+  defaultLocale: 'vn',
   routes: {
     'index': {
       vn: '/vi'

@@ -10,13 +10,13 @@
 </template>
 
 <script>
-import Introduction from '~/components/content/Introduction'
-import Navigation from '~/components/content/Navigation'
-import Target from '~/components/content/Target'
-import Background from '~/components/content/Background'
-import Guide from '~/components/content/Guide'
-import Follow from '~/components/content/Follow'
-import TypingStudy from '~/components/content/TypingStudy'
+import Introduction from '~/components/introduction'
+import Navigation from '~/components/navigation'
+import Target from '~/components/target'
+import Background from '~/components/background'
+import Guide from '~/components/guide'
+import Follow from '~/components/follow'
+import TypingStudy from '~/components/typing-study'
 
 export default {
   layout: 'homepage',

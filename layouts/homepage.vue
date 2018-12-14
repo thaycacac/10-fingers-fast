@@ -7,9 +7,9 @@
 </template>
 
 <script>
-import Navbar from '../components/header/Navbar'
-import Slider from '../components/header/Slider'
-import MyFooter from '../components/footer/Footer'
+import Navbar from '~/components/header/navbar'
+import Slider from '~/components/header/slider'
+import MyFooter from '~/components/footer'
 
 export default {
   components: {

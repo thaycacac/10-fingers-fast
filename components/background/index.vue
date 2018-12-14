@@ -3,25 +3,25 @@
     div.container
       div.columns(data-aos="fade-right")
         div.column
-          one-view(
+          one-card(
             :icon='icon.icon1'
             :content='content.content1'
             :description='description.description1'
           )
         div.column
-          one-view(
+          one-card(
             :icon='icon.icon2'
             :content='content.content2'
             :description='description.description2'
           )
         div.column
-          one-view(
+          one-card(
             :icon='icon.icon3'
             :content='content.content3'
             :description='description.description3'
           )
         div.column
-          one-view(
+          one-card(
             :icon='icon.icon4'
             :content='content.content4'
             :description='description.description4'
@@ -29,7 +29,7 @@
 </template>
 
 <script>
-  import OneView from './background/view.vue'
+  import OneCard from './card'
   export default {
     data () {
       return {
@@ -54,11 +54,11 @@
       }
     },
     components: {
-      OneView
+      OneCard
     }
   }
 </script>
 
-<style lang="sass" scoped>
+<style lang="sass" swcoped>
 @import '~/assets/sass/main.sass';
 </style>

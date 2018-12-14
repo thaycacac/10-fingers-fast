@@ -6,21 +6,21 @@
     div.container
       div.columns.is-all
         div.column.is-one
-          one-view(
+          one-card(
             :icon='icon.icon1'
             :title='title.title1'
             :content='content.content1'
             data-aos="fade-right"
           )
         div.column.is-one
-          one-view(
+          one-card(
             :icon='icon.icon2'
             :title='title.title2'
             :content='content.content2'
             data-aos="fade-up"
           )
         div.column.is-one
-          one-view(
+          one-card(
             :icon='icon.icon3'
             :title='title.title3'
             :content='content.content3'
@@ -28,7 +28,7 @@
           )
 </template>
 <script>
-  import oneView from './target/view.vue'
+  import OneCard from './card'
   export default {
     data () {
       return {
@@ -50,18 +50,16 @@
       }
     },
     components: {
-      oneView
+      OneCard
     }
   }
 </script>
 
-<style lang="scss" scoped>
-@import '~/assets/sass/main.sass';
-.container-intro {
-  @include setupTitle();
-}
-.my-target {
-  padding-bottom: 120px;
-  background-color: #f8f8f8;
-}
+<style lang="sass" scoped>
+@import '~/assets/sass/main.sass'
+.container-intro
+  @include setupTitle()
+.my-target
+  padding-bottom: 120px
+  background-color: #f8f8f8
 </style>
