@@ -31,7 +31,7 @@ export default {
   },
   transition: 'perfect',
   head: {
-    title: 'Trang chủ | 10FingersFast',
+    title: 'Trang chủ | 10FingersFast | Trang luyện gõ 10 ngón',
     meta: [
       { name: 'title', content: '10FingersFast - Trang chủ luyện gõ bàn phím' },
       {

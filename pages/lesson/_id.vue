@@ -26,7 +26,7 @@
             <div class="column is-2 hand-left">
               <img
                 src="/svg/HandLeft.svg"
-                alt="is left hand"
+                alt="left hand"
                 class="is-left-hand">
               <div class="position-finger --is-1" style="visibility: hidden;"></div>
               <div class="position-finger --is-2" style="visibility: hidden;"></div>
@@ -56,7 +56,7 @@
             <div class="column is-2 hand-right">
               <img
                 src="/svg/HandRight.svg"
-                alt=""
+                alt="hand right"
                 class="is-right-hand">
               <div class="position-finger --is-6" style="visibility: hidden;"></div>
               <div class="position-finger --is-7" style="visibility: hidden;"></div>

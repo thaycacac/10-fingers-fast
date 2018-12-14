@@ -12,7 +12,7 @@
                 p.text-description {{ $t('slider.description') }}
                 nuxt-link.button.is-white.my-button.is-hidden-mobile(to="/readmore") {{ $t('slider.readmore') }}
           div.column.is-hidden-mobile
-            img(src="/svg/Slider.svg" alt="slider").svg-slider
+            img(src="/svg/Slider.svg" alt="slider home page").svg-slider
       div.--canvas
         canvas#canvas
 </template>

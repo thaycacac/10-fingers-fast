@@ -12,7 +12,7 @@ export default {
   transition: 'perfect',
   middleware: 'authentication',
   head: {
-    title: 'Luyện gõ 10 ngón | 10FingersFast',
+    title: 'Luyện gõ 10 ngón | 10FingersFast | Trang luyện gõ 10 ngón',
     meta: [
       { name: 'title', content: '10FingersFast - Trang thực hành luyện gõ 10 ngón' },
       {

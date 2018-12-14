@@ -66,7 +66,7 @@ export default {
     }
   },
   head: {
-    title: 'Thông tin cá nhân | 10FingersFast',
+    title: 'Thông tin cá nhân | 10FingersFast | Trang luyện gõ 10 ngón',
     meta: [
       { name: 'title', content: '10FingersFast - Thông tin tài  khoản trang luện gõ 10 ngón' },
       { hid: 'description', name: 'description', content: 'Trang luyện gõ bàn phím 10 ngón' },

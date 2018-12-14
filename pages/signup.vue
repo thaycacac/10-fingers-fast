@@ -59,7 +59,7 @@ export default {
     }
   },
   head: {
-    title: 'Đăng ký | 10FingersFast',
+    title: 'Đăng ký | 10FingersFast | Trang luyện gõ 10 ngónư',
     meta: [
       { name: 'title', content: '10FingersFast - Trang đăng ký luyện gõ 10 ngón' },
       { hid: 'description', name: 'description', content: 'Trang luyện gõ bàn phím 10 ngón' },

@@ -18,7 +18,7 @@
 <script>
 export default {
   head: {
-    title: 'Giới thiệu | 10FingersFast',
+    title: 'Giới thiệu | 10FingersFast | Trang luyện gõ 10 ngón',
     meta: [
       { name: 'title', content: 'Giới thiệu về trang luyện gõ bàm phím 10 ngón' },
       { hid: 'description', name: 'description', content: 'Trang luyện gõ bàn phím 10 ngón' },
