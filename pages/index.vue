@@ -31,8 +31,9 @@ export default {
   },
   transition: 'perfect',
   head: {
-    title: 'Home Page',
+    title: 'Trang chủ | 10FingersFast',
     meta: [
+      { name: 'title', content: '10FingersFast - Trang chủ luyện gõ bàn phím' },
       { hid: 'description', name: 'description', content: 'Trang luyện gõ bàn phím 10 ngón' },
       { hid: 'keywords', name: 'keywords', content: 'luyện gõ bàn phím, luyen go ban phim, luyện gõ 10 ngón, luyen go 10 ngon, gõ bàn phím nhanh, go ban phim nhanh, 10 fingers fast, học gõ 10 ngón, hoc go 10 ngon, gõ 10 ngón, go 10 ngon' }
     ]
