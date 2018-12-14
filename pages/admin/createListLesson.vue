@@ -1,6 +1,6 @@
 <template lang="pug">
   div.box
-    p Lesson ID: 
+    p Lesson ID:
     input(type='text' v-model='lessonID')
     p Lesson Title
     input(type='text' v-model='lessonTitle')
@@ -22,7 +22,7 @@ export default {
   methods: {
     ADMIN_CREATE_LIST_LESSON
   },
-  middleware: 'authenticationAdmin'
+  middleware: 'admin'
 }
 </script>
 

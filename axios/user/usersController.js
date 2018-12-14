@@ -35,7 +35,7 @@ const USER_SIGNUP = function (username, firstname, lastname, dob, email, passwor
       password: password
     })
       .then(response => {
-        this.$router.go('/')
+        this.$router.push('/')
         this.$nuxt.$loading.finish()
       })
       .catch(function (error) {
@@ -67,9 +67,9 @@ const USER_SIGNIN = function (username, password) {
       } else {
         this.$store.dispatch('SET_ERROR', '')
         if (username === 'admin') {
-          this.$router.go('/')
+          this.$router.push('/')
         } else {
-          this.$router.go('/')
+          this.$router.push('/')
         }
       }
     })
@@ -151,8 +151,7 @@ const USER_LOGOUT = function () {
   })
   this.$axios.post(`/api/user/logout`)
     .then(() => {
-      this.$router.go('/')
-      this.$nuxt.$loading.finish()
+      this.$router.push('/')
     })
 }
 

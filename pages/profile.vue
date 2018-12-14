@@ -90,13 +90,7 @@ export default {
     },
     USER_UPDATE
   },
-  // middleware: 'authenticationSignin',
-  beforeCreate() {
-    const account = this.$store.getters.GET_ACCOUNT
-    if (!account) {
-      this.$router.push('/')
-    }
-  },
+  middleware: 'authentication',
   beforeMount () {
     USER_PROFILE(this)
   },

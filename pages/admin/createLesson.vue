@@ -3,7 +3,7 @@
     p Lesson:
     input(type='text' v-model='lesson')
     p Type:
-    input(type='text' v-model='type') 
+    input(type='text' v-model='type')
     p Content:
     input(type='text' v-model='content')
     input(type='submit' value='Submit' @click='ADMIN_CREATE_LESSON(lesson, type, content)')
@@ -19,7 +19,7 @@ export default {
     }
   },
   layout: 'admin',
-  middleware: 'authenticationAdmin',
+  middleware: 'admin',
   methods: {
     ADMIN_CREATE_LESSON
   }
