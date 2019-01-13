@@ -1,13 +1,13 @@
 export default {
-  setUser (state, user) {
+  setUser(state, user) {
     state.user = user
   },
 
-  setError (state, error) {
+  setError(state, error) {
     state.error = error
   },
 
-  setAccount (state, account) {
+  setAccount(state, account) {
     state.account = account
   }
 }

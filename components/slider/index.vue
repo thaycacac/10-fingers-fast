@@ -18,16 +18,16 @@
 </template>
 
 <script>
-  import animationSlider from '~/assets/javascript/animationSlider.js'
-  import animationSVG from '~/assets/javascript/animationSVG.js'
-  export default {
-    mounted () {
-      animationSlider()
-      animationSVG()
-    }
+import animationSlider from "~/assets/javascript/animationSlider.js";
+import animationSVG from "~/assets/javascript/animationSVG.js";
+export default {
+  mounted() {
+    animationSlider();
+    animationSVG();
   }
+};
 </script>
 
 <style lang="scss" scoped>
-@import '~/assets/sass/main.sass';
+@import "~/assets/sass/main.sass";
 </style>

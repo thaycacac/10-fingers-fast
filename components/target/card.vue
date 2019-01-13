@@ -6,22 +6,22 @@
 </template>
 
 <script>
-  export default {
-    props: {
-      title: {
-        type: String,
-        required: true
-      },
-      content: {
-        type: String,
-        required: true
-      },
-      icon: {
-        type: String,
-        required: true
-      }
+export default {
+  props: {
+    title: {
+      type: String,
+      required: true
+    },
+    content: {
+      type: String,
+      required: true
+    },
+    icon: {
+      type: String,
+      required: true
     }
   }
+};
 </script>
 
 <style lang="sass" scoped>

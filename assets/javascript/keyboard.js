@@ -3,16 +3,16 @@ export default () => {
   let keyboardElement = document.getElementsByClassName('keyboard')
   let keys = document.querySelectorAll('kbd')
 
-  // audio 
+  // audio
   let keyAudio = document.getElementById('keyAudio')
 
   // toggle class on a lock key element
-  function toggleLockClass (element) {
+  function toggleLockClass(element) {
     element.classList.toggle('on')
   };
 
   // toggle function for caps, num, and scroll lock keys
-  function toggleKey (code) {
+  function toggleKey(code) {
     var el
     // detect el based on keyCode
     switch (code) {
@@ -39,7 +39,7 @@ export default () => {
   };
 
   // on screen keyboard keypress event
-  function keyPress (e) {
+  function keyPress(e) {
     let keyAttribute = e.target.dataset.key
     if (e.target.localName === 'i' || e.target.localName === 'span') {
       // get data-key of kbd which is a parent of <i>
@@ -52,7 +52,7 @@ export default () => {
   keys.forEach(key => key.addEventListener('click', keyPress))
 
   // toggle key-press class on keys when real keyboard key is clicked
-  function toggleKeyPress (el) {
+  function toggleKeyPress(el) {
     if (el.classList.contains('key-press')) {
       el.classList.remove('key-press')
     } else {

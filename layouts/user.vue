@@ -5,16 +5,16 @@
 </template>
 
 <script>
-import Navbar from '~/components/navbar'
+import Navbar from "~/components/navbar";
 export default {
   components: {
     Navbar
   }
-}
+};
 </script>
 
 <style lang="scss" scoped>
-@import '~/assets/sass/main.sass';
+@import "~/assets/sass/main.sass";
 @include setupBackgroundNav();
 </style>
 

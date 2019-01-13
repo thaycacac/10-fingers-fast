@@ -32,51 +32,53 @@
 </template>
 
 <style lang="scss" scoped>
-@import '~/assets/sass/main.sass';
+@import "~/assets/sass/main.sass";
 </style>
 
 <script>
-import axios from 'axios'
+import axios from "axios";
 export default {
-  data () {
+  data() {
     return {
-      records: '',
-      listLesson: '',
+      records: "",
+      listLesson: "",
       listType: [
-        { name: 'Luyện Phím Mới' },
-        { name: 'Luyện Phím' },
-        { name: 'Luyện Từ' },
-        { name: 'Luyện Không Nhìn' },
-        { name: 'Luyện Văn Bản' },
-        { name: 'Luyện Thêm' }
+        { name: "Luyện Phím Mới" },
+        { name: "Luyện Phím" },
+        { name: "Luyện Từ" },
+        { name: "Luyện Không Nhìn" },
+        { name: "Luyện Văn Bản" },
+        { name: "Luyện Thêm" }
       ],
       isShowLesson: false,
       loading: false
-    }
+    };
   },
   methods: {
-    getListLesson (lessonID) {
-      axios.get('/api/lesson/listlesson/' + lessonID)
+    getListLesson(lessonID) {
+      axios
+        .get("/api/lesson/listlesson/" + lessonID)
         .then(response => {
-          this.listLesson = response.data
+          this.listLesson = response.data;
         })
         .catch(err => {
-          console.log(err)
-        })
+          console.log(err);
+        });
     }
   },
-  beforeMount () {
+  beforeMount() {
     this.$nextTick(() => {
-      this.$nuxt.$loading.start()
-    })
-    axios.get('/api/listlesson')
+      this.$nuxt.$loading.start();
+    });
+    axios
+      .get("/api/listlesson")
       .then(response => {
-        this.records = response.data
-        this.$nuxt.$loading.finish()
+        this.records = response.data;
+        this.$nuxt.$loading.finish();
       })
       .catch(err => {
-        console.log(err)
-      })
+        console.log(err);
+      });
   }
-}
+};
 </script>

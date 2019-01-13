@@ -1,9 +1,9 @@
 const ADMIN_CREATE_LESSON = function (lesson, type, content) {
   this.$axios.post(`/api/lesson`, {
-    lesson: lesson,
-    type: type,
-    content: content
-  })
+      lesson: lesson,
+      type: type,
+      content: content
+    })
     .then(() => {
       console.log('create success')
     })
@@ -14,10 +14,10 @@ const ADMIN_CREATE_LESSON = function (lesson, type, content) {
 
 const ADMIN_CREATE_LIST_LESSON = function (lessonID, lessonTitle, lessonDescription) {
   this.$axios.post('/api/listLesson', {
-    lessonID: lessonID,
-    lessonTitle: lessonTitle,
-    lessonDescription: lessonDescription
-  })
+      lessonID: lessonID,
+      lessonTitle: lessonTitle,
+      lessonDescription: lessonDescription
+    })
     .then(() => {
       console.log('create success')
     })

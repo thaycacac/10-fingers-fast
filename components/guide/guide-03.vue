@@ -28,11 +28,11 @@
 
 <script>
 export default {
-  data () {
+  data() {
     return {
-      step: this.$i18n.t('guide.step.step3'),
-      title: this.$i18n.t('guide.title.title3')
-    }
+      step: this.$i18n.t("guide.step.step3"),
+      title: this.$i18n.t("guide.title.title3")
+    };
   }
-}
+};
 </script>

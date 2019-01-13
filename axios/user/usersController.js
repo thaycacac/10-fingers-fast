@@ -27,13 +27,13 @@ const USER_SIGNUP = function (username, firstname, lastname, dob, email, passwor
       this.$nuxt.$loading.start()
     })
     this.$axios.post(`/api/user/signup`, {
-      username: username,
-      firstname: firstname,
-      lastname: lastname,
-      dob: dob,
-      email: email,
-      password: password
-    })
+        username: username,
+        firstname: firstname,
+        lastname: lastname,
+        dob: dob,
+        email: email,
+        password: password
+      })
       .then(response => {
         this.$router.push('/')
         this.$nuxt.$loading.finish()
@@ -56,9 +56,9 @@ const USER_SIGNIN = function (username, password) {
   })
   // get api
   this.$axios.post(`/api/user/signin`, {
-    username: username,
-    password: password
-  })
+      username: username,
+      password: password
+    })
     .then(response => {
       // done loading page
       this.$nuxt.$loading.finish()
@@ -83,7 +83,9 @@ const USER_PROFILE = (context) => {
     context.$nuxt.$loading.start()
   })
   // get information user by session username
-  context.$axios.post(`/api/user/getProfile`, {username: context.$store.getters.GET_ACCOUNT})
+  context.$axios.post(`/api/user/getProfile`, {
+      username: context.$store.getters.GET_ACCOUNT
+    })
     .then(result => {
       const userCurrent = result.data
       context.$store.dispatch('SET_USER', {
@@ -127,13 +129,13 @@ const USER_UPDATE = function (username, firstname, lastname, dob, email, passwor
       this.$nuxt.$loading.start()
     })
     this.$axios.post(`/api/user/update`, {
-      username: username,
-      firstname: firstname,
-      lastname: lastname,
-      dob: dob,
-      email: email,
-      password: password
-    })
+        username: username,
+        firstname: firstname,
+        lastname: lastname,
+        dob: dob,
+        email: email,
+        password: password
+      })
       .then(response => {
         this.$router.push('/profile')
         this.$nuxt.$loading.finish()

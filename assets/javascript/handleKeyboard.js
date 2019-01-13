@@ -82,7 +82,7 @@ export default text => {
 }
 
 // split text to array have length is 40
-function splitText (textOrigin) {
+function splitText(textOrigin) {
   const length = textOrigin.length
   let array = []
   for (let i = 0; i < length; i += 40) {
@@ -93,7 +93,7 @@ function splitText (textOrigin) {
 
 // hidden position finger in hand when enter new keyboard
 
-function hiddenPositionFinger (textCheck, listPositionFinger) {
+function hiddenPositionFinger(textCheck, listPositionFinger) {
   let positionFinger
   // get index of list include character have key input
   const map = listPositionFinger.map(text => text.indexOf(textCheck))
@@ -114,7 +114,7 @@ function hiddenPositionFinger (textCheck, listPositionFinger) {
 }
 
 // show position finger in hand
-function showPositionFinger (textCheck, listPositionFinger) {
+function showPositionFinger(textCheck, listPositionFinger) {
   let positionFinger
   // get index of list include character have key input
   const map = listPositionFinger.map(text => text.indexOf(textCheck))
@@ -136,19 +136,19 @@ function showPositionFinger (textCheck, listPositionFinger) {
 }
 
 // set up number total leng
-function setNumberTotal (text) {
+function setNumberTotal(text) {
   document.getElementById('__number-total').innerHTML = text.length
 }
 
 // check input of user
-function updateTextAfter (positionCurrent, listText) {
+function updateTextAfter(positionCurrent, listText) {
   let afterPositionCurrent = positionCurrent + 1
   listText[afterPositionCurrent].style.textDecoration = 'underline'
   listText[afterPositionCurrent].style.color = '#6f6f6f'
 }
 
 // update when user input correct
-function updateInputCorrect (listText, positionCurrent, countNumberCorrect, countNumberInput) {
+function updateInputCorrect(listText, positionCurrent, countNumberCorrect, countNumberInput) {
   // update color text
   listText[positionCurrent].style.color = '#0abf00'
   listText[positionCurrent].style.textDecoration = ''
@@ -158,14 +158,14 @@ function updateInputCorrect (listText, positionCurrent, countNumberCorrect, coun
 }
 
 // update when user input incorrect
-function updateInputIncorrect (listText, positionCurrent, countNumberIncorrect) {
+function updateInputIncorrect(listText, positionCurrent, countNumberIncorrect) {
   listText[positionCurrent].style.color = '#fd2020'
   listText[positionCurrent].style.textDecoration = ''
   document.getElementById('__number-incorrect').innerHTML = countNumberIncorrect
 }
 
 // split pharagraph to span
-function getCharming () {
+function getCharming() {
   const charming = require('charming')
   const element = document.getElementById('text')
   charming(element, {

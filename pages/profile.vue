@@ -49,61 +49,70 @@
 </template>
 
 <script>
-import { USER_PROFILE } from '~/axios/user/usersController'
-import { USER_UPDATE } from '~/axios/user/usersController'
-import { mapGetters } from 'vuex'
+import { USER_PROFILE } from "~/axios/user/usersController";
+import { USER_UPDATE } from "~/axios/user/usersController";
+import { mapGetters } from "vuex";
 export default {
-  data () {
+  data() {
     return {
       isUpdate: false,
-      username: '',
-      firstname: '',
-      lastname: '',
-      dob: '',
-      email: '',
-      password: '',
-      repassword: ''
-    }
+      username: "",
+      firstname: "",
+      lastname: "",
+      dob: "",
+      email: "",
+      password: "",
+      repassword: ""
+    };
   },
   head: {
-    title: 'Thông tin cá nhân | 10FingersFast | Trang luyện gõ 10 ngón',
+    title: "Thông tin cá nhân | 10FingersFast | Trang luyện gõ 10 ngón",
     meta: [
-      { name: 'title', content: '10FingersFast - Thông tin tài  khoản trang luện gõ 10 ngón' },
-      { hid: 'description', name: 'description', content: 'Trang luyện gõ bàn phím 10 ngón' },
-      { hid: 'keywords', name: 'keywords', content: 'luyện gõ bàn phím, luyen go ban phim, luyện gõ 10 ngón, luyen go 10 ngon, gõ bàn phím nhanh, go ban phim nhanh, 10 fingers fast, học gõ 10 ngón, hoc go 10 ngon, gõ 10 ngón, go 10 ngon' }
+      {
+        name: "title",
+        content: "10FingersFast - Thông tin tài  khoản trang luện gõ 10 ngón"
+      },
+      {
+        hid: "description",
+        name: "description",
+        content: "Trang luyện gõ bàn phím 10 ngón"
+      },
+      {
+        hid: "keywords",
+        name: "keywords",
+        content:
+          "luyện gõ bàn phím, luyen go ban phim, luyện gõ 10 ngón, luyen go 10 ngon, gõ bàn phím nhanh, go ban phim nhanh, 10 fingers fast, học gõ 10 ngón, hoc go 10 ngon, gõ 10 ngón, go 10 ngon"
+      }
     ]
   },
-  transition: 'perfect',
-  layout: 'user',
+  transition: "perfect",
+  layout: "user",
   computed: {
-    ...mapGetters([
-      'GET_USER',
-      'GET_ERROR'
-    ]),
-    checkUpdate: function () {
-      return this.isUpdate
+    ...mapGetters(["GET_USER", "GET_ERROR"]),
+    checkUpdate: function() {
+      return this.isUpdate;
     }
   },
   methods: {
-    enableUpdate () {
-      this.isUpdate = !this.isUpdate
+    enableUpdate() {
+      this.isUpdate = !this.isUpdate;
     },
     USER_UPDATE
   },
-  middleware: 'authentication',
-  beforeMount () {
-    USER_PROFILE(this)
+  middleware: "authentication",
+  beforeMount() {
+    USER_PROFILE(this);
   },
   beforeUpdate() {
-    this.username = this.$store.getters.GET_ACCOUNT
-    this.firstname = this.$store.getters.GET_FIRST_NAME
-    this.lastname = this.$store.getters.GET_LAST_NAME
-    this.dob = this.$store.getters.GET_DOB
-    this.email = this.$store.getters.GET_EMAIL
-    this.password = this.$store.getters.GET_PASSWORD
-    this.repasswor = this.$store.getters.GET_REPASSWORD
+    this.username = this.$store.getters.GET_ACCOUNT;
+    this.firstname = this.$store.getters.GET_FIRST_NAME;
+    this.lastname = this.$store.getters.GET_LAST_NAME;
+    this.dob = this.$store.getters.GET_DOB;
+    this.email = this.$store.getters.GET_EMAIL;
+    this.password = this.$store.getters.GET_PASSWORD;
+    this.repasswor = this.$store.getters.GET_REPASSWORD;
   }
-}
+};
 </script>
 
 <style lang="sass" scoped>

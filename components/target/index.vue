@@ -28,31 +28,31 @@
           )
 </template>
 <script>
-  import OneCard from './card'
-  export default {
-    data () {
-      return {
-        title: {
-          title1: this.$i18n.t('target.title.title1'),
-          title2: this.$i18n.t('target.title.title2'),
-          title3: this.$i18n.t('target.title.title3'),
-        },
-        content: {
-          content1: this.$i18n.t('target.content.content1'),
-          content2: this.$i18n.t('target.content.content2'),
-          content3: this.$i18n.t('target.content.content3'),
-        },
-        icon: {
-          icon1: 'fas fa-bookmark',
-          icon2: 'fas fa-graduation-cap',
-          icon3: 'fas fa-layer-group'
-        }
+import OneCard from "./card";
+export default {
+  data() {
+    return {
+      title: {
+        title1: this.$i18n.t("target.title.title1"),
+        title2: this.$i18n.t("target.title.title2"),
+        title3: this.$i18n.t("target.title.title3")
+      },
+      content: {
+        content1: this.$i18n.t("target.content.content1"),
+        content2: this.$i18n.t("target.content.content2"),
+        content3: this.$i18n.t("target.content.content3")
+      },
+      icon: {
+        icon1: "fas fa-bookmark",
+        icon2: "fas fa-graduation-cap",
+        icon3: "fas fa-layer-group"
       }
-    },
-    components: {
-      OneCard
-    }
+    };
+  },
+  components: {
+    OneCard
   }
+};
 </script>
 
 <style lang="sass" scoped>

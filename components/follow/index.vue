@@ -16,31 +16,32 @@
 
 <script>
 export default {
-  data () {
+  data() {
     return {
-      email: '',
-      placeholderEmail: this.$i18n.t('follow.placeholder'),
-      valueButton: this.$i18n.t('follow.button'),
-    }
+      email: "",
+      placeholderEmail: this.$i18n.t("follow.placeholder"),
+      valueButton: this.$i18n.t("follow.button")
+    };
   },
   methods: {
-    registerEmail () {
-      this.$axios.post('/api/email', {
-        email: this.email
-      })
+    registerEmail() {
+      this.$axios
+        .post("/api/email", {
+          email: this.email
+        })
         .then(result => {
-          this.email = ''
+          this.email = "";
           this.$toast.open({
-            message: 'Register Success!',
-            type: 'is-success'
-          })
+            message: "Register Success!",
+            type: "is-success"
+          });
         })
         .catch(err => {
-          console.log(err)
-        })
+          console.log(err);
+        });
     }
   }
-}
+};
 </script>
 
 <style lang="sass" scoped>

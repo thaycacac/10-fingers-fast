@@ -9,21 +9,21 @@
     input(type='submit' value='Submit' @click='ADMIN_CREATE_LESSON(lesson, type, content)')
 </template>
 <script>
-import { ADMIN_CREATE_LESSON } from '~/axios/admin/adminController'
+import { ADMIN_CREATE_LESSON } from "~/axios/admin/adminController";
 export default {
-  data () {
+  data() {
     return {
-      lesson: '',
-      type: '',
-      content: ''
-    }
+      lesson: "",
+      type: "",
+      content: ""
+    };
   },
-  layout: 'admin',
-  middleware: 'admin',
+  layout: "admin",
+  middleware: "admin",
   methods: {
     ADMIN_CREATE_LESSON
   }
-}
+};
 </script>
 <style lang="scss" scoped>
 .box {

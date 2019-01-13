@@ -2,8 +2,7 @@ const en = require('../lang/en-US.js')
 const vn = require('../lang/vn-VN.js')
 
 const I18N = {
-  locales: [
-    {
+  locales: [{
       code: 'en',
       iso: 'en-US',
       name: 'English'
@@ -38,7 +37,10 @@ const I18N = {
   },
   vueI18n: {
     fallbackLocale: 'en',
-    messages: { en, vn }
+    messages: {
+      en,
+      vn
+    }
   }
 }
 

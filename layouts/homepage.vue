@@ -7,9 +7,9 @@
 </template>
 
 <script>
-import Navbar from '~/components/navbar'
-import Slider from '~/components/slider'
-import MyFooter from '~/components/footer'
+import Navbar from "~/components/navbar";
+import Slider from "~/components/slider";
+import MyFooter from "~/components/footer";
 
 export default {
   components: {
@@ -17,5 +17,5 @@ export default {
     Slider,
     MyFooter
   }
-}
+};
 </script>

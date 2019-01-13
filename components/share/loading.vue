@@ -26,14 +26,14 @@ export default {
     loading: false
   }),
   methods: {
-    start () {
-      this.loading = true
+    start() {
+      this.loading = true;
     },
-    finish () {
-      this.loading = false
+    finish() {
+      this.loading = false;
     }
   }
-}
+};
 </script>
 
 <style scoped lang = 'sass'>

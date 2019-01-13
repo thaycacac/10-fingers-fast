@@ -9,16 +9,17 @@
 </template>
 
 <script>
-import Guide01 from './guide-01'
-import Guide02 from './guide-02'
-import Guide03 from './guide-03'
+import Guide01 from "./guide-01";
+import Guide02 from "./guide-02";
+import Guide03 from "./guide-03";
+
 export default {
   components: {
     Guide01,
     Guide02,
     Guide03
   }
-}
+};
 </script>
 <style lang="sass" scoped>
 @import '~/assets/sass/main.sass';

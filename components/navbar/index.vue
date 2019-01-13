@@ -33,7 +33,7 @@
               ) {{ locale.name }}
 </template>
 <style lang="scss" scoped>
-@import '~/assets/sass/main.sass';
+@import "~/assets/sass/main.sass";
 .navbar-scroll {
   background-color: #fff;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
@@ -41,35 +41,37 @@
 }
 </style>
 <script>
-import { USER_LOGOUT } from '~/axios/user/usersController'
+import { USER_LOGOUT } from "~/axios/user/usersController";
 export default {
-  data () {
+  data() {
     return {
-      account: ''
-    }
+      account: ""
+    };
   },
   methods: {
     USER_LOGOUT,
-    getOffsetTop () {
-      return window.scrollY
+    getOffsetTop() {
+      return window.scrollY;
     },
-    handleScroll () {
-      const narbar = document.getElementsByClassName('navbar')[0]
+    handleScroll() {
+      const narbar = document.getElementsByClassName("navbar")[0];
       if (this.getOffsetTop() > 50) {
-        narbar.classList.add('navbar-scroll')
+        narbar.classList.add("navbar-scroll");
       } else {
-        narbar.classList.remove('navbar-scroll')
+        narbar.classList.remove("navbar-scroll");
       }
     }
   },
-  beforeMount () {
-    this.account = this.$store.getters.GET_ACCOUNT
-    window.addEventListener('scroll', this.handleScroll)
+  beforeMount() {
+    this.account = this.$store.getters.GET_ACCOUNT;
+    window.addEventListener("scroll", this.handleScroll);
   },
   computed: {
-    showLocales () {
-      return this.$i18n.locales.filter(locale => locale.code !== this.$i18n.locale)
+    showLocales() {
+      return this.$i18n.locales.filter(
+        locale => locale.code !== this.$i18n.locale
+      );
     }
   }
-}
+};
 </script>

@@ -34,34 +34,44 @@
             nuxt-link(to='#') {{ $t('signin.forgot') }}
 </template>
 <script>
-import { USER_SIGNIN } from '~/axios/user/usersController'
-import { mapGetters } from 'vuex'
+import { USER_SIGNIN } from "~/axios/user/usersController";
+import { mapGetters } from "vuex";
 export default {
-  data () {
+  data() {
     return {
-      username: '',
-      password: '',
-      rememberPassword: ''
-    }
+      username: "",
+      password: "",
+      rememberPassword: ""
+    };
   },
   head: {
-    title: 'Đăng nhập | 10FingersFast | Trang luyện gõ 10 ngón',
+    title: "Đăng nhập | 10FingersFast | Trang luyện gõ 10 ngón",
     meta: [
-      { name: 'title', content: '10FingersFast - Trang đăng nhập luyện gõ 10 ngón' },
-      { hid: 'description', name: 'description', content: 'Trang luyện gõ bàn phím 10 ngón' },
-      { hid: 'keywords', name: 'keywords', content: 'luyện gõ bàn phím, luyen go ban phim, luyện gõ 10 ngón, luyen go 10 ngon, gõ bàn phím nhanh, go ban phim nhanh, 10 fingers fast, học gõ 10 ngón, hoc go 10 ngon, gõ 10 ngón, go 10 ngon' }
+      {
+        name: "title",
+        content: "10FingersFast - Trang đăng nhập luyện gõ 10 ngón"
+      },
+      {
+        hid: "description",
+        name: "description",
+        content: "Trang luyện gõ bàn phím 10 ngón"
+      },
+      {
+        hid: "keywords",
+        name: "keywords",
+        content:
+          "luyện gõ bàn phím, luyen go ban phim, luyện gõ 10 ngón, luyen go 10 ngon, gõ bàn phím nhanh, go ban phim nhanh, 10 fingers fast, học gõ 10 ngón, hoc go 10 ngon, gõ 10 ngón, go 10 ngon"
+      }
     ]
   },
-  transition: 'perfect',
-  layout: 'user',
+  transition: "perfect",
+  layout: "user",
   methods: {
     USER_SIGNIN
   },
-  computed: mapGetters([
-    'GET_ERROR'
-  ]),
-  middleware: 'logined',
-}
+  computed: mapGetters(["GET_ERROR"]),
+  middleware: "logined"
+};
 </script>
 
 <style lang="sass" scoped>

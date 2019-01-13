@@ -85,7 +85,7 @@
             <div class="led"></div>
           </div>
           <div class="hdd">
-            <div class="led "></div>
+            <div class="led"></div>
             <div class="led red-led"></div>
             <div class="led"></div>
             <div class="led"></div>
@@ -212,90 +212,94 @@
   </section>
 </template>
 <script>
-  export default {
-    props: ['error']
-  }
+export default {
+  props: ["error"]
+};
 </script>
 
 <style scoped>
-.page-error{
-	color: red;
-	background-color: #f3b861;
-	text-align: center;
+.page-error {
+  color: red;
+  background-color: #f3b861;
+  text-align: center;
 }
 
-#container{
+#container {
   display: flex;
   flex-direction: row;
-	justify-content: center;
+  justify-content: center;
 }
 
-.server{
+.server {
   height: 40vw;
   width: 24vw;
   border-radius: 1vw;
-  background-color: #302F30;
+  background-color: #302f30;
   padding: 3vw 2vw;
-	margin: 1vw;
-	box-shadow: 1vw .5vw .2vw #F9A540;
+  margin: 1vw;
+  box-shadow: 1vw 0.5vw 0.2vw #f9a540;
 }
 
-.hdd-container{
+.hdd-container {
   padding: 0;
 }
 
-.hdd{
+.hdd {
   height: 4vw;
   width: 100%;
   margin-bottom: 1vw;
   background-color: #141414;
-  border-radius: .5vw;
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	align-items: center;
+  border-radius: 0.5vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
-.led{
-	height: .8vw;
-	width: .8vw;
-	border-radius: 50%;
-	background-color: rgba(0, 255, 0, 0.4);
-	margin: .5vw;
-	box-shadow: 0px 1px 10px rgba(0, 255, 0);
+.led {
+  height: 0.8vw;
+  width: 0.8vw;
+  border-radius: 50%;
+  background-color: rgba(0, 255, 0, 0.4);
+  margin: 0.5vw;
+  box-shadow: 0px 1px 10px rgba(0, 255, 0);
 }
 
-.red-led{
-	background-color: rgba(255, 0, 0, 0.5);
-box-shadow: 0 1px 5px rgba(255, 0, 0);
-animation: blinking 1s linear infinite;
+.red-led {
+  background-color: rgba(255, 0, 0, 0.5);
+  box-shadow: 0 1px 5px rgba(255, 0, 0);
+  animation: blinking 1s linear infinite;
 }
 
-.cooling-system{
-	padding-top: .5vw;
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
+.cooling-system {
+  padding-top: 0.5vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
-.grid{
-	background-color: #141414;
-	width: 8vw;
-	height: 9vw;
-	margin: .4vw;
-	border-radius: .8vw
-}
-
-h1{
-  font-family: 'Lobster', cursive;
-	font-weight: lighter;
+.grid {
+  background-color: #141414;
+  width: 8vw;
+  height: 9vw;
+  margin: 0.4vw;
+  border-radius: 0.8vw;
 }
 
-#error{
-	font-size: 1.2em
+h1 {
+  font-family: "Lobster", cursive;
+  font-weight: lighter;
 }
 
-@keyframes blinking{
-	from {opacity: 1;}
-	to {opacity: 0}
+#error {
+  font-size: 1.2em;
+}
+
+@keyframes blinking {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }
 </style>

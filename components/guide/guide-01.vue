@@ -54,11 +54,11 @@
 
 <script>
 export default {
-  data () {
+  data() {
     return {
-      step: this.$i18n.t('guide.step.step1'),
-      title: this.$i18n.t('guide.title.title1')
-    }
+      step: this.$i18n.t("guide.step.step1"),
+      title: this.$i18n.t("guide.title.title1")
+    };
   }
-}
+};
 </script>
