@@ -27,3 +27,10 @@ a:visited {
   max-width: 400px;
   max-height: 289px;
 }
+
+h1,
+h2,
+h3,
+h5 {
+  font-family: 'Lato', sans-serif;
+}

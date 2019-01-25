@@ -44,7 +44,15 @@ module.exports = {
       {
         rel: "alternate",
         hreflang: "vn-VN"
-      }
+      },
+      {
+        href: "https://fonts.googleapis.com/css?family=Open+Sans:300,400,700",
+        rel: "stylesheet"
+      },
+      {
+        href: "https://fonts.googleapis.com/css?family=Lato|Open+Sans:300,400,700",
+        rel: "stylesheet"
+      },
     ],
     script: [{
       src: "/javascript/tweenmax.min.js"

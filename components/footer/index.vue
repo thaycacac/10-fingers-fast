@@ -1,9 +1,9 @@
 <template lang="pug">
   footer.footer.is-footer
     div.content.has-text-centered
-      p Copyright © 2019
+      p Copyright © 2019 |
         strong
-          a.__link-footer(href="https://github.com/thaycacac") THAYCACAC
+          a.__link-footer(href="https://github.com/thaycacac")  THAYCACAC
       div.has-text-centered(align="center")
       ul
         li
