@@ -28,7 +28,7 @@
     "cross-env": "^5.0.1",
     "express": "^4.15.3",
     "express-session": "^1.15.6",
-    "mongoose": "^5.2.14",
+    "mongoose": "^5.7.5",
     "node-sass": "^4.9.3",
     "nodemon": "^1.18.4",
     "nuxt": "1.4.2",
