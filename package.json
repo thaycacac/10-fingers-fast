@@ -29,7 +29,7 @@
     "express": "^4.15.3",
     "express-session": "^1.15.6",
     "mongoose": "^5.2.14",
-    "node-sass": "^4.9.3",
+    "node-sass": "^7.0.0",
     "nodemon": "^1.18.4",
     "nuxt": "1.4.2",
     "nuxt-buefy": "^0.1.0",
